@@ -37,21 +37,17 @@ const scrollActive = () => {
     const sectionHeight = current.offsetHeight
     const sectionTop = current.offsetTop - 50
     let sectionId = current.getAttribute('id')
+    const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+    // Check if navigation link exists before accessing classList
+    if (!navLink) return
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.add('text-white!')
-      document
-        .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.add('nav-gradient')
+      navLink.classList.add('text-white!')
+      navLink.classList.add('nav-gradient')
     } else {
-      document
-        .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.remove('text-white!')
-      document
-        .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.remove('nav-gradient')
+      navLink.classList.remove('text-white!')
+      navLink.classList.remove('nav-gradient')
     }
   })
 }
