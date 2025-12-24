@@ -22,175 +22,257 @@
       <div class="absolute top-0 left-1/2 -translate-x-1/2 glow-orb"></div>
       
       <!-- ===== Hero Section ===== -->
-      <section id="home" class="relative z-10 pt-40 pb-32 lg:pt-52 lg:pb-40">
+      <section id="home" class="relative z-10 pt-32 pb-24 lg:pt-44 lg:pb-32">
         <div class="container text-center">
-          
+
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge border border-[var(--border-primary)] mb-8 animate-fade-in-up bg-[var(--bg-surface)] shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-[var(--brand-color)] animate-pulse"></span>
-            <span class="text-xs font-bold tracking-wider uppercase text-[var(--text-secondary)]">Enterprise Ready v2.0</span>
+          <div class="inline-flex items-center badge mb-8 animate-fade-in-up">
+            <span class="w-2 h-2 rounded-full bg-[var(--color-success)] animate-pulse"></span>
+            <span class="text-xs font-semibold tracking-wider uppercase">Now Available</span>
           </div>
 
           <!-- Headline -->
-          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] max-w-5xl mx-auto text-[var(--text-primary)]">
-            Unlock your organization's <br class="hidden md:block" />
-            <span class="text-gradient-hero">collective intelligence</span>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.05] max-w-4xl mx-auto text-[var(--text-primary)]">
+            Your enterprise data,
+            <span class="text-gradient-hero"> one intelligent platform</span>
           </h1>
 
           <!-- Subheadline -->
-          <p class="max-w-2xl mx-auto text-xl text-[var(--text-secondary)] mb-10 leading-relaxed font-light">
-            Stop searching, start knowing. AynzamAI connects your teams to the 
-            answers they need instantly, turning scattered data into actionable insights.
+          <p class="max-w-2xl mx-auto text-lg md:text-xl text-[var(--text-secondary)] mb-10 leading-relaxed">
+            Build a secure, centralized knowledge base for your organization. Query your data through an intelligent chatbot that understands context and delivers precise answers.
           </p>
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" class="btn-primary w-full sm:w-auto text-lg" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
-              Book a Demo
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <a href="#" class="btn-primary w-full sm:w-auto group" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
+              Schedule a Demo
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
-            <a href="#features" class="btn-outline w-full sm:w-auto text-lg bg-[var(--bg-surface)]">
-              Explore Platform
+            <a href="#features" class="btn-outline w-full sm:w-auto">
+              See How It Works
             </a>
           </div>
 
-          <!-- Hero Image / Dashboard Placeholder -->
-          <div class="mt-20 relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-primary)] bg-[var(--bg-surface)] transition-all duration-500">
-             <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-transparent to-transparent z-10 opacity-20"></div>
-             <!-- Mockup Browser Header -->
-             <div class="h-10 bg-[var(--bg-secondary)] border-b border-[var(--border-primary)] flex items-center px-4 gap-2">
-               <div class="w-3 h-3 rounded-full" style="background-color: #ff5f56;"></div>
-               <div class="w-3 h-3 rounded-full" style="background-color: #ffbd2e;"></div>
-               <div class="w-3 h-3 rounded-full" style="background-color: #27c93f;"></div>
-               <div class="ml-4 h-6 w-1/3 bg-[var(--bg-primary)] rounded-md border border-[var(--border-secondary)]"></div>
-             </div>
-             <!-- Placeholder Content -->
-             <div class="p-8 md:p-12 bg-[var(--bg-primary)] grid grid-cols-4 gap-8">
-                <!-- Sidebar -->
-                <div class="col-span-1 hidden md:block space-y-6 border-r border-[var(--border-secondary)] pr-8">
-                   <div class="h-8 w-full bg-[var(--bg-secondary)] rounded-lg"></div>
-                   <div class="space-y-3">
-                      <div class="h-3 w-3/4 bg-[var(--text-muted)] rounded opacity-40"></div>
-                      <div class="h-3 w-full bg-[var(--text-muted)] rounded opacity-40"></div>
-                      <div class="h-3 w-5/6 bg-[var(--text-muted)] rounded opacity-40"></div>
-                   </div>
-                   <div class="pt-8 space-y-3">
-                      <div class="h-3 w-1/2 bg-[var(--brand-color)] rounded opacity-20"></div>
-                      <div class="h-3 w-full bg-[var(--text-muted)] rounded opacity-40"></div>
-                   </div>
-                </div>
-                <!-- Main Content -->
-                <div class="col-span-4 md:col-span-3 space-y-8">
-                   <div class="flex items-center justify-between">
-                     <div class="h-8 w-1/3 bg-[var(--bg-secondary)] rounded-lg"></div>
-                     <div class="h-8 w-8 rounded-full bg-[var(--brand-color)] opacity-20"></div>
-                   </div>
-                   <div class="h-48 w-full bg-[var(--bg-secondary)] rounded-2xl border border-[var(--border-secondary)] flex items-center justify-center">
-                      <svg class="w-12 h-12 text-[var(--brand-color)] opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                   </div>
-                   <div class="grid grid-cols-2 gap-6">
-                      <div class="h-32 bg-[var(--bg-secondary)] rounded-2xl border border-[var(--border-secondary)]"></div>
-                      <div class="h-32 bg-[var(--bg-secondary)] rounded-2xl border border-[var(--border-secondary)]"></div>
-                   </div>
-                </div>
-             </div>
+          <!-- Trust Indicators -->
+          <div class="mt-10 flex items-center justify-center gap-6 text-sm text-[var(--text-muted)]">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[var(--color-success)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>SOC 2 Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[var(--color-success)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>On-Premise Available</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[var(--color-success)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>GDPR Ready</span>
+            </div>
+          </div>
+
+          <!-- Hero Image / Dashboard Preview -->
+          <div class="mt-16 relative max-w-5xl mx-auto">
+            <!-- Glow effect behind the card -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[var(--brand-color)] via-purple-500 to-pink-500 opacity-20 blur-3xl rounded-3xl"></div>
+
+            <div class="relative rounded-2xl overflow-hidden border border-[var(--border-primary)] bg-[var(--bg-surface)] shadow-2xl">
+               <!-- Mockup Browser Header -->
+               <div class="h-12 bg-[var(--bg-secondary)] border-b border-[var(--border-primary)] flex items-center px-4 gap-2">
+                 <div class="w-3 h-3 rounded-full bg-[var(--window-close)]"></div>
+                 <div class="w-3 h-3 rounded-full bg-[var(--window-minimize)]"></div>
+                 <div class="w-3 h-3 rounded-full bg-[var(--window-maximize)]"></div>
+                 <div class="ml-4 flex-1 max-w-md h-7 bg-[var(--bg-primary)] rounded-lg border border-[var(--border-secondary)] flex items-center px-3">
+                   <svg class="w-3 h-3 text-[var(--text-muted)] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                   <span class="text-xs text-[var(--text-muted)]">app.aynzamai.com</span>
+                 </div>
+               </div>
+               <!-- Dashboard Content -->
+               <div class="p-6 md:p-10 bg-[var(--bg-primary)]">
+                  <div class="grid grid-cols-12 gap-6">
+                     <!-- Sidebar -->
+                     <div class="col-span-3 hidden md:block space-y-4 border-r border-[var(--border-secondary)] pr-6">
+                        <div class="h-10 w-full bg-gradient-to-r from-[var(--brand-color)] to-purple-500 rounded-xl opacity-90"></div>
+                        <div class="space-y-2 pt-4">
+                           <div class="h-9 w-full bg-[var(--bg-secondary)] rounded-lg border border-[var(--border-secondary)]"></div>
+                           <div class="h-9 w-full bg-[var(--bg-surface)] rounded-lg"></div>
+                           <div class="h-9 w-full bg-[var(--bg-surface)] rounded-lg"></div>
+                        </div>
+                        <div class="pt-6 space-y-2">
+                           <div class="h-2 w-16 bg-[var(--text-muted)] rounded opacity-30"></div>
+                           <div class="h-9 w-full bg-[var(--bg-surface)] rounded-lg"></div>
+                           <div class="h-9 w-full bg-[var(--bg-surface)] rounded-lg"></div>
+                        </div>
+                     </div>
+                     <!-- Main Content -->
+                     <div class="col-span-12 md:col-span-9 space-y-6">
+                        <!-- Chat Interface Preview -->
+                        <div class="bg-[var(--bg-secondary)] rounded-xl border border-[var(--border-secondary)] p-6">
+                           <div class="flex items-start gap-4 mb-6">
+                              <div class="w-8 h-8 rounded-full bg-[var(--brand-color)] flex items-center justify-center flex-shrink-0">
+                                 <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                              </div>
+                              <div class="flex-1 space-y-2">
+                                 <div class="h-4 w-3/4 bg-[var(--text-muted)] rounded opacity-40"></div>
+                                 <div class="h-4 w-1/2 bg-[var(--text-muted)] rounded opacity-30"></div>
+                              </div>
+                           </div>
+                           <div class="flex items-start gap-4">
+                              <div class="w-8 h-8 rounded-full bg-[var(--bg-surface)] border border-[var(--border-primary)] flex items-center justify-center flex-shrink-0">
+                                 <svg class="w-4 h-4 text-[var(--text-secondary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                              </div>
+                              <div class="flex-1">
+                                 <div class="h-10 w-full bg-[var(--bg-surface)] rounded-lg border border-[var(--border-secondary)] flex items-center px-4">
+                                    <span class="text-sm text-[var(--text-muted)]">Ask anything about your data...</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Stats Cards -->
+                        <div class="grid grid-cols-3 gap-4">
+                           <div class="bg-[var(--bg-surface)] rounded-xl border border-[var(--border-secondary)] p-4">
+                              <div class="h-2 w-12 bg-[var(--text-muted)] rounded opacity-30 mb-3"></div>
+                              <div class="h-6 w-20 bg-[var(--brand-color)] rounded opacity-20"></div>
+                           </div>
+                           <div class="bg-[var(--bg-surface)] rounded-xl border border-[var(--border-secondary)] p-4">
+                              <div class="h-2 w-16 bg-[var(--text-muted)] rounded opacity-30 mb-3"></div>
+                              <div class="h-6 w-16 bg-[var(--color-success)] rounded opacity-20"></div>
+                           </div>
+                           <div class="bg-[var(--bg-surface)] rounded-xl border border-[var(--border-secondary)] p-4">
+                              <div class="h-2 w-14 bg-[var(--text-muted)] rounded opacity-30 mb-3"></div>
+                              <div class="h-6 w-24 bg-purple-500 rounded opacity-20"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
           </div>
 
         </div>
       </section>
 
       <!-- ===== Logos Section ===== -->
-      <section class="py-12 border-y border-[var(--border-secondary)] bg-[var(--bg-secondary)]/30 transition-colors duration-500">
-        <div class="container text-center">
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--text-secondary)] mb-10 opacity-60">Trusted by modern enterprises</p>
-          <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale contrast-125">
-             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 bg-current rounded-sm"></div> ACME</div>
-             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 bg-current rounded-full"></div> NEXUS</div>
-             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 bg-current" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div> VERTEX</div>
-             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 border-4 border-current rounded-full"></div> GLOBAL</div>
+      <section class="py-16 border-y border-[var(--border-secondary)] bg-[var(--bg-secondary)]/50 transition-colors duration-300">
+        <div class="container">
+          <p class="text-center text-xs font-medium uppercase tracking-[0.15em] text-[var(--text-muted)] mb-10">Trusted by innovative teams worldwide</p>
+          <div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-8">
+             <div class="flex items-center gap-2.5 font-bold text-xl text-[var(--text-secondary)] opacity-60 hover:opacity-100 transition-opacity"><div class="w-5 h-5 bg-current rounded"></div> TechCorp</div>
+             <div class="flex items-center gap-2.5 font-bold text-xl text-[var(--text-secondary)] opacity-60 hover:opacity-100 transition-opacity"><div class="w-5 h-5 bg-current rounded-full"></div> Innovate</div>
+             <div class="flex items-center gap-2.5 font-bold text-xl text-[var(--text-secondary)] opacity-60 hover:opacity-100 transition-opacity"><div class="w-5 h-5 bg-current rotate-45"></div> DataFlow</div>
+             <div class="flex items-center gap-2.5 font-bold text-xl text-[var(--text-secondary)] opacity-60 hover:opacity-100 transition-opacity"><div class="w-5 h-5 border-2 border-current rounded-full"></div> CloudFirst</div>
+             <div class="flex items-center gap-2.5 font-bold text-xl text-[var(--text-secondary)] opacity-60 hover:opacity-100 transition-opacity"><div class="w-5 h-5 bg-current rounded-lg"></div> ScaleUp</div>
           </div>
         </div>
       </section>
 
       <!-- ===== Features Section ===== -->
-      <section id="features" class="relative z-10 py-32 bg-[var(--bg-secondary)] transition-colors duration-500">
+      <section id="features" class="relative z-10 py-24 lg:py-32 bg-[var(--bg-primary)] transition-colors duration-300">
         <div class="container">
-          
-          <div class="text-center mb-20 max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-[var(--text-primary)]">Engineered for Intelligence</h2>
-            <p class="text-[var(--text-secondary)] text-xl font-light">The foundational layer for your organization's collective memory.</p>
+
+          <div class="text-center mb-16 max-w-2xl mx-auto">
+            <div class="inline-flex items-center badge mb-4">
+              <span class="text-xs font-semibold tracking-wider uppercase">Platform</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-[var(--text-primary)]">Built for enterprise scale</h2>
+            <p class="text-[var(--text-secondary)] text-lg">Everything you need to centralize, secure, and query your organization's knowledge.</p>
           </div>
 
           <!-- Bento Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Large Card -->
-            <div class="md:col-span-2 glass glass-hover p-10 rounded-3xl relative overflow-hidden group">
-               <div class="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
-                  <svg class="w-96 h-96 text-[var(--text-primary)]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-               </div>
-               <div class="relative z-10 h-full flex flex-col">
-                  <div class="w-14 h-14 rounded-2xl bg-[var(--brand-color)] flex items-center justify-center mb-8 text-white shadow-lg shadow-blue-500/20">
-                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          <div class="grid grid-cols-1 md:grid-cols-6 gap-5">
+
+            <!-- Large Card - Semantic Search -->
+            <div class="md:col-span-4 card-premium card-premium-hover p-8 lg:p-10 relative overflow-hidden group">
+               <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-gradient-to-br from-[var(--brand-color)] to-purple-500 opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity"></div>
+               <div class="relative z-10">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-color)] to-[var(--brand-hover)] flex items-center justify-center mb-6 text-white shadow-lg">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                   </div>
-                  <h3 class="text-3xl font-bold mb-4 text-[var(--text-primary)]">Neural Semantic Search</h3>
-                  <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-lg font-light">
-                    Go beyond simple keywords. Our proprietary neural engine understands context, nuance, and intent to find answers across your entire data silo.
+                  <h3 class="text-2xl lg:text-3xl font-semibold mb-3 text-[var(--text-primary)]">Intelligent Search</h3>
+                  <p class="text-[var(--text-secondary)] text-base lg:text-lg leading-relaxed max-w-xl">
+                    Our AI understands context and intent, finding precise answers across millions of documents in milliseconds.
                   </p>
                </div>
             </div>
 
-            <!-- Vertical Card -->
-            <div class="glass glass-hover p-10 rounded-3xl flex flex-col justify-between group bg-[var(--bg-surface)]">
-               <div class="w-14 h-14 rounded-2xl bg-[var(--bg-secondary)] flex items-center justify-center mb-8 text-[var(--text-primary)] border border-[var(--border-primary)] shadow-sm">
-                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            <!-- Vertical Card - Speed -->
+            <div class="md:col-span-2 card-premium card-premium-hover p-8 flex flex-col group">
+               <div class="w-12 h-12 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-6 text-[var(--brand-color)] border border-[var(--border-primary)]">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                </div>
-               <div>
-                  <h3 class="text-2xl font-bold mb-4 text-[var(--text-primary)]">Instant Synthesis</h3>
-                  <p class="text-[var(--text-secondary)] leading-relaxed font-light">
-                    Our AI reads through thousands of documents to provide one clear, cited answer to your team's most complex questions.
-                  </p>
-               </div>
-            </div>
-
-            <!-- Small Card -->
-            <div class="glass glass-hover p-10 rounded-3xl flex flex-col justify-between group">
-               <div class="w-14 h-14 rounded-2xl bg-[var(--bg-secondary)] flex items-center justify-center mb-8 text-[var(--text-primary)] border border-[var(--border-primary)]">
-                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-               </div>
-               <div>
-                  <h3 class="text-2xl font-bold mb-4 text-[var(--text-primary)]">Secure by Design</h3>
-                  <p class="text-[var(--text-secondary)] leading-relaxed font-light">
-                    Enterprise-grade security with SOC2 compliance and end-to-end encryption for all your data.
-                  </p>
+               <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">Lightning Fast</h3>
+               <p class="text-[var(--text-secondary)] leading-relaxed text-sm flex-1">
+                 Responses in under 500ms. Your team gets answers instantly, not minutes later.
+               </p>
+               <div class="mt-6 pt-4 border-t border-[var(--border-secondary)]">
+                  <span class="text-3xl font-bold text-[var(--brand-color)]">&lt;500ms</span>
+                  <span class="text-sm text-[var(--text-muted)] ml-2">avg response</span>
                </div>
             </div>
 
-            <!-- Wide Card -->
-            <div class="md:col-span-2 glass glass-hover p-10 rounded-3xl group bg-[var(--bg-surface)]">
-               <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Security Card -->
+            <div class="md:col-span-2 card-premium card-premium-hover p-8 flex flex-col group">
+               <div class="w-12 h-12 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-6 text-[var(--color-success)] border border-[var(--border-primary)]">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+               </div>
+               <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">Enterprise Security</h3>
+               <p class="text-[var(--text-secondary)] leading-relaxed text-sm flex-1">
+                 SOC 2 Type II certified. End-to-end encryption. Your data never leaves your control.
+               </p>
+               <div class="mt-6 flex gap-2">
+                  <span class="px-2.5 py-1 text-xs font-medium bg-[var(--bg-secondary)] text-[var(--text-secondary)] rounded-md border border-[var(--border-secondary)]">SOC 2</span>
+                  <span class="px-2.5 py-1 text-xs font-medium bg-[var(--bg-secondary)] text-[var(--text-secondary)] rounded-md border border-[var(--border-secondary)]">GDPR</span>
+                  <span class="px-2.5 py-1 text-xs font-medium bg-[var(--bg-secondary)] text-[var(--text-secondary)] rounded-md border border-[var(--border-secondary)]">HIPAA</span>
+               </div>
+            </div>
+
+            <!-- Wide Card - Integrations -->
+            <div class="md:col-span-4 card-premium card-premium-hover p-8 lg:p-10 group">
+               <div class="flex flex-col lg:flex-row items-start lg:items-center gap-8">
                   <div class="flex-1">
-                     <div class="w-14 h-14 rounded-2xl bg-[var(--brand-color)] flex items-center justify-center mb-8 text-white">
-                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 text-white shadow-lg">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
                      </div>
-                     <h3 class="text-3xl font-bold mb-4 text-[var(--text-primary)]">Infinite Connectors</h3>
-                     <p class="text-[var(--text-secondary)] text-lg leading-relaxed font-light">
-                       Seamlessly aggregate knowledge from Slack, Notion, Jira, GitHub, and 100+ other sources with one-click integrations.
+                     <h3 class="text-2xl lg:text-3xl font-semibold mb-3 text-[var(--text-primary)]">Connect Everything</h3>
+                     <p class="text-[var(--text-secondary)] text-base lg:text-lg leading-relaxed">
+                       Native integrations with Slack, Notion, Google Drive, SharePoint, Confluence, and 50+ more data sources.
                      </p>
                   </div>
-                  <div class="flex-1 grid grid-cols-3 gap-4">
-                     <!-- Techy connector placeholders -->
-                     <div class="aspect-square bg-[var(--bg-primary)] rounded-2xl border border-[var(--border-secondary)] shadow-sm flex items-center justify-center">
-                        <div class="w-8 h-8 rounded-full bg-[var(--text-muted)] opacity-20"></div>
+                  <div class="flex-shrink-0 grid grid-cols-4 gap-3">
+                     <div class="w-12 h-12 bg-[var(--bg-secondary)] rounded-xl border border-[var(--border-secondary)] flex items-center justify-center group-hover:border-[var(--brand-color)] transition-colors">
+                        <div class="w-6 h-6 rounded bg-[var(--text-muted)] opacity-30"></div>
                      </div>
-                     <div class="aspect-square bg-[var(--bg-primary)] rounded-2xl border border-[var(--border-secondary)] shadow-sm flex items-center justify-center">
-                        <div class="w-8 h-8 bg-[var(--text-muted)] opacity-20"></div>
+                     <div class="w-12 h-12 bg-[var(--bg-secondary)] rounded-xl border border-[var(--border-secondary)] flex items-center justify-center group-hover:border-purple-500 transition-colors">
+                        <div class="w-6 h-6 rounded-full bg-[var(--text-muted)] opacity-30"></div>
                      </div>
-                     <div class="aspect-square bg-[var(--bg-primary)] rounded-2xl border border-[var(--border-secondary)] shadow-sm flex items-center justify-center">
-                        <div class="w-8 h-8 bg-[var(--text-muted)] opacity-20 rotate-45"></div>
+                     <div class="w-12 h-12 bg-[var(--bg-secondary)] rounded-xl border border-[var(--border-secondary)] flex items-center justify-center group-hover:border-pink-500 transition-colors">
+                        <div class="w-6 h-6 bg-[var(--text-muted)] opacity-30 rotate-45"></div>
+                     </div>
+                     <div class="w-12 h-12 bg-[var(--bg-secondary)] rounded-xl border border-[var(--border-secondary)] flex items-center justify-center">
+                        <span class="text-xs font-semibold text-[var(--text-muted)]">+47</span>
                      </div>
                   </div>
                </div>
+            </div>
+
+            <!-- On-Premise Card -->
+            <div class="md:col-span-3 card-premium card-premium-hover p-8 group">
+               <div class="w-12 h-12 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-6 text-[var(--text-primary)] border border-[var(--border-primary)]">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+               </div>
+               <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">On-Premise Deployment</h3>
+               <p class="text-[var(--text-secondary)] leading-relaxed text-sm">
+                 Deploy AynzamAI entirely within your infrastructure. We handle setup and maintenance, you keep full control.
+               </p>
+            </div>
+
+            <!-- Custom Solutions Card -->
+            <div class="md:col-span-3 card-premium card-premium-hover p-8 group">
+               <div class="w-12 h-12 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-6 text-[var(--text-primary)] border border-[var(--border-primary)]">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+               </div>
+               <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">Custom Implementation</h3>
+               <p class="text-[var(--text-secondary)] leading-relaxed text-sm">
+                 Our team works directly with you to build and deploy a solution tailored to your specific data architecture.
+               </p>
             </div>
 
           </div>
@@ -198,70 +280,70 @@
       </section>
 
       <!-- ===== Testimonials ===== -->
-      <section id="testimonials" class="relative z-10 py-32 bg-[var(--bg-primary)] transition-colors duration-500">
+      <section id="testimonials" class="relative z-10 py-24 lg:py-32 bg-[var(--bg-secondary)] transition-colors duration-300">
         <div class="container">
-          <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div class="max-w-2xl">
-              <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text-primary)]">Loved by world-class teams</h2>
-              <p class="text-[var(--text-secondary)] text-xl font-light">Join the ranks of the world's most innovative organizations.</p>
+          <div class="text-center mb-16 max-w-2xl mx-auto">
+            <div class="inline-flex items-center badge mb-4">
+              <span class="text-xs font-semibold tracking-wider uppercase">Testimonials</span>
             </div>
-            <a href="#" class="btn-outline px-8 py-4">Read all case studies</a>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-[var(--text-primary)]">Trusted by leading teams</h2>
+            <p class="text-[var(--text-secondary)] text-lg">See what engineering and operations leaders are saying.</p>
           </div>
-          
-          <div class="grid md:grid-cols-3 gap-8">
+
+          <div class="grid md:grid-cols-3 gap-6">
             <!-- Testimonial 1 -->
-            <div class="p-10 border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
-              <div class="flex gap-1 text-[var(--color-warning)] mb-6">
-                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="card-premium card-premium-hover p-8 flex flex-col">
+              <div class="flex gap-1 text-[var(--color-warning)] mb-5">
+                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
-              <p class="text-[var(--text-primary)] mb-8 text-xl leading-relaxed font-light italic">"AynzamAI has completely transformed how our engineering team documents code. We save hours every single week."</p>
-              <div class="flex items-center gap-4 pt-6 border-t border-[var(--border-secondary)]">
-                <div class="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-primary)] shadow-inner"></div>
+              <p class="text-[var(--text-primary)] mb-6 text-base leading-relaxed flex-1">"AynzamAI transformed how we handle internal documentation. Our team saves 10+ hours weekly on knowledge retrieval."</p>
+              <div class="flex items-center gap-3 pt-5 border-t border-[var(--border-secondary)]">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--brand-color)] to-purple-500 flex items-center justify-center text-white font-semibold text-sm">SJ</div>
                 <div>
-                  <h4 class="text-[var(--text-primary)] font-bold">Sarah Jenkins</h4>
-                  <p class="text-[var(--text-secondary)] text-sm">CTO, TechFlow</p>
+                  <h4 class="text-[var(--text-primary)] font-semibold text-sm">Sarah Jenkins</h4>
+                  <p class="text-[var(--text-muted)] text-xs">CTO, TechFlow</p>
                 </div>
               </div>
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="p-10 border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
-               <div class="flex gap-1 text-[var(--color-warning)] mb-6">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="card-premium card-premium-hover p-8 flex flex-col">
+               <div class="flex gap-1 text-[var(--color-warning)] mb-5">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                </div>
-              <p class="text-[var(--text-primary)] mb-8 text-xl leading-relaxed font-light italic">"The semantic search feels like magic. It finds the exact policy document I need even when I don't remember the file name."</p>
-              <div class="flex items-center gap-4 pt-6 border-t border-[var(--border-secondary)]">
-                <div class="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-primary)] shadow-inner"></div>
+              <p class="text-[var(--text-primary)] mb-6 text-base leading-relaxed flex-1">"The semantic search understands context perfectly. I find exactly what I need, even when I can't remember the exact terms."</p>
+              <div class="flex items-center gap-3 pt-5 border-t border-[var(--border-secondary)]">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-success)] to-teal-500 flex items-center justify-center text-white font-semibold text-sm">DC</div>
                 <div>
-                  <h4 class="text-[var(--text-primary)] font-bold">David Chen</h4>
-                  <p class="text-[var(--text-secondary)] text-sm">HR Director, GlobalCorp</p>
+                  <h4 class="text-[var(--text-primary)] font-semibold text-sm">David Chen</h4>
+                  <p class="text-[var(--text-muted)] text-xs">VP Engineering, GlobalCorp</p>
                 </div>
               </div>
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="p-10 border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
-               <div class="flex gap-1 text-[var(--color-warning)] mb-6">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="card-premium card-premium-hover p-8 flex flex-col">
+               <div class="flex gap-1 text-[var(--color-warning)] mb-5">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                </div>
-              <p class="text-[var(--text-primary)] mb-8 text-xl leading-relaxed font-light italic">"Deployment was incredibly fast. We connected our entire stack in minutes and were ready to go."</p>
-              <div class="flex items-center gap-4 pt-6 border-t border-[var(--border-secondary)]">
-                <div class="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-primary)] shadow-inner"></div>
+              <p class="text-[var(--text-primary)] mb-6 text-base leading-relaxed flex-1">"On-premise deployment was seamless. The team had us running in days, not months. Security and compliance are exactly what we needed."</p>
+              <div class="flex items-center gap-3 pt-5 border-t border-[var(--border-secondary)]">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-white font-semibold text-sm">ER</div>
                 <div>
-                  <h4 class="text-[var(--text-primary)] font-bold">Elena Rodriguez</h4>
-                  <p class="text-[var(--text-secondary)] text-sm">Ops Manager, SwiftStart</p>
+                  <h4 class="text-[var(--text-primary)] font-semibold text-sm">Elena Rodriguez</h4>
+                  <p class="text-[var(--text-muted)] text-xs">IT Director, FinanceFirst</p>
                 </div>
               </div>
             </div>
@@ -270,58 +352,75 @@
       </section>
 
       <!-- ===== Pricing Section ===== -->
-      <section id="pricing" class="relative z-10 py-32 border-t border-[var(--border-secondary)] bg-[var(--bg-secondary)] transition-colors duration-500">
+      <section id="pricing" class="relative z-10 py-24 lg:py-32 bg-[var(--bg-primary)] transition-colors duration-300">
         <div class="container">
-          <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text-primary)]">Simple, Transparent Pricing</h2>
-            <p class="text-[var(--text-secondary)] text-xl font-light">The scale you need, the security you trust.</p>
+          <div class="text-center mb-16 max-w-2xl mx-auto">
+            <div class="inline-flex items-center badge mb-4">
+              <span class="text-xs font-semibold tracking-wider uppercase">Pricing</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-[var(--text-primary)]">Simple, transparent pricing</h2>
+            <p class="text-[var(--text-secondary)] text-lg">Start free, scale as you grow. No hidden fees.</p>
           </div>
 
-          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            
+          <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
             <!-- Starter -->
-            <div class="p-8 rounded-3xl border border-[var(--border-primary)] bg-[var(--bg-surface)] hover:border-[var(--brand-color)] transition-all duration-300">
-              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Starter</h3>
-              <div class="flex items-baseline gap-1 mb-8">
-                <span class="text-5xl font-bold text-[var(--text-primary)]">$0</span>
-                <span class="text-[var(--text-secondary)] text-lg">/mo</span>
+            <div class="card-premium card-premium-hover p-8 flex flex-col">
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">Starter</h3>
+                <p class="text-sm text-[var(--text-muted)]">For small teams getting started</p>
               </div>
-              <ul class="space-y-5 mb-10 text-[var(--text-secondary)]">
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 5 users</li>
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 1GB Knowledge Base</li>
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Core Connectors</li>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-bold text-[var(--text-primary)]">$0</span>
+                <span class="text-[var(--text-muted)] text-sm">/month</span>
+              </div>
+              <ul class="space-y-3 mb-8 text-sm text-[var(--text-secondary)] flex-1">
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 5 users</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 1GB storage</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 5 integrations</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Community support</li>
               </ul>
-              <a href="#" class="btn-outline w-full text-center py-4">Get Started</a>
+              <a href="#" class="btn-outline w-full text-center">Get Started</a>
             </div>
 
-            <!-- Pro -->
-            <div class="p-8 rounded-3xl border-2 border-[var(--brand-color)] bg-[var(--bg-surface)] relative shadow-2xl transform md:scale-105 z-10 transition-all duration-300">
-              <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--brand-color)] text-white text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] uppercase">Most Popular</div>
-              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Professional</h3>
-              <div class="flex items-baseline gap-1 mb-8">
-                <span class="text-5xl font-bold text-[var(--text-primary)]">$49</span>
-                <span class="text-[var(--text-secondary)] text-lg">/mo</span>
+            <!-- Pro - Featured -->
+            <div class="card-premium p-8 flex flex-col relative border-2 border-[var(--brand-color)] shadow-xl md:-mt-4 md:mb-4">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--brand-color)] to-purple-500 text-white text-[10px] font-semibold px-4 py-1 rounded-full tracking-wide uppercase">Recommended</div>
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">Professional</h3>
+                <p class="text-sm text-[var(--text-muted)]">For growing organizations</p>
               </div>
-              <ul class="space-y-5 mb-10 text-[var(--text-secondary)]">
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--brand-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 20 users</li>
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--brand-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 50GB Knowledge Base</li>
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--brand-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Advanced Analytics</li>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-bold text-[var(--text-primary)]">$49</span>
+                <span class="text-[var(--text-muted)] text-sm">/user/month</span>
+              </div>
+              <ul class="space-y-3 mb-8 text-sm text-[var(--text-secondary)] flex-1">
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--brand-color)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Unlimited users</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--brand-color)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 100GB storage</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--brand-color)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> All integrations</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--brand-color)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Advanced analytics</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--brand-color)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Priority support</li>
               </ul>
-              <a href="#" class="btn-primary w-full text-center py-4">Start Free Trial</a>
+              <a href="#" class="btn-primary w-full text-center">Start Free Trial</a>
             </div>
 
             <!-- Enterprise -->
-            <div class="p-8 rounded-3xl border border-[var(--border-primary)] bg-[var(--bg-surface)] hover:border-[var(--brand-color)] transition-all duration-300">
-              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Enterprise</h3>
-              <div class="flex items-baseline gap-1 mb-8">
-                <span class="text-5xl font-bold text-[var(--text-primary)]">Custom</span>
+            <div class="card-premium card-premium-hover p-8 flex flex-col">
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-1">Enterprise</h3>
+                <p class="text-sm text-[var(--text-muted)]">For large-scale deployments</p>
               </div>
-              <ul class="space-y-5 mb-10 text-[var(--text-secondary)]">
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Unlimited users</li>
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Dedicated 24/7 Support</li>
-                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom Integrations</li>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-bold text-[var(--text-primary)]">Custom</span>
+              </div>
+              <ul class="space-y-3 mb-8 text-sm text-[var(--text-secondary)] flex-1">
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> On-premise deployment</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Unlimited storage</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom integrations</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Dedicated support</li>
+                <li class="flex gap-3 items-center"><svg class="w-4 h-4 text-[var(--color-success)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> SLA guarantee</li>
               </ul>
-              <a href="#" class="btn-outline w-full text-center py-4">Talk to Sales</a>
+              <a href="#" class="btn-outline w-full text-center" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">Contact Sales</a>
             </div>
 
           </div>
@@ -329,11 +428,25 @@
       </section>
 
       <!-- ===== CTA Section ===== -->
-      <section class="py-32 relative overflow-hidden bg-[var(--bg-primary)] transition-colors duration-500">
-        <div class="container relative z-10 text-center">
-          <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter text-[var(--text-primary)]">Transform your knowledge today.</h2>
-          <p class="text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto text-xl font-light">Join the future of enterprise intelligence. Secure, scalable, and ridiculously fast.</p>
-          <a href="#" class="btn-primary text-xl px-10 py-5 shadow-2xl">Create Free Account</a>
+      <section class="py-24 lg:py-32 relative overflow-hidden bg-[var(--bg-secondary)] transition-colors duration-300">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[var(--brand-color)]/5 via-transparent to-purple-500/5"></div>
+
+        <div class="container relative z-10">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[var(--text-primary)]">Ready to transform your enterprise knowledge?</h2>
+            <p class="text-[var(--text-secondary)] mb-10 text-lg">Join forward-thinking teams who trust AynzamAI to power their knowledge infrastructure.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="#" class="btn-primary w-full sm:w-auto group" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
+                Schedule a Demo
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+              <a href="#features" class="btn-outline w-full sm:w-auto">
+                Learn More
+              </a>
+            </div>
+            <p class="mt-8 text-sm text-[var(--text-muted)]">No credit card required. Free 14-day trial.</p>
+          </div>
         </div>
       </section>
 
