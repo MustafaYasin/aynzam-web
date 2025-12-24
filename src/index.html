@@ -1,2682 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AynzamAI</title>
+    <title>AynzamAI - Enterprise Knowledge Intelligence</title>
     <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
   </head>
 
-  <body
-    x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
-  >
-    <!-- ===== Header Start ===== -->
+  <body x-data="{ loaded: true }" x-init="loaded = true">
+    <!-- Header -->
     <include src="./partials/header.html" />
-    <!-- ===== Header End ===== -->
 
-    <main>
-      <!-- ===== Hero Section Start ===== -->
-      <section
-        id="home"
-        class="relative z-10 overflow-hidden pt-35 md:pt-40 xl:pt-45"
-      >
-        <!-- Hero Bg Shapes -->
-        <div class="mx-auto max-w-7xl">
-          <div
-            class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -mx-28"
-          >
-            <div
-              class="absolute -z-1 -top-[128%] sm:-top-[107%] xl:-top-[73%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1282px] rounded-full max-w-[1282px]"
-            ></div>
-            <div
-              class="absolute -z-1 -top-[112%] sm:-top-[93%] xl:-top-[62%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1046px] rounded-full max-w-[1046px]"
-            ></div>
-            <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
-              <img
-                src="./images/blur/blur-02.svg"
-                alt="blur-sm"
-                class="max-w-none"
-              />
-            </div>
-            <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
-              <img
-                src="./images/blur/blur-01.svg"
-                alt="blur-sm"
-                class="max-w-none"
-              />
-            </div>
+    <main class="relative overflow-hidden">
+      
+      <!-- Background Effects -->
+      <div class="absolute inset-0 grid-bg pointer-events-none z-0"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 glow-orb"></div>
+      
+      <!-- ===== Hero Section ===== -->
+      <section id="home" class="relative z-10 pt-40 pb-32 lg:pt-52 lg:pb-40">
+        <div class="container text-center">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge border border-[var(--border-primary)] mb-8 animate-fade-in-up bg-[var(--bg-surface)] shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[var(--brand-color)] animate-pulse"></span>
+            <span class="text-xs font-bold tracking-wider uppercase text-[var(--text-secondary)]">Enterprise Ready v2.0</span>
           </div>
-        </div>
 
-        <!-- Hero Content -->
-        <div class="mx-auto max-w-[900px] px-4 sm:px-8 xl:px-0 relative z-1">
-          <div class="text-center">
-            <a
-              href="/#"
-              class="hero-subtitle-gradient hover:hero-subtitle-hover relative mb-5 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
+          <!-- Headline -->
+          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] max-w-5xl mx-auto text-[var(--text-primary)]">
+            Unlock your organization's <br class="hidden md:block" />
+            <span class="text-gradient-hero">collective intelligence</span>
+          </h1>
 
-              <span class="hero-subtitle-text">
-                Your Ultimate Knowledge Management Companion!
-              </span>
-            </a>
-            <h1
-              class="mb-6 text-3xl font-extrabold text-white sm:text-5xl xl:text-heading-1"
-            >
-              Access Your Organization's Knowledge Instantly with AI
-            </h1>
-            <p class="max-w-[500px] mx-auto mb-9 font-medium md:text-lg">
-              Transform how your teams find and use enterprise knowledge with our AI-powered knowledge assistant. Boost productivity, enhance collaboration, and retain critical information.
-            </p>
+          <!-- Subheadline -->
+          <p class="max-w-2xl mx-auto text-xl text-[var(--text-secondary)] mb-10 leading-relaxed font-light">
+            Stop searching, start knowing. AynzamAI connects your teams to the 
+            answers they need instantly, turning scattered data into actionable insights.
+          </p>
 
-            <a
-              href="#"
-              class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80"
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
-            >
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#" class="btn-primary w-full sm:w-auto text-lg" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
               Book a Demo
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="#features" class="btn-outline w-full sm:w-auto text-lg bg-[var(--bg-surface)]">
+              Explore Platform
             </a>
           </div>
-        </div>
 
-        <div class="mt-17" data-wow-delay="0.1s">
-          <img class="mx-auto" src="./images/hero/hero.svg" alt="hero" />
-        </div>
-      </section>
-      <!-- ===== Hero Section End ===== -->
-
-      <!-- ===== features grid Section Start ===== -->
-      <section
-        id="features"
-        class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
-      >
-        <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- Section Title -->
-          <div class="text-center wow fadeInUp">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Some of Main Features </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              Key Features of Our Tool
-            </h2>
-            <p class="max-w-[714px] mx-auto mb-5 font-medium">
-              Our AI platform enables employees to access and utilize organizational knowledge effortlessly, enhancing efficiency, collaboration, and knowledge retention.
-            </p>
+          <!-- Hero Image / Dashboard Placeholder -->
+          <div class="mt-20 relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-primary)] bg-[var(--bg-surface)] transition-all duration-500">
+             <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-transparent to-transparent z-10 opacity-20"></div>
+             <!-- Mockup Browser Header -->
+             <div class="h-10 bg-[var(--bg-secondary)] border-b border-[var(--border-primary)] flex items-center px-4 gap-2">
+               <div class="w-3 h-3 rounded-full" style="background-color: #ff5f56;"></div>
+               <div class="w-3 h-3 rounded-full" style="background-color: #ffbd2e;"></div>
+               <div class="w-3 h-3 rounded-full" style="background-color: #27c93f;"></div>
+               <div class="ml-4 h-6 w-1/3 bg-[var(--bg-primary)] rounded-md border border-[var(--border-secondary)]"></div>
+             </div>
+             <!-- Placeholder Content -->
+             <div class="p-8 md:p-12 bg-[var(--bg-primary)] grid grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="col-span-1 hidden md:block space-y-6 border-r border-[var(--border-secondary)] pr-8">
+                   <div class="h-8 w-full bg-[var(--bg-secondary)] rounded-lg"></div>
+                   <div class="space-y-3">
+                      <div class="h-3 w-3/4 bg-[var(--text-muted)] rounded opacity-40"></div>
+                      <div class="h-3 w-full bg-[var(--text-muted)] rounded opacity-40"></div>
+                      <div class="h-3 w-5/6 bg-[var(--text-muted)] rounded opacity-40"></div>
+                   </div>
+                   <div class="pt-8 space-y-3">
+                      <div class="h-3 w-1/2 bg-[var(--brand-color)] rounded opacity-20"></div>
+                      <div class="h-3 w-full bg-[var(--text-muted)] rounded opacity-40"></div>
+                   </div>
+                </div>
+                <!-- Main Content -->
+                <div class="col-span-4 md:col-span-3 space-y-8">
+                   <div class="flex items-center justify-between">
+                     <div class="h-8 w-1/3 bg-[var(--bg-secondary)] rounded-lg"></div>
+                     <div class="h-8 w-8 rounded-full bg-[var(--brand-color)] opacity-20"></div>
+                   </div>
+                   <div class="h-48 w-full bg-[var(--bg-secondary)] rounded-2xl border border-[var(--border-secondary)] flex items-center justify-center">
+                      <svg class="w-12 h-12 text-[var(--brand-color)] opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                   </div>
+                   <div class="grid grid-cols-2 gap-6">
+                      <div class="h-32 bg-[var(--bg-secondary)] rounded-2xl border border-[var(--border-secondary)]"></div>
+                      <div class="h-32 bg-[var(--bg-secondary)] rounded-2xl border border-[var(--border-secondary)]"></div>
+                   </div>
+                </div>
+             </div>
           </div>
 
-          <div class="relative">
-            <div
-              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 left-1/2 -translate-y-1/2 lg:-translate-x-1/3 lg:left-1/4 hidden lg:block"
-            ></div>
-            <div
-              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 right-1/2 -translate-y-1/2 lg:right-[8.3%] hidden lg:block"
-            ></div>
+        </div>
+      </section>
 
-            <!--=== Features Row ===-->
-            <div class="flex flex-wrap justify-center">
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
-                    </svg>
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Unified Knowledge Access
-                  </h4>
-                  <p class="font-medium">
-                    Connects and centralizes internal sources into a single, searchable interface.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                      <circle cx="12" cy="10" r="2"></circle>
-                      <path d="M12 8v0"></path>
-                      <path d="M12 12v0"></path>
-                    </svg>
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Smart AI Chat Assistant
-                  </h4>
-                  <p class="font-medium">
-                    Delivers accurate, context-aware answers to natural language queries.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="12" y1="8" x2="12" y2="12"></line>
-                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                    </svg>
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Knowledge Gap Detection
-                  </h4>
-                  <p class="font-medium">
-                    Eliminate time wasted searching for information and help teams focus on high-value work that drives your business forward.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="features-row-border w-full h-[1px]"></div>
-
-            <!--=== Features Row ===-->
-            <div class="flex flex-wrap justify-center">
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                      <circle cx="12" cy="16" r="1"></circle>
-                    </svg>
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Enterprise-Grade Data Security
-                  </h4>
-                  <p class="font-medium">
-                    Built to handle sensitive data with encryption and access control.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Intelligent Content Structuring
-                  </h4>
-                  <p class="font-medium">
-                    Transforms unstructured documents into searchable, organized knowledge.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="16 3 21 3 21 8"></polyline>
-                      <line x1="4" y1="20" x2="21" y2="3"></line>
-                      <path d="M21 16v5h-5"></path>
-                      <line x1="15" y1="15" x2="21" y2="21"></line>
-                      <line x1="4" y1="4" x2="9" y2="9"></line>
-                    </svg>
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Scalable Integration
-                  </h4>
-                  <p class="font-medium">
-                    Easily adapts across teams and systems for seamless enterprise deployment.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <!-- ===== Logos Section ===== -->
+      <section class="py-12 border-y border-[var(--border-secondary)] bg-[var(--bg-secondary)]/30 transition-colors duration-500">
+        <div class="container text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--text-secondary)] mb-10 opacity-60">Trusted by modern enterprises</p>
+          <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale contrast-125">
+             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 bg-current rounded-sm"></div> ACME</div>
+             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 bg-current rounded-full"></div> NEXUS</div>
+             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 bg-current" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div> VERTEX</div>
+             <div class="flex items-center gap-2 font-black text-2xl text-[var(--text-primary)]"><div class="w-6 h-6 border-4 border-current rounded-full"></div> GLOBAL</div>
           </div>
         </div>
       </section>
-      <!-- ===== features grid Section End ===== -->
 
-      <!-- ===== features list Section Start ===== -->
-      <section class="pt-12.5">
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div class="grid sm:grid-cols-12 gap-7.5" data-highlighter>
-            <!-- features item -->
-            <div class="sm:col-span-12">
-              <div class="relative rounded-3xl features-box-border">
-                <div
-                  class="relative p-10 overflow-hidden rounded-3xl xl:p-15 box-hover"
-                >
-                  <div class="relative z-20 flex items-center justify-between">
-                    <div class="max-w-[477px] w-full">
-                      <span
-                        class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-                      >
-                        <img src="./images/hero/icon-title.svg" alt="icon" />
+      <!-- ===== Features Section ===== -->
+      <section id="features" class="relative z-10 py-32 bg-[var(--bg-secondary)] transition-colors duration-500">
+        <div class="container">
+          
+          <div class="text-center mb-20 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-[var(--text-primary)]">Engineered for Intelligence</h2>
+            <p class="text-[var(--text-secondary)] text-xl font-light">The foundational layer for your organization's collective memory.</p>
+          </div>
 
-                        <span class="hero-subtitle-text">
-                          AI-Powered Knowledge Platform
-                        </span>
-                      </span>
-                      <h3 class="text-white mb-4.5 font-bold text-heading-4">
-                        AI-Powered Knowledge Discovery
-                      </h3>
-                      <p class="mb-10 font-medium">
-                        Our platform connects your team with the information they need, when they need it, making knowledge discovery fast and intuitive.
-                      </p>
-                      <a
-                        href="#"
-                        class="features-button-gradient relative inline-flex items-center gap-1.5 rounded-full py-3 px-6 text-white text-sm ease-in duration-300 hover:shadow-button"
-                      >
-                        Learn more
-                        <svg
-                          width="14"
-                          height="12"
-                          viewBox="0 0 14 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M13.3992 5.60002L8.22422 0.350024C7.99922 0.125024 7.64922 0.125024 7.42422 0.350024C7.19922 0.575024 7.19922 0.925025 7.42422 1.15002L11.6242 5.42503H0.999219C0.699219 5.42503 0.449219 5.67502 0.449219 5.97502C0.449219 6.27502 0.699219 6.55003 0.999219 6.55003H11.6742L7.42422 10.875C7.19922 11.1 7.19922 11.45 7.42422 11.675C7.52422 11.775 7.67422 11.825 7.82422 11.825C7.97422 11.825 8.12422 11.775 8.22422 11.65L13.3992 6.40002C13.6242 6.17502 13.6242 5.82502 13.3992 5.60002Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-
-                    <div class="max-w-[428px] w-full hidden sm:block">
-                      <img src="./images/features/big-icon.svg" alt="Knowledge Platform" />
-                    </div>
+          <!-- Bento Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Large Card -->
+            <div class="md:col-span-2 glass glass-hover p-10 rounded-3xl relative overflow-hidden group">
+               <div class="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
+                  <svg class="w-96 h-96 text-[var(--text-primary)]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+               </div>
+               <div class="relative z-10 h-full flex flex-col">
+                  <div class="w-14 h-14 rounded-2xl bg-[var(--brand-color)] flex items-center justify-center mb-8 text-white shadow-lg shadow-blue-500/20">
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                   </div>
+                  <h3 class="text-3xl font-bold mb-4 text-[var(--text-primary)]">Neural Semantic Search</h3>
+                  <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-lg font-light">
+                    Go beyond simple keywords. Our proprietary neural engine understands context, nuance, and intent to find answers across your entire data silo.
+                  </p>
+               </div>
+            </div>
 
-                  <!-- bg shapes -->
-                  <div
-                    class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -mx-28"
-                  >
-                    <span class="absolute bottom-0 right-0"
-                      ><img src="./images/features/shape-01.png" alt="shape"
-                    /></span>
-                    <span class="absolute top-0 left-0"
-                      ><img src="./images/features/shape-02.svg" alt="shape"
-                    /></span>
-                    <span class="absolute bottom-0 -translate-x-1/2 left-1/2">
-                      <img
-                        src="./images/blur/blur-03.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute bottom-0 -translate-x-1/2 left-1/2">
-                      <img
-                        src="./images/blur/blur-04.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute bottom-0 -translate-x-1/2 left-1/2">
-                      <img
-                        src="./images/blur/blur-05.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/features/shape-03.svg"
-                        alt="shape"
-                        class="max-w-none"
-                      />
-                    </span>
+            <!-- Vertical Card -->
+            <div class="glass glass-hover p-10 rounded-3xl flex flex-col justify-between group bg-[var(--bg-surface)]">
+               <div class="w-14 h-14 rounded-2xl bg-[var(--bg-secondary)] flex items-center justify-center mb-8 text-[var(--text-primary)] border border-[var(--border-primary)] shadow-sm">
+                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+               </div>
+               <div>
+                  <h3 class="text-2xl font-bold mb-4 text-[var(--text-primary)]">Instant Synthesis</h3>
+                  <p class="text-[var(--text-secondary)] leading-relaxed font-light">
+                    Our AI reads through thousands of documents to provide one clear, cited answer to your team's most complex questions.
+                  </p>
+               </div>
+            </div>
+
+            <!-- Small Card -->
+            <div class="glass glass-hover p-10 rounded-3xl flex flex-col justify-between group">
+               <div class="w-14 h-14 rounded-2xl bg-[var(--bg-secondary)] flex items-center justify-center mb-8 text-[var(--text-primary)] border border-[var(--border-primary)]">
+                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+               </div>
+               <div>
+                  <h3 class="text-2xl font-bold mb-4 text-[var(--text-primary)]">Secure by Design</h3>
+                  <p class="text-[var(--text-secondary)] leading-relaxed font-light">
+                    Enterprise-grade security with SOC2 compliance and end-to-end encryption for all your data.
+                  </p>
+               </div>
+            </div>
+
+            <!-- Wide Card -->
+            <div class="md:col-span-2 glass glass-hover p-10 rounded-3xl group bg-[var(--bg-surface)]">
+               <div class="flex flex-col md:flex-row items-center gap-12">
+                  <div class="flex-1">
+                     <div class="w-14 h-14 rounded-2xl bg-[var(--brand-color)] flex items-center justify-center mb-8 text-white">
+                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                     </div>
+                     <h3 class="text-3xl font-bold mb-4 text-[var(--text-primary)]">Infinite Connectors</h3>
+                     <p class="text-[var(--text-secondary)] text-lg leading-relaxed font-light">
+                       Seamlessly aggregate knowledge from Slack, Notion, Jira, GitHub, and 100+ other sources with one-click integrations.
+                     </p>
                   </div>
+                  <div class="flex-1 grid grid-cols-3 gap-4">
+                     <!-- Techy connector placeholders -->
+                     <div class="aspect-square bg-[var(--bg-primary)] rounded-2xl border border-[var(--border-secondary)] shadow-sm flex items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-[var(--text-muted)] opacity-20"></div>
+                     </div>
+                     <div class="aspect-square bg-[var(--bg-primary)] rounded-2xl border border-[var(--border-secondary)] shadow-sm flex items-center justify-center">
+                        <div class="w-8 h-8 bg-[var(--text-muted)] opacity-20"></div>
+                     </div>
+                     <div class="aspect-square bg-[var(--bg-primary)] rounded-2xl border border-[var(--border-secondary)] shadow-sm flex items-center justify-center">
+                        <div class="w-8 h-8 bg-[var(--text-muted)] opacity-20 rotate-45"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Testimonials ===== -->
+      <section id="testimonials" class="relative z-10 py-32 bg-[var(--bg-primary)] transition-colors duration-500">
+        <div class="container">
+          <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div class="max-w-2xl">
+              <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text-primary)]">Loved by world-class teams</h2>
+              <p class="text-[var(--text-secondary)] text-xl font-light">Join the ranks of the world's most innovative organizations.</p>
+            </div>
+            <a href="#" class="btn-outline px-8 py-4">Read all case studies</a>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="p-10 border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
+              <div class="flex gap-1 text-[var(--color-warning)] mb-6">
+                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-[var(--text-primary)] mb-8 text-xl leading-relaxed font-light italic">"AynzamAI has completely transformed how our engineering team documents code. We save hours every single week."</p>
+              <div class="flex items-center gap-4 pt-6 border-t border-[var(--border-secondary)]">
+                <div class="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-primary)] shadow-inner"></div>
+                <div>
+                  <h4 class="text-[var(--text-primary)] font-bold">Sarah Jenkins</h4>
+                  <p class="text-[var(--text-secondary)] text-sm">CTO, TechFlow</p>
                 </div>
               </div>
             </div>
 
-            <!-- features item -->
-            <div class="sm:col-span-7">
-              <div class="relative rounded-3xl features-box-border">
-                <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small"
-                >
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                      </svg>
-                    </span>
-
-                    <h3 class="text-white mb-4.5 font-semibold text-heading-6">
-                      Enhanced Team Collaboration
-                    </h3>
-                    <p class="font-medium">
-                      Our platform connects your team with the information they need, when they need it, making knowledge discovery fast and intuitive.
-                    </p>
-                  </div>
-
-                  <!-- bg shapes -->
-                  <div
-                    class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                  >
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-06.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/blur/blur-07.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute right-[16%] top-[16%]"
-                      ><img src="./images/features/shape-04.svg" alt="shape"
-                    /></span>
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-08.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-09.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                  </div>
+            <!-- Testimonial 2 -->
+            <div class="p-10 border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
+               <div class="flex gap-1 text-[var(--color-warning)] mb-6">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+               </div>
+              <p class="text-[var(--text-primary)] mb-8 text-xl leading-relaxed font-light italic">"The semantic search feels like magic. It finds the exact policy document I need even when I don't remember the file name."</p>
+              <div class="flex items-center gap-4 pt-6 border-t border-[var(--border-secondary)]">
+                <div class="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-primary)] shadow-inner"></div>
+                <div>
+                  <h4 class="text-[var(--text-primary)] font-bold">David Chen</h4>
+                  <p class="text-[var(--text-secondary)] text-sm">HR Director, GlobalCorp</p>
                 </div>
               </div>
             </div>
 
-            <!-- features item -->
-            <div class="sm:col-span-5">
-              <div class="relative rounded-3xl features-box-border">
-                <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small"
-                >
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                    </span>
-
-                    <h3 class="text-white mb-4.5 font-semibold text-heading-6">
-                      Enhanced Team Productivity
-                    </h3>
-                    <p class="font-medium">
-                      Eliminate time wasted searching for information and help teams focus on high-value work that drives your business forward.
-                    </p>
-                  </div>
-
-                  <!-- bg shapes -->
-                  <div
-                    class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                  >
-                    <span class="absolute right-[14%] top-[17%]"
-                      ><img src="./images/features/shape-05.svg" alt="shape"
-                    /></span>
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-10.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/blur/blur-11.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/blur/blur-12.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                  </div>
+            <!-- Testimonial 3 -->
+            <div class="p-10 border border-[var(--border-primary)] bg-[var(--bg-surface)] rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
+               <div class="flex gap-1 text-[var(--color-warning)] mb-6">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+               </div>
+              <p class="text-[var(--text-primary)] mb-8 text-xl leading-relaxed font-light italic">"Deployment was incredibly fast. We connected our entire stack in minutes and were ready to go."</p>
+              <div class="flex items-center gap-4 pt-6 border-t border-[var(--border-secondary)]">
+                <div class="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-primary)] shadow-inner"></div>
+                <div>
+                  <h4 class="text-[var(--text-primary)] font-bold">Elena Rodriguez</h4>
+                  <p class="text-[var(--text-secondary)] text-sm">Ops Manager, SwiftStart</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ===== features list Section End ===== -->
 
-      <!-- ====== Pricing Section Start -->
-      <section
-        id="pricing"
-        class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17 hidden"
-      >
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- bg circles -->
-          <div class="relative top-18">
-            <div
-              class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -my-55"
-            >
-              <div class="absolute top-0 -translate-x-1/2 left-1/2">
-                <img
-                  src="./images/blur/blur-13.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </div>
-              <div class="absolute top-0 -translate-x-1/2 left-1/2">
-                <img
-                  src="./images/blur/blur-14.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </div>
-              <div class="absolute top-0 -translate-x-1/2 left-1/2">
-                <img
-                  src="./images/blur/blur-15.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </div>
-            </div>
-            <div
-              class="max-w-[830px] w-full h-[830px] rounded-full bg-dark absolute left-1/2 -translate-x-1/2 top-0 pricing-circle"
-            ></div>
-
-            <div
-              class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2"
-            >
-              <div class="stars"></div>
-              <div class="stars2"></div>
-            </div>
+      <!-- ===== Pricing Section ===== -->
+      <section id="pricing" class="relative z-10 py-32 border-t border-[var(--border-secondary)] bg-[var(--bg-secondary)] transition-colors duration-500">
+        <div class="container">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[var(--text-primary)]">Simple, Transparent Pricing</h2>
+            <p class="text-[var(--text-secondary)] text-xl font-light">The scale you need, the security you trust.</p>
           </div>
 
-          <!-- grid row -->
-          <div class="flex justify-center gap-7.5 relative -z-1">
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-2"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-5"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-8"
-            ></div>
-          </div>
-
-          <!-- section title -->
-          <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Get access </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              Our Pricing Plan
-            </h2>
-            <p class="max-w-[714px] mx-auto font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
-            <!-- Pricing item -->
-            <div
-              class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
-            >
-              <span class="absolute right-9 top-9"
-                ><img src="./images/pricing/pricing-icon-01.svg" alt="icon"
-              /></span>
-
-              <h3 class="font-semibold text-heading-6 text-white mb-5.5">
-                Starter
-              </h3>
-
-              <div class="flex items-center gap-3.5">
-                <h2 class="font-bold text-custom-1 pricing-gradient-text">
-                  $10
-                </h2>
-
-                <p class="font-medium">
-                  /month <br />
-                  (billed annually)
-                </p>
+          <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
+            <!-- Starter -->
+            <div class="p-8 rounded-3xl border border-[var(--border-primary)] bg-[var(--bg-surface)] hover:border-[var(--brand-color)] transition-all duration-300">
+              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Starter</h3>
+              <div class="flex items-baseline gap-1 mb-8">
+                <span class="text-5xl font-bold text-[var(--text-primary)]">$0</span>
+                <span class="text-[var(--text-secondary)] text-lg">/mo</span>
               </div>
-
-              <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
-
-              <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Subscription with levels</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Advanced features included</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Shared workspaces & tools</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium"
-                    >Premium versions functionality</span
-                  >
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Customizing the outputs</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Priority customer support</span>
-                </li>
+              <ul class="space-y-5 mb-10 text-[var(--text-secondary)]">
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 5 users</li>
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 1GB Knowledge Base</li>
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Core Connectors</li>
               </ul>
-
-              <a
-                href="/#"
-                class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button"
-              >
-                Get the plan
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-
-              <p class="mt-4 text-sm text-center">No extra hidden charge</p>
-
-              <!-- bg shapes -->
-              <div
-                class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-              >
-                <span class="absolute bottom-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-16.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-                <span class="absolute top-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-17.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-              </div>
+              <a href="#" class="btn-outline w-full text-center py-4">Get Started</a>
             </div>
 
-            <!-- Pricing item -->
-            <div
-              class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
-            >
-              <span class="absolute right-9 top-9"
-                ><img src="./images/pricing/pricing-icon-02.svg" alt="icon"
-              /></span>
-
-              <h3 class="font-semibold text-heading-6 text-white mb-5.5">
-                Medium
-              </h3>
-
-              <div class="flex items-center gap-3.5">
-                <h2 class="font-bold text-custom-1 pricing-gradient-text">
-                  $59
-                </h2>
-
-                <p class="font-medium">
-                  /month <br />
-                  (billed annually)
-                </p>
+            <!-- Pro -->
+            <div class="p-8 rounded-3xl border-2 border-[var(--brand-color)] bg-[var(--bg-surface)] relative shadow-2xl transform md:scale-105 z-10 transition-all duration-300">
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--brand-color)] text-white text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] uppercase">Most Popular</div>
+              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Professional</h3>
+              <div class="flex items-baseline gap-1 mb-8">
+                <span class="text-5xl font-bold text-[var(--text-primary)]">$49</span>
+                <span class="text-[var(--text-secondary)] text-lg">/mo</span>
               </div>
-
-              <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
-
-              <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Subscription with levels</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Advanced features included</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Shared workspaces & tools</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium"
-                    >Premium versions functionality</span
-                  >
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Customizing the outputs</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Priority customer support</span>
-                </li>
+              <ul class="space-y-5 mb-10 text-[var(--text-secondary)]">
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--brand-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 20 users</li>
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--brand-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 50GB Knowledge Base</li>
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--brand-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Advanced Analytics</li>
               </ul>
-
-              <a
-                href="/#"
-                class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button"
-              >
-                Get the plan
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-
-              <p class="mt-4 text-sm text-center">No extra hidden charge</p>
-
-              <!-- bg shapes -->
-              <div
-                class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-              >
-                <span class="absolute bottom-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-16.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-                <span class="absolute top-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-17.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-              </div>
+              <a href="#" class="btn-primary w-full text-center py-4">Start Free Trial</a>
             </div>
 
-            <!-- Pricing item -->
-            <div
-              class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
-            >
-              <span class="absolute right-9 top-9"
-                ><img src="./images/pricing/pricing-icon-03.svg" alt="icon"
-              /></span>
-
-              <h3 class="font-semibold text-heading-6 text-white mb-5.5">
-                Business
-              </h3>
-
-              <div class="flex items-center gap-3.5">
-                <h2 class="font-bold text-custom-1 pricing-gradient-text">
-                  $289
-                </h2>
-
-                <p class="font-medium">
-                  /month <br />
-                  (billed annually)
-                </p>
+            <!-- Enterprise -->
+            <div class="p-8 rounded-3xl border border-[var(--border-primary)] bg-[var(--bg-surface)] hover:border-[var(--brand-color)] transition-all duration-300">
+              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">Enterprise</h3>
+              <div class="flex items-baseline gap-1 mb-8">
+                <span class="text-5xl font-bold text-[var(--text-primary)]">Custom</span>
               </div>
-
-              <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
-
-              <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Subscription with levels</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Advanced features included</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Shared workspaces & tools</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium"
-                    >Premium versions functionality</span
-                  >
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Customizing the outputs</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Priority customer support</span>
-                </li>
+              <ul class="space-y-5 mb-10 text-[var(--text-secondary)]">
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Unlimited users</li>
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Dedicated 24/7 Support</li>
+                <li class="flex gap-3 items-center"><svg class="w-5 h-5 text-[var(--color-success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom Integrations</li>
               </ul>
-
-              <a
-                href="/#"
-                class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button"
-              >
-                Get the plan
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-
-              <p class="mt-4 text-sm text-center">No extra hidden charge</p>
-
-              <!-- bg shapes -->
-              <div
-                class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-              >
-                <span class="absolute bottom-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-16.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-                <span class="absolute top-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-17.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-              </div>
+              <a href="#" class="btn-outline w-full text-center py-4">Talk to Sales</a>
             </div>
+
           </div>
         </div>
       </section>
-      <!-- ====== Pricing Section End -->
 
-      <!-- ====== User Section Start -->
-      <section
-        x-data="{ 'showContent': false, 'scrollContent': false, }"
-        class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45 pb-20 hidden"
-      >
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- section title -->
-          <div class="text-center wow fadeInUp mb-15">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Wall of love </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              What Our User Says
-            </h2>
-            <p class="max-w-[714px] mx-auto font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
-
-          <div
-            @scroll.window="scrollContent = (scrollY > $el.offsetTop - 500) ? true : false"
-            :class="{ 'max-h-[855px] overflow-hidden' :!showContent }"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5"
-          >
-            <!-- user column -->
-            <div class="space-y-7.5">
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-01.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Machel Pildium
-                    </h5>
-                    <p class="text-sm font-medium">@machel</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-02.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Wilson Bator</h5>
-                    <p class="text-sm font-medium">@wilson</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-03.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Roger George</h5>
-                    <p class="text-sm font-medium">@roger</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-04.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Adison Dias</h5>
-                    <p class="text-sm font-medium">@adison</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-05.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Abram Lipshutz
-                    </h5>
-                    <p class="text-sm font-medium">@abram</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-06.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Jaylon Press</h5>
-                    <p class="text-sm font-medium">@jaylon</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-07.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Zain Franci</h5>
-                    <p class="text-sm font-medium">@zain</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-08.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Cristofer Carder
-                    </h5>
-                    <p class="text-sm font-medium">@cristofer</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-09.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Dulce Rosser</h5>
-                    <p class="text-sm font-medium">@dulce</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- user column -->
-            <div class="space-y-7.5 hidden sm:block">
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-04.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Adison Dias</h5>
-                    <p class="text-sm font-medium">@adison</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-05.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Abram Lipshutz
-                    </h5>
-                    <p class="text-sm font-medium">@abram</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-06.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Jaylon Press</h5>
-                    <p class="text-sm font-medium">@jaylon</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-07.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Zain Franci</h5>
-                    <p class="text-sm font-medium">@zain</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-08.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Cristofer Carder
-                    </h5>
-                    <p class="text-sm font-medium">@cristofer</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-09.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Dulce Rosser</h5>
-                    <p class="text-sm font-medium">@dulce</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-01.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Machel Pildium
-                    </h5>
-                    <p class="text-sm font-medium">@machel</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-02.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Wilson Bator</h5>
-                    <p class="text-sm font-medium">@wilson</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-03.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Roger George</h5>
-                    <p class="text-sm font-medium">@roger</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- user column -->
-            <div class="space-y-7.5 hidden lg:block">
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-07.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Zain Franci</h5>
-                    <p class="text-sm font-medium">@zain</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-08.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Cristofer Carder
-                    </h5>
-                    <p class="text-sm font-medium">@cristofer</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-09.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Dulce Rosser</h5>
-                    <p class="text-sm font-medium">@dulce</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-01.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Machel Pildium
-                    </h5>
-                    <p class="text-sm font-medium">@machel</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-02.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Wilson Bator</h5>
-                    <p class="text-sm font-medium">@wilson</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-03.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Roger George</h5>
-                    <p class="text-sm font-medium">@roger</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-04.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Adison Dias</h5>
-                    <p class="text-sm font-medium">@adison</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-05.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Abram Lipshutz
-                    </h5>
-                    <p class="text-sm font-medium">@abram</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-06.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Jaylon Press</h5>
-                    <p class="text-sm font-medium">@jaylon</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            :class="[ showContent ? 'sticky -u-mt-52 transition-opacity duration-300 opacity-0' : '', scrollContent ? 'opacity-100!' : '' ]"
-            class="absolute inset-x-0 flex justify-center pt-32 pb-8 pointer-events-none bottom-20 bg-linear-to-t from-dark"
-          >
-            <button
-              :class="[ showContent ? 'transition-transform translate-y-4' : '', scrollContent ? 'translate-y-0' : '' ]"
-              @click="showContent = !showContent"
-              type="button"
-              class="button-border-gradient hover:button-gradient-hover relative top-20 text-sm text-white font-semibold px-4.5 py-3 rounded-lg pointer-events-auto flex mx-auto -mt-7.5 ease-in duration-300"
-            >
-              <span
-                x-text="showContent ? 'Okay, I get the point' : 'Show more...'"
-              ></span>
-            </button>
-          </div>
+      <!-- ===== CTA Section ===== -->
+      <section class="py-32 relative overflow-hidden bg-[var(--bg-primary)] transition-colors duration-500">
+        <div class="container relative z-10 text-center">
+          <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter text-[var(--text-primary)]">Transform your knowledge today.</h2>
+          <p class="text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto text-xl font-light">Join the future of enterprise intelligence. Secure, scalable, and ridiculously fast.</p>
+          <a href="#" class="btn-primary text-xl px-10 py-5 shadow-2xl">Create Free Account</a>
         </div>
       </section>
-      <!-- ====== User Section End -->
 
-      <!-- ====== Clients Section Start -->
-      <section class="py-19 hidden">
-        <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div class="relative z-10 overflow-hidden">
-            <span
-              class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-0 top-1/2 -translate-y-1/2 bg-linear-to-l from-dark/0 to-dark/100"
-            ></span>
-            <span
-              class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-auto top-1/2 -translate-y-1/2 bg-linear-to-r from-dark/0 to-dark/100"
-            ></span>
-            <div class="swiper clients-carousel">
-              <div class="swiper-wrapper items-center select-none ease-linear!">
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-01.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-02.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-03.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-04.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-05.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-06.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img
-                      class="mt-3"
-                      src="./images/clients/client-07.svg"
-                      alt="client"
-                    />
-                  </a>
-                </div>
-
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-01.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-02.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-03.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-04.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-05.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-06.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img
-                      class="mt-3"
-                      src="./images/clients/client-07.svg"
-                      alt="client"
-                    />
-                  </a>
-                </div>
-
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-01.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-02.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-03.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-04.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-05.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-06.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img
-                      class="mt-3"
-                      src="./images/clients/client-07.svg"
-                      alt="client"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Clients Section End -->
-
-      <!-- ====== Support Section Start -->
-      <section id="support" class="scroll-mt-17 mt-20">
-        <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div
-            class="relative z-999 overflow-hidden rounded-[30px] bg-dark pt-25 px-4 sm:px-20 lg:px-27.5"
-          >
-            <!-- grid row -->
-            <div
-              class="flex justify-center gap-7.5 absolute left-1/2 -translate-x-1/2 -top-[16%] max-w-[690px] w-full -z-1 opacity-40"
-            >
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-12"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-7"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-3"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-2"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-5"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-8"
-              ></div>
-            </div>
-
-            <!-- stars -->
-            <div
-              class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2"
-            >
-              <div class="stars"></div>
-              <div class="stars2"></div>
-            </div>
-
-            <!-- bg shapes -->
-            <div
-              class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-            >
-              <span class="absolute top-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-19.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute top-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-20.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute top-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-21.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-            </div>
-
-            <!-- section title -->
-            <div class="relative mb-16 text-center wow fadeInUp z-999">
-              <span
-                class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-              >
-                <img src="./images/hero/icon-title.svg" alt="icon" />
-
-                <span class="hero-subtitle-text"> Need Any Help? </span>
-              </span>
-              <h2
-                class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-              >
-                Contact With Us
-              </h2>
-              <p class="max-w-[714px] mx-auto font-medium">
-                Interested in transforming how your organization manages knowledge? Reach out to our team to discuss how our AI platform can address your specific needs.
-              </p>
-            </div>
-
-            <!-- support form -->
-            <div
-              class="form-box-gradient relative overflow-hidden rounded-[25px] bg-dark p-6 sm:p-8 xl:p-15"
-            >
-              <form class="relative z-10">
-                <div class="flex flex-wrap -mx-4 xl:-mx-10">
-                  <div class="w-full px-4 xl:px-5 md:w-1/2">
-                    <div class="mb-9.5">
-                      <label
-                        for="name"
-                        class="text-white mb-2.5 block font-medium"
-                      >
-                        Name
-                      </label>
-                      <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        placeholder="Enter your Name"
-                        class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden"
-                      />
-                    </div>
-                  </div>
-                  <div class="w-full px-4 xl:px-5 md:w-1/2">
-                    <div class="mb-9.5">
-                      <label
-                        for="email"
-                        class="text-white mb-2.5 block font-medium"
-                      >
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Enter your Email"
-                        class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden"
-                      />
-                    </div>
-                  </div>
-                  <div class="w-full px-4 xl:px-5">
-                    <div class="mb-10">
-                      <label
-                        for="message"
-                        class="text-white mb-2.5 block font-medium"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Type your message"
-                        rows="6"
-                        class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-5 px-6 outline-hidden"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="w-full px-4 xl:px-5">
-                    <div class="text-center">
-                      <a
-                        href="#"
-                        class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80"
-                      >
-                        Send Message
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Support Section End -->
-
-      <!-- ====== Blog Section Start -->
-      <section class="py-20 lg:py-25 hidden">
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- section title -->
-          <div class="mb-16 text-center wow fadeInUp">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Read Our Latest Blogs </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              Latest Blogs & News
-            </h2>
-            <p class="max-w-[714px] mx-auto font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
-            <!-- blog item -->
-            <div class="wow fadeInUp group">
-              <div class="mb-6 overflow-hidden rounded-xl">
-                <img
-                  src="./images/blog/blog-01.png"
-                  alt="image"
-                  class="w-full duration-500 ease-linear scale-100 group-hover:scale-125"
-                />
-              </div>
-
-              <div class="flex flex-wrap gap-2.5 items-center mb-4.5">
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Design
-                </span>
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Engineering
-                </span>
-              </div>
-
-              <h4>
-                <a
-                  href="blog-single.html"
-                  class="text-xl font-semibold text-white duration-300 ease-in hover:opacity-80"
-                >
-                  Revolution in Content Creation and Communication
-                </a>
-              </h4>
-              <p class="mt-4 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna oliumosd
-                aliqua...
-              </p>
-
-              <div class="flex items-center gap-4.5 flex-wrap mt-6">
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
-                      fill=""
-                    />
-                    <path
-                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">Alex Demo</span>
-                </div>
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">25 Mar, 2025</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- blog item -->
-            <div class="wow fadeInUp group">
-              <div class="mb-6 overflow-hidden rounded-xl">
-                <img
-                  src="./images/blog/blog-02.png"
-                  alt="image"
-                  class="w-full duration-500 ease-linear scale-100 group-hover:scale-125"
-                />
-              </div>
-
-              <div class="flex flex-wrap gap-2.5 items-center mb-4.5">
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Development
-                </span>
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Security
-                </span>
-              </div>
-
-              <h4>
-                <a
-                  href="blog-single.html"
-                  class="text-xl font-semibold text-white duration-300 ease-in hover:opacity-80"
-                >
-                  How AI Writing Tools Empower Writers to Speed up there Writing
-                </a>
-              </h4>
-              <p class="mt-4 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna oliumosd
-                aliqua...
-              </p>
-
-              <div class="flex items-center gap-4.5 flex-wrap mt-6">
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
-                      fill=""
-                    />
-                    <path
-                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">Hendary Jonson</span>
-                </div>
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">12 Feb, 2025</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- blog item -->
-            <div class="wow fadeInUp group">
-              <div class="mb-6 overflow-hidden rounded-xl">
-                <img
-                  src="./images/blog/blog-03.png"
-                  alt="image"
-                  class="w-full duration-500 ease-linear scale-100 group-hover:scale-125"
-                />
-              </div>
-
-              <div class="flex flex-wrap gap-2.5 items-center mb-4.5">
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Products
-                </span>
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Blog and articles
-                </span>
-              </div>
-
-              <h4>
-                <a
-                  href="blog-single.html"
-                  class="text-xl font-semibold text-white duration-300 ease-in hover:opacity-80"
-                >
-                  Revolution in Content Creation and Communication
-                </a>
-              </h4>
-              <p class="mt-4 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna oliumosd
-                aliqua...
-              </p>
-
-              <div class="flex items-center gap-4.5 flex-wrap mt-6">
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
-                      fill=""
-                    />
-                    <path
-                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">Piter Mecraow</span>
-                </div>
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">10 Jan, 2025</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Blog Section End -->
-
-      <!-- ====== CTA Section Start -->
-      <section>
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div
-            class="cta-box-gradient bg-dark rounded-[30px] relative overflow-hidden px-4 py-20 lg:py-25 z-999"
-          >
-            <!-- bg shapes -->
-            <span class="absolute bottom-0 left-0 -z-1"
-              ><img src="./images/cta/grid.svg" alt="grid"
-            /></span>
-            <div
-              class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-            >
-              <span class="absolute bottom-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-22.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute bottom-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-23.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute bottom-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-24.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-            </div>
-
-            <!-- stars -->
-            <div
-              class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -bottom-25 left-1/2 -translate-x-1/2"
-            >
-              <div class="stars"></div>
-              <div class="stars2"></div>
-            </div>
-
-            <div class="text-center wow fadeInUp">
-              <span
-                class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-              >
-                <img src="./images/hero/icon-title.svg" alt="icon" />
-
-                <span class="hero-subtitle-text"> Try our platform </span>
-              </span>
-              <h2
-                class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-              >
-                What are you waiting for?
-              </h2>
-              <p class="max-w-[714px] mx-auto font-medium mb-9">
-                Join leading organizations that are already transforming how their teams access and utilize knowledge. Experience the power of AI-enhanced knowledge management today.
-              </p>
-
-              <a
-                href="#"
-                class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80"
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin/30min'});return false;"
-              >
-                Book a Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== CTA Section End -->
-
-      <!-- ====== Newsletter Section Start -->
-      <section class="pt-17.5 sm:pt-22.5 xl:pt-27.5 pb-11">
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div class="flex flex-wrap items-center justify-between gap-10">
-            <div class="max-w-[352px] w-full">
-              <h3 class="mb-2 font-semibold text-white text-heading-5">
-                News & Update
-              </h3>
-              <p class="font-medium">
-                Stay informed about new features and improvements to our knowledge platform
-              </p>
-            </div>
-            <div class="max-w-[534px] w-full">
-              <form>
-                <div class="flex items-center gap-4">
-                  <div class="max-w-[395px] w-full">
-                    <input
-                      id="email"
-                      type="email"
-                      name="email"
-                      placeholder="Enter your Email"
-                      class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden"
-                    />
-                  </div>
-                  <a
-                    href="/#"
-                    class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-3.5 px-7 shadow-button hover:button-gradient-hover hover:shadow-none"
-                  >
-                    Subscribe
-                  </a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Newsletter Section End -->
     </main>
-    <!-- ===== Footer Start ===== -->
-    <include src="./partials/footer.html" />
-    <!-- ===== Footer End ===== -->
 
-    <!-- ====== Back To Top Start ===== -->
-    <include src="./partials/scrolltop.html" />
-    <!-- ====== Back To Top End ===== -->
+    <!-- Footer -->
+    <include src="./partials/footer.html" />
+    
   </body>
 </html>
