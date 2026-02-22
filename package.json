@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
-    "sort": "npx prettier --write src"
+    "lint": "biome check --write src",
+    "format": "biome format --write src"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,9 @@
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
+    "@biomejs/biome": "^2.4.3",
     "@tailwindcss/postcss": "^4.0.9",
+    "autoprefixer": "^10.4.24",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "glob": "^7.2.0",
@@ -23,7 +26,6 @@
     "mini-css-extract-plugin": "^2.5.3",
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^7.2.3",
     "style-loader": "^3.3.1",
     "tailwindcss": "^4.0.9",
     "webpack": "^5.103.0",

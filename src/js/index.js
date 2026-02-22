@@ -18,26 +18,26 @@ const scrollActive = () => {
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight
-    const sectionTop = current.offsetTop - 100 
+    const sectionTop = current.offsetTop - 100
     const sectionId = current.getAttribute('id')
-    
-    // Use semantic classes for active links
-    const navLinks = document.querySelectorAll('header nav a[href*=' + sectionId + '], header div[x-show="mobileMenuOpen"] a[href*=' + sectionId + ']')
 
-    navLinks.forEach(link => {
-       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    // Use semantic classes for active links
+    const navLinks = document.querySelectorAll(
+      'header nav a[href*=' +
+        sectionId +
+        '], header div[x-show="mobileMenuOpen"] a[href*=' +
+        sectionId +
+        ']',
+    )
+
+    navLinks.forEach((link) => {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         link.classList.add('active-nav-link') // Use a semantic class
       } else {
         link.classList.remove('active-nav-link')
       }
     })
-   
   })
 }
 
 window.addEventListener('scroll', scrollActive)
-
-// Document Loaded
-document.addEventListener('DOMContentLoaded', () => {
-  // Any init logic
-})
