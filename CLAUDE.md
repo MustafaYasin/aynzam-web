@@ -10,9 +10,8 @@ AynzamAI marketing website — a static multi-page site for an Enterprise Knowle
 
 - **Dev server:** `npm start` (runs on http://localhost:3000, auto-opens browser)
 - **Production build:** `npm run build` (outputs to `./build/`)
-- **Format code:** `npm run sort` (runs Prettier on `src/`)
-
-No test suite or linter is configured.
+- **Lint:** `npm run lint` (runs Biome check with auto-fix on `src/`)
+- **Format:** `npm run format` (runs Biome format on `src/`)
 
 ## Architecture
 
@@ -53,11 +52,15 @@ All defined in `src/css/style.css` using `@utility` syntax:
 ### External Integrations
 
 - **Calendly** — booking widget loaded via CDN
-- **Google Fonts** — Inter font family
+- **Google Fonts** — DM Sans font family
 
 ### Pages
 
 8 HTML pages in `src/`: index (landing), about, pricing, blog-grid, blog-single, signin, signup, 404. Each uses `<include>` tags for shared partials.
+
+### Favicon
+
+The favicon (`src/images/favicon.svg`) must match the site logo (purple rounded square with white lightning bolt). Whenever the logo design or brand color changes, update the favicon SVG to stay in sync.
 
 ### Semantic Color System
 

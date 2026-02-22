@@ -29,7 +29,7 @@ const generateHTMLPlugins = () => glob.sync('./src/*.html').map((dir) => {
   return new HtmlWebpackPlugin({
     filename,
     template: `./src/${filename}`,
-    favicon: `./src/images/favicon.ico`,
+    favicon: `./src/images/favicon.svg`,
     inject: 'body',
   });
 });
