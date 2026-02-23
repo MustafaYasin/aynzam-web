@@ -31,6 +31,7 @@ Managed via Alpine.js global store (`src/js/theme.js`):
 - Persisted to `localStorage` key `"theme"`, falls back to `prefers-color-scheme`
 - CSS uses custom properties defined in `:root` and `:root.dark` blocks in `src/css/style.css`
 - Dark mode variant: `@custom-variant dark (&:is(.dark *));`
+- **Gradient mesh background:** Dark mode uses a fixed multi-radial gradient on `body` (`.dark body` rule) that transitions from muted purple (top-left) through dusty blue (top-right) to warm amber (bottom-right). The dark mode CSS variables use semi-transparent rgba values (`--bg-primary`, `--bg-surface`) so the gradient shows through page sections and cards, creating depth. The solid base color (`#181325`, warm dark purple) is set on `:root.dark` as `background-color` for html. When changing the dark mode color scheme, update both the gradient blobs in `.dark body` and the CSS variables together.
 
 ### Tailwind CSS 4 Custom Utilities
 
