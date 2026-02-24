@@ -18,14 +18,22 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-1">
-      <a href="#home" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all">Home</a>
-      <a href="#features" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all">Features</a>
-      <a href="#pricing" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all">Pricing</a>
-      <a href="#testimonials" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all">Stories</a>
+      <a href="#home" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.home')"></a>
+      <a href="#features" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.features')"></a>
+      <a href="#pricing" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.pricing')"></a>
+      <a href="#testimonials" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.stories')"></a>
     </nav>
 
     <!-- Actions -->
     <div class="flex items-center gap-3">
+      <!-- Language Toggle -->
+      <button
+        @click="$store.lang.toggle()"
+        class="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)] transition-all focus:outline-none"
+        aria-label="Toggle Language"
+        x-text="$store.lang.current === 'de' ? 'EN' : 'DE'"
+      ></button>
+
       <!-- Theme Toggle -->
       <button
         @click="$store.theme.toggle()"
@@ -45,7 +53,7 @@
       </button>
 
       <a href="#" class="hidden md:inline-flex btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
-        Book a Demo
+        <span x-text="$store.lang.t('header.bookDemo')"></span>
         <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </a>
 
@@ -74,12 +82,12 @@
     class="lg:hidden absolute top-full left-0 w-full glass shadow-xl"
   >
     <div class="container py-3 flex flex-col gap-0.5">
-      <a href="#home" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false">Home</a>
-      <a href="#features" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false">Features</a>
-      <a href="#pricing" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false">Pricing</a>
-      <a href="#testimonials" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false">Stories</a>
+      <a href="#home" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.home')"></a>
+      <a href="#features" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.features')"></a>
+      <a href="#pricing" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.pricing')"></a>
+      <a href="#testimonials" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.stories')"></a>
       <div class="pt-3 mt-2 border-t border-[var(--border-secondary)]">
-        <a href="#" class="btn-primary w-full text-center" @click="mobileMenuOpen = false" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">Book a Demo</a>
+        <a href="#" class="btn-primary w-full text-center" @click="mobileMenuOpen = false" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;" x-text="$store.lang.t('header.bookDemo')"></a>
       </div>
     </div>
   </div>

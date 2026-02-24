@@ -1,0 +1,11 @@
+<script>
+  (function() {
+    var lang = localStorage.getItem('language');
+    if (!lang) {
+      var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      lang = nav.indexOf('en') === 0 ? 'en' : 'de';
+    }
+    document.documentElement.lang = lang;
+    window.__lang = lang;
+  })();
+</script>

@@ -1,6 +1,9 @@
 import '../css/animate.css'
 import '../css/style.css'
-import './theme.js' // Added theme store
+import './translations/de.js'
+import './translations/en.js'
+import './theme.js'
+import './language.js'
 
 import persist from '@alpinejs/persist'
 import Alpine from 'alpinejs'

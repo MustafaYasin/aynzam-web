@@ -10,9 +10,7 @@
           </div>
           <span class="text-base font-semibold text-[var(--text-primary)] tracking-tight">AynzamAI</span>
         </a>
-        <p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-6 max-w-xs">
-          Secure, centralized knowledge management for enterprises. Query your data through intelligent AI.
-        </p>
+        <p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-6 max-w-xs" x-text="$store.lang.t('footer.description')"></p>
         <div class="flex gap-3">
           <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center text-[var(--text-secondary)] bg-[var(--bg-secondary)] hover:bg-[var(--brand-color)] hover:text-white transition-all">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
@@ -28,45 +26,45 @@
 
       <!-- Product -->
       <div>
-        <h4 class="text-[var(--text-primary)] font-semibold text-sm mb-4">Product</h4>
+        <h4 class="text-[var(--text-primary)] font-semibold text-sm mb-4" x-text="$store.lang.t('footer.product')"></h4>
         <ul class="flex flex-col gap-3 text-sm text-[var(--text-secondary)]">
-          <li><a href="#features" class="hover:text-[var(--text-primary)] transition-colors">Features</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Integrations</a></li>
-          <li><a href="#pricing" class="hover:text-[var(--text-primary)] transition-colors">Pricing</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Security</a></li>
+          <li><a href="#features" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.features')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.integrations')"></a></li>
+          <li><a href="#pricing" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.pricing')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.security')"></a></li>
         </ul>
       </div>
 
       <!-- Company -->
       <div>
-        <h4 class="text-[var(--text-primary)] font-semibold text-sm mb-4">Company</h4>
+        <h4 class="text-[var(--text-primary)] font-semibold text-sm mb-4" x-text="$store.lang.t('footer.company')"></h4>
         <ul class="flex flex-col gap-3 text-sm text-[var(--text-secondary)]">
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">About</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Careers</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Blog</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Contact</a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.about')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.careers')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.blog')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.contact')"></a></li>
         </ul>
       </div>
 
       <!-- Resources -->
       <div>
-        <h4 class="text-[var(--text-primary)] font-semibold text-sm mb-4">Resources</h4>
+        <h4 class="text-[var(--text-primary)] font-semibold text-sm mb-4" x-text="$store.lang.t('footer.resources')"></h4>
         <ul class="flex flex-col gap-3 text-sm text-[var(--text-secondary)]">
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Documentation</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">API Reference</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Status</a></li>
-          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors">Support</a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.documentation')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.apiReference')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.status')"></a></li>
+          <li><a href="#" class="hover:text-[var(--text-primary)] transition-colors" x-text="$store.lang.t('footer.support')"></a></li>
         </ul>
       </div>
 
     </div>
 
     <div class="mt-12 pt-6 border-t border-[var(--border-secondary)] flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-[var(--text-muted)] text-xs">&copy; 2025 AynzamAI. All rights reserved.</p>
+      <p class="text-[var(--text-muted)] text-xs" x-text="$store.lang.t('footer.copyright')"></p>
       <div class="flex gap-6 text-xs text-[var(--text-muted)]">
-        <a href="#" class="hover:text-[var(--text-secondary)] transition-colors">Privacy</a>
-        <a href="#" class="hover:text-[var(--text-secondary)] transition-colors">Terms</a>
-        <a href="#" class="hover:text-[var(--text-secondary)] transition-colors">Cookies</a>
+        <a href="#" class="hover:text-[var(--text-secondary)] transition-colors" x-text="$store.lang.t('footer.privacy')"></a>
+        <a href="#" class="hover:text-[var(--text-secondary)] transition-colors" x-text="$store.lang.t('footer.terms')"></a>
+        <a href="#" class="hover:text-[var(--text-secondary)] transition-colors" x-text="$store.lang.t('footer.cookies')"></a>
       </div>
     </div>
   </div>

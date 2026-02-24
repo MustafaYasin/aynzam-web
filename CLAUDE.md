@@ -63,6 +63,17 @@ All defined in `src/css/style.css` using `@utility` syntax:
 
 The favicon (`src/images/favicon.svg`) must match the site logo (purple rounded square with white lightning bolt). Whenever the logo design or brand color changes, update the favicon SVG to stay in sync.
 
+### Internationalization (i18n)
+
+German is the default language; English is shown to users with English browser settings. Managed via Alpine.js global store (`src/js/language.js`), mirroring the theme store pattern:
+
+- **Translation files:** `src/js/translations/de.js` and `src/js/translations/en.js` — assign to `window.__translations_de` / `window.__translations_en`. Organized by section (header, hero, features, pricing, etc.) with dot-notation keys.
+- **Language store:** `Alpine.store('lang')` with `current`, `toggle()`, `t(key)` methods. Reads `localStorage('language')`, falls back to `navigator.language`, defaults to `'de'`.
+- **Lang init:** `src/partials/lang-init.html` — inline `<script>` in `<head>` that detects language from localStorage / navigator.language before first paint and sets `<html lang>` + `window.__lang`.
+- **HTML pattern:** No hardcoded text in HTML. All visible text comes from translation files via `x-text="$store.lang.t('section.key')"`. Elements are empty in HTML — Alpine fills them on init.
+- **Language toggle:** EN/DE button in header next to theme toggle.
+- **Adding new strings:** Add the key to both `de.js` and `en.js`, then use `x-text="$store.lang.t('section.key')"` on the element.
+
 ### Semantic Color System
 
 Colors are defined as CSS custom properties (not hardcoded) to support dark mode. Use the semantic variables (`--bg-primary`, `--text-primary`, `--brand-color`, etc.) rather than raw color values. See the `:root` / `:root.dark` blocks in `src/css/style.css` for the full palette.
