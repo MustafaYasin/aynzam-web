@@ -65,19 +65,19 @@
   }
 
   :root.dark {
-    --bg-primary: rgba(24, 19, 37, 0.65);
+    --bg-primary: rgba(28, 24, 28, 0.65);
     --bg-secondary: rgba(255, 255, 255, 0.035);
-    --bg-surface: rgba(40, 32, 60, 0.55);
-    --bg-elevated: rgba(50, 42, 70, 0.6);
-    --text-primary: #f0ecf5;
-    --text-secondary: #b0a3c0;
-    --text-muted: #706580;
+    --bg-surface: rgba(42, 36, 40, 0.55);
+    --bg-elevated: rgba(52, 46, 50, 0.6);
+    --text-primary: #f2eff0;
+    --text-secondary: #b5adb0;
+    --text-muted: #756d70;
     --border-primary: rgba(255, 255, 255, 0.1);
     --border-secondary: rgba(255, 255, 255, 0.06);
     --brand-color: #8b80ff;
     --brand-hover: #a69cff;
     --brand-light: rgba(139, 128, 255, 0.12);
-    --glass-bg: rgba(25, 20, 42, 0.82);
+    --glass-bg: rgba(28, 24, 28, 0.82);
     --grid-color: rgba(255, 255, 255, 0.025);
     --orb-opacity: 0.2;
     --color-success: #3ecf8e;
@@ -88,7 +88,7 @@
     --gradient-mid: #c090ff;
     --gradient-end: #80d0e0;
     /* solid base for html element */
-    background-color: #181325;
+    background-color: #1a181c;
   }
 
   html {
@@ -103,13 +103,13 @@
     transition: background-color 0.3s ease;
   }
 
-  /* Dark mode gradient mesh — purple → dusty blue → warm amber */
+  /* Dark mode gradient mesh — dusty rose → warm grey → amber */
   .dark body {
     background:
-      radial-gradient(ellipse at 10% 15%, rgba(90, 50, 120, 0.4) 0%, transparent 50%),
-      radial-gradient(ellipse at 85% 10%, rgba(50, 80, 120, 0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 10% 15%, rgba(100, 60, 75, 0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 85% 10%, rgba(70, 75, 85, 0.3) 0%, transparent 50%),
       radial-gradient(ellipse at 75% 85%, rgba(120, 95, 50, 0.3) 0%, transparent 50%),
-      radial-gradient(ellipse at 30% 60%, rgba(60, 40, 90, 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 60%, rgba(80, 55, 65, 0.15) 0%, transparent 50%),
       transparent;
     background-attachment: fixed;
   }
@@ -401,7 +401,7 @@
     0 0 0 1px rgba(0, 0, 0, 0.02);
 
   :is(.dark &) {
-    background: rgba(25, 20, 42, 0.8);
+    background: rgba(30, 26, 30, 0.8);
     box-shadow:
       0 4px 16px rgba(0, 0, 0, 0.3),
       0 24px 80px rgba(0, 0, 0, 0.25);
