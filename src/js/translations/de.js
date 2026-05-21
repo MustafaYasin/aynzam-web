@@ -14,7 +14,7 @@ window.__translations_de = {
     titleA: 'TGA-Doku in ',
     titleEm: 'Minuten',
     titleB: ', nicht Wochen.',
-    deck: 'AynzamAI generiert Funktionsbeschreibungen, Funktionslisten nach VDI 3814 und Leistungsverzeichnisse mit GAEB-X86-Export — direkt aus deinen Anlagedaten, konform zu VDI 6022 und der revidierten GMP Annex 1.',
+    deck: 'AynzamAI generiert Funktionsbeschreibungen, Funktionslisten nach VDI 3814 und Leistungsverzeichnisse mit GAEB-X86-Export — direkt aus deinen Anlagedaten, normkonform und prüfungsfähig per Default.',
     ctaPrimary: 'Demo buchen',
     ctaSecondary: 'Use Cases ansehen',
     cardEyebrow: 'Die Engine im Überblick',
@@ -22,7 +22,7 @@ window.__translations_de = {
       'Anlagedaten und Norm-Codes konvergieren im Hub — drei prüfungsfähige Doku-Typen kommen raus.',
     viz: {
       aria: 'Topologie der AynzamAI-Engine: vier Eingaben (ISO 5, Volumenstrom, VOB/A, VDI 3814) konvergieren zum zentralen Hub und werden in drei Outputs aufgeteilt — FUBE, GA-Schema und LV mit GAEB-Export.',
-      i1: 'ISO 5',
+      i1: 'BACnet',
       i2: 'V̇ 12 000',
       i3: 'VOB/A',
       i4: 'VDI 3814',
@@ -35,14 +35,18 @@ window.__translations_de = {
     },
   },
 
-  // ── Trust strip ────────────────────────────────────────
+  // ── Trust / Pilot-Projekte ─────────────────────────────
   trust: {
-    label: 'Engineering-Teams arbeiten mit AynzamAI',
-    c1: 'PowerCo',
-    c2: 'Exyte',
-    c3: 'Volkswagen',
-    c4: 'Google',
-    c5: 'Bosch',
+    eyebrow: 'Pilot-Projekte 2025 / 2026',
+    titleA: 'Entwickelt mit ',
+    titleEm: 'Engineering-Teams',
+    titleB: ', nicht im Vakuum.',
+    deck: 'Drei aktive Pilot-Engagements quer durch Battery, Automotive und Cleanroom-Engineering. Jeder Output der Engine wird gegen konkrete Anlagen geprüft, bevor wir ihn freigeben.',
+    c1: { name: 'PowerCo', context: 'Battery · Gigafactory' },
+    c2: { name: 'Volkswagen', context: 'Werks-TGA · Automotive' },
+    c3: { name: 'Exyte', context: 'Cleanroom · Halbleiter' },
+    footnote:
+      'Pilot-Status · 2025 gestartet · Engagements laufen. Referenzen und Case-Studies auf Anfrage.',
   },
 
   // ── Engine / Live visualisations ───────────────────────
@@ -55,8 +59,8 @@ window.__translations_de = {
     v1: {
       aria: 'FUBE-Generierung: Anlagedaten konvergieren in die Engine, Funktionsbeschreibung baut sich Zeile für Zeile auf.',
       tag: 'Funktionsbeschreibung · FUBE',
-      title: 'RLT-Anlage zur fertigen FUBE',
-      body: 'ISO-Klasse, Filterstufe, Volumenstrom, Druckhaltung — vier Werte rein, vollständige Funktionsbeschreibung raus. Inklusive FAT-Plan, Wartungssektion und Quellen-Nachweis pro Absatz.',
+      title: 'Anlage zur fertigen FUBE',
+      body: 'Anlage-ID, Norm-Referenz, Volumenstrom, Druckhaltung — vier Werte rein, vollständige Funktionsbeschreibung raus. Inklusive FAT-Plan, Wartungssektion und Quellen-Nachweis pro Absatz.',
     },
     v2: {
       aria: 'Funktionsliste: Komponenten konvergieren, GA-Schema verkabelt sich.',
@@ -81,8 +85,8 @@ window.__translations_de = {
     deck: 'Jede Ausgabe ist normkonform, versioniert und prüfungsfähig per Default. Du startest mit Anlage-Daten — die Engine zieht die richtigen Norm-Kapitel.',
     c1: {
       tag: 'Funktionsbeschreibungen',
-      title: 'FUBE für FMCS-Komponenten',
-      body: 'Von Reinraum-RLT bis Materialschleuse — vollständig dokumentiert inklusive FAT-Plan und Wartungs-Sektion. Konsistent zu Anlage und Norm.',
+      title: 'FUBE für jede TGA-Anlage',
+      body: 'Von Lüftung über Heizung und Kälte bis zur GA-Funktion — vollständig dokumentiert inklusive FAT-Plan und Wartungs-Sektion. Konsistent zu Anlage und Norm.',
     },
     c2: {
       tag: 'Leistungsverzeichnisse',

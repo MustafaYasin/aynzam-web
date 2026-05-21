@@ -128,7 +128,7 @@
                     <!-- Input chips (top) -->
                     <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="14" font-weight="500" fill="var(--fg-muted)" text-anchor="middle">
                       <g class="hv-in b1">
-                        <text x="70" y="38" x-text="$store.lang.t('hero.viz.i1')">ISO 5</text>
+                        <text x="70" y="38" x-text="$store.lang.t('hero.viz.i1')">BACnet</text>
                         <circle cx="70" cy="60" r="5" fill="var(--clay)"/>
                       </g>
                       <g class="hv-in b2">
@@ -185,22 +185,6 @@
               </div>
             </aside>
 
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Trust strip ===== -->
-      <section class="border-y border-[var(--border-soft)] py-10">
-        <div class="container">
-          <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-10 justify-between">
-            <p class="eyebrow" x-text="$store.lang.t('trust.label')"></p>
-            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
-              <span class="mono-sm" x-text="$store.lang.t('trust.c1')"></span>
-              <span class="mono-sm" x-text="$store.lang.t('trust.c2')"></span>
-              <span class="mono-sm" x-text="$store.lang.t('trust.c3')"></span>
-              <span class="mono-sm" x-text="$store.lang.t('trust.c4')"></span>
-              <span class="mono-sm" x-text="$store.lang.t('trust.c5')"></span>
-            </div>
           </div>
         </div>
       </section>
@@ -297,11 +281,11 @@
                   <!-- Static input chips with mono labels -->
                   <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="9.5" font-weight="500" fill="var(--fg-muted)" text-anchor="middle">
                     <g>
-                      <text x="60" y="36">ISO 5</text>
+                      <text x="60" y="36">RLT 01</text>
                       <circle cx="60" cy="50" r="3.2" fill="none" stroke="var(--clay)" stroke-width="1.3"/>
                     </g>
                     <g>
-                      <text x="100" y="42">H14</text>
+                      <text x="100" y="42">VDI 3814</text>
                       <circle cx="100" cy="56" r="3.2" fill="none" stroke="var(--clay)" stroke-width="1.3"/>
                     </g>
                     <g>
@@ -693,13 +677,13 @@
               <h3 class="headline-md mb-4" x-text="$store.lang.t('useCases.c1.title')"></h3>
               <p class="body-md mb-6 flex-1" x-text="$store.lang.t('useCases.c1.body')"></p>
               <div class="flex flex-wrap gap-1.5 mt-auto">
-                <span class="norm-chip">PAL</span>
-                <span class="norm-chip">MAL</span>
-                <span class="norm-chip">DHU</span>
+                <span class="norm-chip">RLT</span>
+                <span class="norm-chip">HZG</span>
+                <span class="norm-chip">KÄL</span>
+                <span class="norm-chip">VAV</span>
+                <span class="norm-chip">BSK</span>
                 <span class="norm-chip">FCU</span>
                 <span class="norm-chip">FFU</span>
-                <span class="norm-chip">RCU</span>
-                <span class="norm-chip">RLT</span>
               </div>
             </article>
 
@@ -852,6 +836,45 @@
             </article>
 
           </div>
+        </div>
+      </section>
+
+      <!-- ===== Trust: Pilot-Projekte (logo wall) ===== -->
+      <section id="pilots" class="stage py-24 sm:py-32 border-t border-[var(--border-soft)]">
+        <span class="stage-glow" style="bottom: -10%; left: 25%;" aria-hidden="true"></span>
+
+        <div class="container relative">
+
+          <div class="max-w-3xl mb-14 sm:mb-16">
+            <p class="eyebrow mb-5" x-text="$store.lang.t('trust.eyebrow')"></p>
+            <h2 class="headline-lg mb-5">
+              <span x-text="$store.lang.t('trust.titleA')"></span>
+              <em x-text="$store.lang.t('trust.titleEm')"></em><span x-text="$store.lang.t('trust.titleB')"></span>
+            </h2>
+            <p class="deck max-w-[60ch]" x-text="$store.lang.t('trust.deck')"></p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl">
+            <!-- PowerCo -->
+            <article class="card text-center flex flex-col items-center justify-center py-10">
+              <div class="text-[28px] sm:text-[30px] tracking-tight text-[var(--fg)] mb-3" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600;" x-text="$store.lang.t('trust.c1.name')">PowerCo</div>
+              <p class="mono-sm" x-text="$store.lang.t('trust.c1.context')"></p>
+            </article>
+
+            <!-- Volkswagen -->
+            <article class="card text-center flex flex-col items-center justify-center py-10">
+              <div class="text-[26px] sm:text-[28px] tracking-tight text-[var(--fg)] mb-3" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600; letter-spacing: -0.01em;" x-text="$store.lang.t('trust.c2.name')">Volkswagen</div>
+              <p class="mono-sm" x-text="$store.lang.t('trust.c2.context')"></p>
+            </article>
+
+            <!-- Exyte -->
+            <article class="card text-center flex flex-col items-center justify-center py-10">
+              <div class="text-[28px] sm:text-[30px] tracking-tight text-[var(--fg)] mb-3" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600; letter-spacing: 0.02em;" x-text="$store.lang.t('trust.c3.name')">Exyte</div>
+              <p class="mono-sm" x-text="$store.lang.t('trust.c3.context')"></p>
+            </article>
+          </div>
+
+          <p class="mono-sm mt-10 max-w-[60ch]" x-text="$store.lang.t('trust.footnote')"></p>
         </div>
       </section>
 

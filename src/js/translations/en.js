@@ -14,7 +14,7 @@ window.__translations_en = {
     titleA: 'HVAC docs in ',
     titleEm: 'minutes',
     titleB: ', not weeks.',
-    deck: 'AynzamAI generates function descriptions, function lists per VDI 3814, and bills of quantities with GAEB X86 export — straight from your plant data, compliant with VDI 6022 and the revised GMP Annex 1.',
+    deck: 'AynzamAI generates function descriptions, function lists per VDI 3814, and bills of quantities with GAEB X86 export — straight from your plant data, compliant and audit-ready by default.',
     ctaPrimary: 'Book a demo',
     ctaSecondary: 'See use cases',
     cardEyebrow: 'The engine at a glance',
@@ -22,7 +22,7 @@ window.__translations_en = {
       'Plant data and standards codes converge in the hub — three audit-ready doc types come out.',
     viz: {
       aria: 'Topology of the AynzamAI engine: four inputs (ISO 5, volume flow, VOB/A, VDI 3814) converge to the central hub and fan out as three outputs — FUBE, GA schema, and BOQ with GAEB export.',
-      i1: 'ISO 5',
+      i1: 'BACnet',
       i2: 'V̇ 12 000',
       i3: 'VOB/A',
       i4: 'VDI 3814',
@@ -35,14 +35,18 @@ window.__translations_en = {
     },
   },
 
-  // ── Trust strip ────────────────────────────────────────
+  // ── Trust / Pilot projects ─────────────────────────────
   trust: {
-    label: 'Engineering teams work with AynzamAI',
-    c1: 'PowerCo',
-    c2: 'Exyte',
-    c3: 'Volkswagen',
-    c4: 'Google',
-    c5: 'Bosch',
+    eyebrow: 'Pilot projects 2025 / 2026',
+    titleA: 'Built with ',
+    titleEm: 'engineering teams',
+    titleB: ', not in a vacuum.',
+    deck: 'Three active pilot engagements spanning battery, automotive, and cleanroom engineering. Every output of the engine is tested against concrete plants before we ship it.',
+    c1: { name: 'PowerCo', context: 'Battery · Gigafactory' },
+    c2: { name: 'Volkswagen', context: 'Plant HVAC · Automotive' },
+    c3: { name: 'Exyte', context: 'Cleanroom · Semiconductor' },
+    footnote:
+      'Pilot status · launched 2025 · engagements ongoing. References and case studies on request.',
   },
 
   // ── Engine / Live visualisations ───────────────────────
@@ -55,8 +59,8 @@ window.__translations_en = {
     v1: {
       aria: 'FUBE generation: plant data converges into the engine, function description builds up line by line.',
       tag: 'Function description · FUBE',
-      title: 'AHU plant to ready FUBE',
-      body: 'ISO class, filter stage, volume flow, pressure regulation — four values in, full function description out. Including FAT plan, maintenance section, and source references per paragraph.',
+      title: 'Plant to ready FUBE',
+      body: 'Plant ID, standards reference, volume flow, pressure regulation — four values in, full function description out. Including FAT plan, maintenance section, and source references per paragraph.',
     },
     v2: {
       aria: 'Function list: components converge, building-automation schema wires itself up.',
@@ -81,8 +85,8 @@ window.__translations_en = {
     deck: 'Every output is compliant, versioned, and audit-ready by default. You start with plant data — the engine pulls the right standards chapters.',
     c1: {
       tag: 'Function descriptions',
-      title: 'FUBE for FMCS components',
-      body: 'From cleanroom AHU to material airlock — fully documented including FAT plan and maintenance section. Consistent with plant and standard.',
+      title: 'FUBE for every HVAC plant',
+      body: 'From ventilation to heating, cooling, and building-automation functions — fully documented including FAT plan and maintenance section. Consistent with plant and standard.',
     },
     c2: {
       tag: 'Bills of quantities',
