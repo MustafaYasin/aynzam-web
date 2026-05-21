@@ -1,68 +1,76 @@
 <header
   class="fixed left-0 top-0 w-full z-50 transition-all duration-300"
-  :class="{ 'glass shadow-sm': stickyMenu, 'py-4': !stickyMenu, 'py-2.5': stickyMenu }"
-  x-data="{
-    stickyMenu: false,
-    mobileMenuOpen: false
-  }"
-  @scroll.window="stickyMenu = (window.scrollY > 20) ? true : false"
+  :class="stickyMenu ? 'py-3 bg-[var(--bg-deep)]/95 backdrop-blur-md border-b border-[var(--border-soft)]' : 'py-5'"
+  x-data="{ stickyMenu: false, mobileMenuOpen: false }"
+  @scroll.window="stickyMenu = window.scrollY > 16"
 >
-  <div class="container flex items-center justify-between">
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-2.5 group">
-      <div class="w-8 h-8 rounded-lg bg-[var(--brand-color)] flex items-center justify-center text-white shadow-md group-hover:shadow-lg transition-shadow">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-      </div>
-      <span class="text-lg font-bold text-[var(--text-primary)] tracking-tight">AynzamAI</span>
+  <div class="container flex items-center justify-between gap-6">
+
+    <!-- Wordmark -->
+    <a href="index.html" class="wordmark group" aria-label="AynzamAI">
+      <span>AynzamAI</span><span class="dot">.</span>
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-1">
-      <a href="#home" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.home')"></a>
-      <a href="#features" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.features')"></a>
-      <a href="#pricing" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.pricing')"></a>
-      <a href="#testimonials" class="nav-link px-4 py-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-all" x-text="$store.lang.t('header.stories')"></a>
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
+      <a href="#use-cases" class="nav-link" x-text="$store.lang.t('header.useCases')"></a>
+      <a href="#workflow" class="nav-link" x-text="$store.lang.t('header.workflow')"></a>
+      <a href="#industries" class="nav-link" x-text="$store.lang.t('header.industries')"></a>
+      <a href="pricing.html" class="nav-link" x-text="$store.lang.t('header.pricing')"></a>
     </nav>
 
     <!-- Actions -->
     <div class="flex items-center gap-3">
       <!-- Language Toggle -->
       <button
+        type="button"
         @click="$store.lang.toggle()"
-        class="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)] transition-all focus:outline-none"
-        aria-label="Toggle Language"
+        class="mono-sm uppercase tracking-[0.12em] hover:text-[var(--fg)] transition-colors"
+        :aria-label="$store.lang.current === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten'"
         x-text="$store.lang.current === 'de' ? 'EN' : 'DE'"
       ></button>
 
       <!-- Theme Toggle -->
       <button
+        type="button"
         @click="$store.theme.toggle()"
-        class="w-9 h-9 rounded-lg flex items-center justify-center text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)] transition-all focus:outline-none"
-        aria-label="Toggle Dark Mode"
+        class="w-8 h-8 inline-flex items-center justify-center text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
+        aria-label="Toggle theme"
       >
         <template x-if="$store.theme.isDark">
-          <svg class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <svg class="w-[16px] h-[16px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
         </template>
         <template x-if="!$store.theme.isDark">
-          <svg class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <svg class="w-[16px] h-[16px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </template>
       </button>
 
-      <a href="#" class="hidden md:inline-flex btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
+      <!-- CTA -->
+      <a
+        href="#"
+        class="hidden md:inline-flex btn-outline"
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
+      >
         <span x-text="$store.lang.t('header.bookDemo')"></span>
-        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        <span class="btn-arrow" aria-hidden="true"></span>
       </a>
 
       <!-- Mobile Toggle -->
-      <button class="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-all focus:outline-none" @click="mobileMenuOpen = !mobileMenuOpen">
-        <svg x-show="!mobileMenuOpen" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+      <button
+        type="button"
+        class="lg:hidden w-9 h-9 inline-flex items-center justify-center text-[var(--fg)] transition-colors"
+        @click="mobileMenuOpen = !mobileMenuOpen"
+        :aria-expanded="mobileMenuOpen"
+        aria-label="Menu"
+      >
+        <svg x-show="!mobileMenuOpen" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
         </svg>
-        <svg x-show="mobileMenuOpen" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display: none;">
+        <svg x-show="mobileMenuOpen" x-cloak class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
@@ -79,15 +87,31 @@
     x-transition:leave="transition ease-in duration-150"
     x-transition:leave-start="opacity-100 translate-y-0"
     x-transition:leave-end="opacity-0 -translate-y-2"
-    class="lg:hidden absolute top-full left-0 w-full glass shadow-xl"
+    class="lg:hidden absolute top-full left-0 w-full border-b border-[var(--border-soft)] bg-[var(--bg-deep)]"
   >
-    <div class="container py-3 flex flex-col gap-0.5">
-      <a href="#home" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.home')"></a>
-      <a href="#features" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.features')"></a>
-      <a href="#pricing" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.pricing')"></a>
-      <a href="#testimonials" class="px-4 py-3.5 text-[15px] font-medium text-[var(--text-primary)] rounded-lg hover:bg-[var(--bg-secondary)] active:bg-[var(--bg-secondary)] transition-all" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.stories')"></a>
-      <div class="pt-3 mt-2 border-t border-[var(--border-secondary)]">
-        <a href="#" class="btn-primary w-full text-center" @click="mobileMenuOpen = false" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;" x-text="$store.lang.t('header.bookDemo')"></a>
+    <div class="container py-5 flex flex-col gap-1">
+      <a href="#use-cases" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+        <span x-text="$store.lang.t('header.useCases')"></span>
+      </a>
+      <a href="#workflow" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+        <span x-text="$store.lang.t('header.workflow')"></span>
+      </a>
+      <a href="#industries" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+        <span x-text="$store.lang.t('header.industries')"></span>
+      </a>
+      <a href="pricing.html" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+        <span x-text="$store.lang.t('header.pricing')"></span>
+      </a>
+      <div class="pt-4 mt-2 border-t border-[var(--border-soft)]">
+        <a
+          href="#"
+          class="btn-primary w-full"
+          @click="mobileMenuOpen = false"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
+        >
+          <span x-text="$store.lang.t('header.bookDemo')"></span>
+          <span class="btn-arrow" aria-hidden="true"></span>
+        </a>
       </div>
     </div>
   </div>

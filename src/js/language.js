@@ -23,7 +23,9 @@ document.addEventListener('alpine:init', () => {
       const translations =
         this.current === 'en' ? window.__translations_en : window.__translations_de
       if (!translations) return ''
-      return key.split('.').reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : ''), translations)
+      return key
+        .split('.')
+        .reduce((obj, k) => (obj && obj[k] !== undefined ? obj[k] : ''), translations)
     },
 
     update() {

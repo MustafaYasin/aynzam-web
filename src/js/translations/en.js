@@ -1,231 +1,216 @@
 window.__translations_en = {
-  // Header
+  // ── Header ──────────────────────────────────────────────
   header: {
-    home: 'Home',
-    features: 'Features',
+    useCases: 'Use cases',
+    workflow: 'Workflow',
+    industries: 'Industries',
     pricing: 'Pricing',
-    stories: 'Stories',
-    bookDemo: 'Book a Demo',
+    bookDemo: 'Book a demo',
   },
 
-  // Hero
+  // ── Hero ────────────────────────────────────────────────
   hero: {
-    badge: 'Now Available',
-    titleLine1: 'Your enterprise data,',
-    titleHighlight: ' one intelligent platform',
-    description:
-      'Build a secure, centralized knowledge base for your organization. Query your data through an intelligent chatbot that understands context and delivers precise answers.',
-    ctaPrimary: 'Schedule a Demo',
-    ctaSecondary: 'See How It Works',
-    trustBadge1: 'SOC 2 Compliant',
-    trustBadge2: 'On-Premise Available',
-    trustBadge3: 'GDPR Ready',
-    chatPlaceholder: 'Ask anything about your data...',
+    eyebrow: 'For HVAC teams · cleanroom, battery, data center',
+    titleA: 'HVAC docs in ',
+    titleEm: 'minutes',
+    titleB: ', not weeks.',
+    deck: 'AynzamAI generates function descriptions, bills of quantities, and flow matrices for your HVAC projects — checked against VDI 6022, DIN 1946-4, and GMP Annex 1.',
+    ctaPrimary: 'Book a demo',
+    ctaSecondary: 'See use cases',
+    cardEyebrow: 'What you get',
+    value1Strong: 'FUBE in 90 seconds ',
+    value1Rest: '— instead of 18 days iterating Excel against the standards catalog.',
+    value2Strong: 'BOQ items per VOB/A ',
+    value2Rest: '— with GAEB X86 export ready for procurement.',
+    value3Strong: 'Flow matrices in draw.io ',
+    value3Rest: '— importable in DWG, SVG, and standard HVAC tools.',
+    value4: 'Versioned, audit-ready, on-premise available.',
   },
 
-  // Logos
-  logos: {
-    title: 'Trusted by innovative teams worldwide',
+  // ── Trust strip ────────────────────────────────────────
+  trust: {
+    label: 'Engineering teams work with AynzamAI',
+    c1: 'PowerCo',
+    c2: 'Exyte',
+    c3: 'Volkswagen',
+    c4: 'Google',
+    c5: 'Bosch',
   },
 
-  // Features
-  features: {
-    badge: 'Platform',
-    title: 'Built for enterprise scale',
-    description:
-      'Everything you need to centralize, secure, and query your organization\'s knowledge.',
-    intelligentSearch: 'Intelligent Search',
-    intelligentSearchDesc:
-      'Our AI understands context and intent, finding precise answers across millions of documents in milliseconds.',
-    lightningFast: 'Lightning Fast',
-    lightningFastDesc:
-      'Responses in under 500ms. Your team gets answers instantly, not minutes later.',
-    avgResponse: 'avg response',
-    enterpriseSecurity: 'Enterprise Security',
-    enterpriseSecurityDesc:
-      'SOC 2 Type II certified. End-to-end encryption. Your data never leaves your control.',
-    connectEverything: 'Connect Everything',
-    connectEverythingDesc:
-      'Native integrations with Slack, Notion, Google Drive, SharePoint, Confluence, and 50+ more data sources.',
-    onPremise: 'On-Premise Deployment',
-    onPremiseDesc:
-      'Deploy AynzamAI entirely within your infrastructure. We handle setup and maintenance, you keep full control.',
-    customImpl: 'Custom Implementation',
-    customImplDesc:
-      'Our team works directly with you to build and deploy a solution tailored to your specific data architecture.',
+  // ── Use Cases ──────────────────────────────────────────
+  useCases: {
+    eyebrow: '01 / What AynzamAI creates',
+    titleA: 'Three doc types. ',
+    titleEm: 'One workflow',
+    titleB: '.',
+    deck: 'Every output is compliant, versioned, and audit-ready by default. You start with plant data — the engine pulls the right standards chapters.',
+    c1: {
+      tag: 'Function descriptions',
+      title: 'FUBE for FMCS components',
+      body: 'From cleanroom AHU to material airlock — fully documented including FAT plan and maintenance section. Consistent with plant and standard.',
+    },
+    c2: {
+      tag: 'Bills of quantities',
+      title: 'BOQ items per VOB/A',
+      body: 'Quantities, units, and standard texts for procurement. Direct GAEB export — seamless into your existing procurement tooling.',
+    },
+    c3: {
+      tag: 'Flow matrices',
+      title: 'Function matrices & schematics',
+      body: 'Plant schematics and function matrices that open directly in draw.io, re-import to DWG, or go to PDF for submission.',
+    },
   },
 
-  // Testimonials
-  testimonials: {
-    badge: 'Testimonials',
-    title: 'Trusted by leading teams',
-    description: 'See what engineering and operations leaders are saying.',
-    quote1:
-      '\u201cAynzamAI transformed how we handle internal documentation. Our team saves 10+ hours weekly on knowledge retrieval.\u201d',
-    author1: 'Sarah Jenkins',
-    role1: 'CTO, TechFlow',
-    quote2:
-      '\u201cThe semantic search understands context perfectly. I find exactly what I need, even when I can\'t remember the exact terms.\u201d',
-    author2: 'David Chen',
-    role2: 'VP Engineering, GlobalCorp',
-    quote3:
-      '\u201cOn-premise deployment was seamless. The team had us running in days, not months. Security and compliance are exactly what we needed.\u201d',
-    author3: 'Elena Rodriguez',
-    role3: 'IT Director, FinanceFirst',
+  // ── Workflow ───────────────────────────────────────────
+  workflow: {
+    eyebrow: '02 / The workflow',
+    titleA: 'Three steps ',
+    titleEm: 'without Excel hell',
+    titleB: '.',
+    deck: 'From concept data to audit-ready documentation — no copy-paste from legacy projects, no unchecked references to standards.',
+    s1: {
+      label: 'Brief',
+      title: 'Describe the plant',
+      body: 'Component, cleanroom class, critical functions — briefly describe what to generate. No templates, no boilerplate.',
+    },
+    s2: {
+      label: 'Generate',
+      title: 'AynzamAI pulls the standards',
+      body: 'The engine checks against the matching standards catalog and produces a complete, consistent doc — including source references.',
+    },
+    s3: {
+      label: 'Export',
+      title: 'Straight into the project',
+      body: 'Export to your target format. Versioned, audit trail, revision-safe storage — ready for review.',
+    },
   },
 
-  // Pricing
-  pricing: {
-    badge: 'Pricing',
-    title: 'Simple, transparent pricing',
-    description: 'Start free, scale as you grow. No hidden fees.',
-    starter: 'Starter',
-    starterDesc: 'For small teams getting started',
-    starterPrice: '$0',
-    perMonth: '/month',
-    perUserMonth: '/user/month',
-    starterFeature1: 'Up to 5 users',
-    starterFeature2: '1GB storage',
-    starterFeature3: '5 integrations',
-    starterFeature4: 'Community support',
-    getStarted: 'Get Started',
-    pro: 'Professional',
-    proDesc: 'For growing organizations',
-    proPrice: '$49',
-    recommended: 'Recommended',
-    proFeature1: 'Unlimited users',
-    proFeature2: '100GB storage',
-    proFeature3: 'All integrations',
-    proFeature4: 'Advanced analytics',
-    proFeature5: 'Priority support',
-    startTrial: 'Start Free Trial',
-    enterprise: 'Enterprise',
-    enterpriseDesc: 'For large-scale deployments',
-    enterprisePrice: 'Custom',
-    enterpriseFeature1: 'On-premise deployment',
-    enterpriseFeature2: 'Unlimited storage',
-    enterpriseFeature3: 'Custom integrations',
-    enterpriseFeature4: 'Dedicated support',
-    enterpriseFeature5: 'SLA guarantee',
-    contactSales: 'Contact Sales',
+  // ── Industries ─────────────────────────────────────────
+  industries: {
+    eyebrow: '03 / For the industry',
+    titleA: 'Built for ',
+    titleEm: 'high-precision engineering',
+    titleB: '.',
+    deck: 'AynzamAI speaks your industry — and knows the standards that matter in audit.',
+    i1: {
+      tag: 'Semiconductor & cleanroom',
+      title: 'Cleanroom-compliant docs',
+      body: 'From ISO 5 to subnano. Specs for AHU, MAL, PAL, and FFU in semiconductor fabs and research facilities.',
+    },
+    i2: {
+      tag: 'Battery & gigafactory',
+      title: 'Dryroom & GMP',
+      body: 'Dryroom-specific requirements, GMP-compliant function descriptions. Scales from pilot to gigafactory.',
+    },
+    i3: {
+      tag: 'Mission critical',
+      title: 'HVAC for data centers',
+      body: 'Tier III/IV docs, redundancy concepts, fire protection — for hyperscalers and colocation.',
+    },
   },
 
-  // CTA
-  cta: {
-    title: 'Ready to transform your enterprise knowledge?',
-    description:
-      'Join forward-thinking teams who trust AynzamAI to power their knowledge infrastructure.',
-    ctaPrimary: 'Schedule a Demo',
-    ctaSecondary: 'Learn More',
-    noCreditCard: 'No credit card required. Free 14-day trial.',
+  // ── Final CTA ──────────────────────────────────────────
+  finalCta: {
+    eyebrow: 'Ready?',
+    titleA: 'See what AynzamAI makes of your project in ',
+    titleEm: '20 minutes',
+    titleB: '.',
+    deck: 'A demo against a concrete plant from your backlog. No generic tour — we generate live against your example.',
+    button: 'Book a demo',
   },
 
-  // Footer
+  // ── Footer ─────────────────────────────────────────────
   footer: {
-    description:
-      'Secure, centralized knowledge management for enterprises. Query your data through intelligent AI.',
-    product: 'Product',
-    features: 'Features',
-    integrations: 'Integrations',
-    pricing: 'Pricing',
-    security: 'Security',
-    company: 'Company',
-    about: 'About',
-    careers: 'Careers',
-    blog: 'Blog',
-    contact: 'Contact',
-    resources: 'Resources',
-    documentation: 'Documentation',
-    apiReference: 'API Reference',
-    status: 'Status',
-    support: 'Support',
-    copyright: '\u00a9 2025 AynzamAI. All rights reserved.',
+    tagline:
+      'AI documentation engine for HVAC. Function descriptions, bills of quantities, and flow matrices — checked against VDI, DIN, and GMP Annex 1.',
+    cta: 'Book a demo',
+    colProduct: 'Product',
+    linkUseCases: 'Use cases',
+    linkWorkflow: 'Workflow',
+    linkIndustries: 'Industries',
+    linkPricing: 'Pricing',
+    colCompany: 'Company',
+    linkAbout: 'About',
+    linkBlog: 'Blog',
+    linkContact: 'Contact',
+    linkImprint: 'Imprint',
+    copyright: '© 2026 AynzamAI · pure-msrplanung.de',
     privacy: 'Privacy',
     terms: 'Terms',
-    cookies: 'Cookies',
+    region: 'Made in Munich',
   },
 
-  // About page
+  // ── Legacy fallbacks for other pages ─────────────────────
   about: {
     title: 'About AynzamAI',
-    breadcrumb: 'About Us',
-    sectionTitle: 'About Our App',
-    heading: '10,000+ Writers, Marketers, & Business owners Love AynzamAI.',
-    description:
-      'Our AI writing tool is designed to empower you with exceptional writing capabilities, making the writing process more efficient.',
-    ctaButton: 'Start Writing - It\'s Free',
-    featuresTitle: 'Some of Main Features',
-    featuresHeading: 'Key Features of Our Tool',
-    featuresDesc:
-      'Our AI writing tool is designed to empower you with exceptional writing capabilities, making the writing process more efficient, accurate, and enjoyable.',
+    breadcrumb: 'About',
+    sectionTitle: 'About AynzamAI',
+    heading: 'Engineering docs, rethought.',
+    description: 'AynzamAI is built by HVAC planners for HVAC planners — pure-msrplanung.de.',
+    ctaButton: 'Book a demo',
+    featuresTitle: 'What you get',
+    featuresHeading: 'Core features',
+    featuresDesc: 'FUBE, BOQ, and flow matrices — compliant and audit-ready by default.',
   },
 
-  // Pricing page (standalone)
   pricingPage: {
-    title: 'Pricing Table',
-    breadcrumb: 'Pricing Table',
-    sectionBadge: 'Get access',
-    heading: 'Our Pricing Plan',
-    description:
-      'Our AI writing tool is designed to empower you with exceptional writing capabilities, making the writing process more efficient, accurate, and enjoyable.',
+    title: 'Pricing',
+    breadcrumb: 'Pricing',
+    sectionBadge: 'Pricing',
+    heading: 'Plans that grow with you.',
+    description: 'From solo planner to engineering enterprise.',
   },
 
-  // Sign In
   signin: {
     title: 'Sign in',
     breadcrumb: 'Sign in',
-    sideHeading: 'Unlock the Power of Writing Tool',
-    googleButton: 'Sign in with Google',
-    appleButton: 'Sign in with Apple',
-    divider: 'Or Sign in with Email',
+    sideHeading: 'AI documentation engine for HVAC',
+    googleButton: 'Continue with Google',
+    appleButton: 'Continue with Apple',
+    divider: 'Or',
     emailLabel: 'Email',
-    emailPlaceholder: 'Enter your email',
+    emailPlaceholder: 'name@company.com',
     passwordLabel: 'Password',
-    passwordPlaceholder: 'Enter your password',
-    forgotPassword: 'Forget Password?',
+    passwordPlaceholder: 'Password',
+    forgotPassword: 'Forgot password?',
     submitButton: 'Sign in',
-    noAccount: 'Don\'t have an account?',
-    signUpLink: 'Sign Up',
+    noAccount: 'No account yet?',
+    signUpLink: 'Sign up',
   },
 
-  // Sign Up
   signup: {
     title: 'Sign up',
     breadcrumb: 'Sign up',
-    sideHeading: 'Unlock the Power of Writing Tool',
+    sideHeading: 'First FUBE in 90 seconds',
     googleButton: 'Sign up with Google',
     appleButton: 'Sign up with Apple',
-    divider: 'Or Sign up with Email',
+    divider: 'Or',
     nameLabel: 'Name',
-    namePlaceholder: 'Enter your full name',
+    namePlaceholder: 'First Last',
     emailLabel: 'Email',
-    emailPlaceholder: 'Enter your email',
+    emailPlaceholder: 'name@company.com',
     passwordLabel: 'Password',
-    passwordPlaceholder: 'Enter your password',
-    submitButton: 'Create Account',
+    passwordPlaceholder: 'At least 8 characters',
+    submitButton: 'Create account',
     hasAccount: 'Already have an account?',
-    signInLink: 'Sign In',
+    signInLink: 'Sign in',
   },
 
-  // 404
   notFound: {
-    title: 'Error Page',
-    breadcrumb: 'Error Page',
-    heading: 'Oops! Page Not Found.',
-    description:
-      'The page you are looking for is not available or has been moved. Try a different page or go to homepage with the button below.',
-    goHome: 'Go To Home',
+    title: 'Error page',
+    breadcrumb: '404',
+    heading: 'This page is not in the bill of quantities.',
+    description: 'We could not find the item you requested. Go back to the home page.',
+    goHome: 'Go home',
   },
 
-  // Blog
   blog: {
-    gridTitle: 'Blog Grid',
-    gridBreadcrumb: 'Blog Grid',
-    singleTitle: 'Blog Details',
-    singleBreadcrumb: 'Blog Details',
+    gridTitle: 'Blog',
+    gridBreadcrumb: 'Blog',
+    singleTitle: 'Article',
+    singleBreadcrumb: 'Article',
   },
 
-  // Common
   common: {
     home: 'Home',
   },
