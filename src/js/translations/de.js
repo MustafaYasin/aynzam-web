@@ -37,6 +37,33 @@ window.__translations_de = {
     c5: 'Bosch',
   },
 
+  // ── Engine / Live visualisations ───────────────────────
+  engine: {
+    eyebrow: '01 / Live im Loop',
+    titleA: 'So arbeitet die ',
+    titleEm: 'Engine',
+    titleB: ' — auf realer Anlage.',
+    deck: 'Drei Doku-Outputs, ein Workflow: Anlagedaten gehen rein, Norm-geprüfte Doku kommt raus. Keine Excel-Templates, die bei jeder Designänderung erneut geprüft werden müssen.',
+    v1: {
+      aria: 'FUBE-Generierung: Anlagedaten konvergieren in die Engine, Funktionsbeschreibung baut sich Zeile für Zeile auf.',
+      tag: 'Funktionsbeschreibung · FUBE',
+      title: 'RLT-Anlage zur fertigen FUBE',
+      body: 'ISO-Klasse, Filterstufe, Volumenstrom, Druckhaltung — vier Werte rein, vollständige Funktionsbeschreibung raus. Inklusive FAT-Plan, Wartungssektion und Quellen-Nachweis pro Absatz.',
+    },
+    v2: {
+      aria: 'Funktionsliste: Komponenten konvergieren, GA-Schema verkabelt sich.',
+      tag: 'Funktionsliste · GA-Schema',
+      title: 'Komponenten zur Funktionsliste',
+      body: 'Feldgeräte, VAV-Boxen, Brandschutzklappen — werden zur Funktionsliste nach VDI 3814. Tabelle aller Anlagen-Funktionen, bereit für Vergabe und Inbetriebnahme.',
+    },
+    v3: {
+      aria: 'LV-Generierung: Anlagedaten werden zu LV-Positionen mit GAEB-Export.',
+      tag: 'Leistungsverzeichnis · LV',
+      title: 'Anlage zum LV mit GAEB-Export',
+      body: 'Mengen, Einheiten und Standardtexte nach VOB/A. Direkt-Export als GAEB X86 — importierbar in jedes Vergabe-Tool, hierarchisch nach System oder als Sammelbeschreibung.',
+    },
+  },
+
   // ── Use Cases ──────────────────────────────────────────
   useCases: {
     eyebrow: '01 / Was AynzamAI erstellt',

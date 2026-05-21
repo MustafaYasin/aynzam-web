@@ -37,6 +37,33 @@ window.__translations_en = {
     c5: 'Bosch',
   },
 
+  // ── Engine / Live visualisations ───────────────────────
+  engine: {
+    eyebrow: '01 / Live in loop',
+    titleA: 'How the ',
+    titleEm: 'engine',
+    titleB: ' works — on real plant data.',
+    deck: 'Three doc outputs, one workflow: plant data goes in, compliant docs come out. No Excel templates to re-check on every design change.',
+    v1: {
+      aria: 'FUBE generation: plant data converges into the engine, function description builds up line by line.',
+      tag: 'Function description · FUBE',
+      title: 'AHU plant to ready FUBE',
+      body: 'ISO class, filter stage, volume flow, pressure regulation — four values in, full function description out. Including FAT plan, maintenance section, and source references per paragraph.',
+    },
+    v2: {
+      aria: 'Function list: components converge, building-automation schema wires itself up.',
+      tag: 'Function list · GA schema',
+      title: 'Components to function list',
+      body: 'Field devices, VAV boxes, fire dampers — turn into a function list per VDI 3814. A table of all plant functions, ready for procurement and commissioning.',
+    },
+    v3: {
+      aria: 'BOQ generation: plant data becomes line items with GAEB export.',
+      tag: 'Bill of quantities · BOQ',
+      title: 'Plant to BOQ with GAEB export',
+      body: 'Quantities, units, and standard texts per VOB/A. Direct GAEB X86 export — importable to any procurement tool, hierarchical by system or as a summary spec.',
+    },
+  },
+
   // ── Use Cases ──────────────────────────────────────────
   useCases: {
     eyebrow: '01 / What AynzamAI creates',

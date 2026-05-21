@@ -104,6 +104,364 @@
         </div>
       </section>
 
+      <!-- ===== Engine / Live visualisations ===== -->
+      <section id="engine" class="py-24 sm:py-32">
+        <div class="container">
+
+          <div class="max-w-3xl mb-16">
+            <p class="eyebrow mb-5" x-text="$store.lang.t('engine.eyebrow')"></p>
+            <h2 class="headline-lg mb-5">
+              <span x-text="$store.lang.t('engine.titleA')"></span>
+              <em x-text="$store.lang.t('engine.titleEm')"></em><span x-text="$store.lang.t('engine.titleB')"></span>
+            </h2>
+            <p class="deck max-w-[60ch]" x-text="$store.lang.t('engine.deck')"></p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- ── Viz 1: FUBE ── -->
+            <article class="card flex flex-col">
+              <div class="rounded-md mb-6" :aria-label="$store.lang.t('engine.v1.aria')" role="img">
+                <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
+                  <style>
+                    .v1-frame { fill: var(--bg-elev-strong); stroke: var(--border); stroke-width: 1.5; }
+                    .v1-hub-pulse { transform-origin: 140px 110px; animation: v1-pulse 3s ease-in-out infinite; }
+                    @keyframes v1-pulse {
+                      0%, 100% { opacity: 0.15; transform: scale(0.8); }
+                      50%      { opacity: 0.5;  transform: scale(2.2); }
+                    }
+                    .v1-dot { animation: v1-fly 10s ease-in-out infinite; }
+                    .v1-dot.d1 { animation-delay: 0s; }
+                    .v1-dot.d2 { animation-delay: 0.4s; }
+                    .v1-dot.d3 { animation-delay: 0.8s; }
+                    .v1-dot.d4 { animation-delay: 1.2s; }
+                    @keyframes v1-fly {
+                      0%   { opacity: 0; transform: translate(0, 0); }
+                      6%   { opacity: 1; transform: translate(0, 0); }
+                      26%  { opacity: 0; transform: var(--fly-to); }
+                      100% { opacity: 0; transform: var(--fly-to); }
+                    }
+                    .v1-dot.d1 { --fly-to: translate(80px, 75px); }
+                    .v1-dot.d2 { --fly-to: translate(40px, 70px); }
+                    .v1-dot.d3 { --fly-to: translate(-30px, 75px); }
+                    .v1-dot.d4 { --fly-to: translate(-65px, 65px); }
+                    .v1-doc-outline {
+                      stroke-dasharray: 350; stroke-dashoffset: 350;
+                      animation: v1-draw 10s linear infinite;
+                    }
+                    @keyframes v1-draw {
+                      0%, 35% { stroke-dashoffset: 350; }
+                      48%     { stroke-dashoffset: 0; }
+                      94%     { stroke-dashoffset: 0; }
+                      100%    { stroke-dashoffset: 350; }
+                    }
+                    .v1-line { stroke-dasharray: 80; stroke-dashoffset: 80; animation: v1-line 10s linear infinite; }
+                    .v1-line.l1 { animation-delay: 0s; }
+                    .v1-line.l2 { animation-delay: 0.35s; }
+                    .v1-line.l3 { animation-delay: 0.7s; }
+                    @keyframes v1-line {
+                      0%, 52% { stroke-dashoffset: 80; }
+                      62%     { stroke-dashoffset: 0; }
+                      94%     { stroke-dashoffset: 0; }
+                      100%    { stroke-dashoffset: 80; }
+                    }
+                    @media (prefers-reduced-motion: reduce) {
+                      .v1-hub-pulse, .v1-dot, .v1-doc-outline, .v1-line { animation: none; }
+                      .v1-doc-outline, .v1-line { stroke-dashoffset: 0; }
+                      .v1-dot { opacity: 1; }
+                    }
+                  </style>
+
+                  <rect class="v1-frame" x="0.75" y="0.75" width="278.5" height="218.5" rx="9.25"/>
+
+                  <!-- Input dots with mono labels -->
+                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)" text-anchor="middle">
+                    <g class="v1-dot d1">
+                      <circle cx="60" cy="35" r="3" fill="var(--clay)"/>
+                      <text x="60" y="25">ISO 5</text>
+                    </g>
+                    <g class="v1-dot d2">
+                      <circle cx="100" cy="40" r="3" fill="var(--clay)"/>
+                      <text x="100" y="30">H14</text>
+                    </g>
+                    <g class="v1-dot d3">
+                      <circle cx="170" cy="35" r="3" fill="var(--clay)"/>
+                      <text x="170" y="25">V̇ 12000</text>
+                    </g>
+                    <g class="v1-dot d4">
+                      <circle cx="210" cy="45" r="3" fill="var(--clay)"/>
+                      <text x="210" y="35">Δp 400</text>
+                    </g>
+                  </g>
+
+                  <!-- Central hub -->
+                  <g>
+                    <circle class="v1-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
+                    <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                    <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                    <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                  </g>
+
+                  <!-- Output: document with text lines -->
+                  <g transform="translate(80, 150)">
+                    <rect class="v1-doc-outline" x="0" y="0" width="120" height="55" rx="3" fill="none" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <line class="v1-line l1" x1="10" y1="14" x2="80" y2="14" stroke="var(--fg-soft)" stroke-width="1.5" stroke-linecap="round"/>
+                    <line class="v1-line l2" x1="10" y1="26" x2="92" y2="26" stroke="var(--fg-soft)" stroke-width="1.5" stroke-linecap="round"/>
+                    <line class="v1-line l3" x1="10" y1="38" x2="68" y2="38" stroke="var(--fg-soft)" stroke-width="1.5" stroke-linecap="round"/>
+                    <text x="60" y="71" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">RLT-RA1.FUBE.docx</text>
+                  </g>
+                </svg>
+              </div>
+
+              <p class="eyebrow mb-3" x-text="$store.lang.t('engine.v1.tag')"></p>
+              <h3 class="headline-md mb-3" x-text="$store.lang.t('engine.v1.title')"></h3>
+              <p class="body-md flex-1" x-text="$store.lang.t('engine.v1.body')"></p>
+              <div class="flex flex-wrap gap-1.5 mt-5">
+                <span class="norm-chip">VDI 6022</span>
+                <span class="norm-chip">DIN 1946-4</span>
+                <span class="norm-chip">GMP Annex 1</span>
+              </div>
+            </article>
+
+            <!-- ── Viz 2: Anlagenschema / Funktionsliste ── -->
+            <article class="card flex flex-col">
+              <div class="rounded-md mb-6" :aria-label="$store.lang.t('engine.v2.aria')" role="img">
+                <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
+                  <style>
+                    .v2-frame { fill: var(--bg-elev-strong); stroke: var(--border); stroke-width: 1.5; }
+                    .v2-hub-pulse { transform-origin: 140px 110px; animation: v2-pulse 3s ease-in-out infinite; }
+                    @keyframes v2-pulse {
+                      0%, 100% { opacity: 0.15; transform: scale(0.8); }
+                      50%      { opacity: 0.5;  transform: scale(2.2); }
+                    }
+                    .v2-comp { animation: v2-fly 10s ease-in-out infinite; }
+                    .v2-comp.d1 { animation-delay: 0s; }
+                    .v2-comp.d2 { animation-delay: 0.4s; }
+                    .v2-comp.d3 { animation-delay: 0.8s; }
+                    @keyframes v2-fly {
+                      0%   { opacity: 0; transform: translate(0, 0); }
+                      6%   { opacity: 1; transform: translate(0, 0); }
+                      26%  { opacity: 0; transform: var(--fly-to); }
+                      100% { opacity: 0; transform: var(--fly-to); }
+                    }
+                    .v2-comp.d1 { --fly-to: translate(60px, 65px); }
+                    .v2-comp.d2 { --fly-to: translate(0px, 70px); }
+                    .v2-comp.d3 { --fly-to: translate(-60px, 65px); }
+                    .v2-node { opacity: 0; animation: v2-node-in 10s linear infinite; }
+                    .v2-node.n1 { animation-delay: 0s; }
+                    .v2-node.n2 { animation-delay: 0.4s; }
+                    .v2-node.n3 { animation-delay: 0.8s; }
+                    .v2-node.n4 { animation-delay: 1.2s; }
+                    @keyframes v2-node-in {
+                      0%, 38% { opacity: 0; transform: scale(0.4); }
+                      48%     { opacity: 1; transform: scale(1); }
+                      94%     { opacity: 1; transform: scale(1); }
+                      100%    { opacity: 0; transform: scale(0.4); }
+                    }
+                    .v2-link { stroke-dasharray: 60; stroke-dashoffset: 60; animation: v2-link 10s linear infinite; }
+                    .v2-link.k1 { animation-delay: 0s; }
+                    .v2-link.k2 { animation-delay: 0.3s; }
+                    .v2-link.k3 { animation-delay: 0.6s; }
+                    @keyframes v2-link {
+                      0%, 56% { stroke-dashoffset: 60; }
+                      68%     { stroke-dashoffset: 0; }
+                      94%     { stroke-dashoffset: 0; }
+                      100%    { stroke-dashoffset: 60; }
+                    }
+                    @media (prefers-reduced-motion: reduce) {
+                      .v2-hub-pulse, .v2-comp, .v2-node, .v2-link { animation: none; }
+                      .v2-node, .v2-comp { opacity: 1; transform: none; }
+                      .v2-link { stroke-dashoffset: 0; }
+                    }
+                  </style>
+
+                  <rect class="v2-frame" x="0.75" y="0.75" width="278.5" height="218.5" rx="9.25"/>
+
+                  <!-- Input components (top): different shapes -->
+                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)" text-anchor="middle">
+                    <g class="v2-comp d1">
+                      <rect x="68" y="32" width="10" height="10" fill="var(--clay)"/>
+                      <text x="73" y="25">RLT</text>
+                    </g>
+                    <g class="v2-comp d2">
+                      <circle cx="140" cy="37" r="5" fill="var(--clay)"/>
+                      <text x="140" y="25">VAV</text>
+                    </g>
+                    <g class="v2-comp d3">
+                      <path d="M 200 32 L 211 32 L 205.5 42 Z" fill="var(--clay)"/>
+                      <text x="205.5" y="25">BSK</text>
+                    </g>
+                  </g>
+
+                  <!-- Central hub -->
+                  <g>
+                    <circle class="v2-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
+                    <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                    <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                    <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                  </g>
+
+                  <!-- Output: network of nodes connected by lines -->
+                  <g transform="translate(0, 0)">
+                    <!-- Nodes -->
+                    <g class="v2-node n1" style="transform-origin: 90px 175px;">
+                      <circle cx="90" cy="175" r="6" fill="var(--bg-elev)" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    </g>
+                    <g class="v2-node n2" style="transform-origin: 140px 165px;">
+                      <circle cx="140" cy="165" r="6" fill="var(--bg-elev)" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    </g>
+                    <g class="v2-node n3" style="transform-origin: 190px 175px;">
+                      <circle cx="190" cy="175" r="6" fill="var(--bg-elev)" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    </g>
+                    <g class="v2-node n4" style="transform-origin: 140px 195px;">
+                      <circle cx="140" cy="195" r="5" fill="var(--clay)" stroke="var(--clay)" stroke-width="1.5"/>
+                    </g>
+                    <!-- Links -->
+                    <line class="v2-link k1" x1="96" y1="175" x2="134" y2="165" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <line class="v2-link k2" x1="146" y1="165" x2="184" y2="175" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <line class="v2-link k3" x1="140" y1="171" x2="140" y2="189" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                  </g>
+
+                  <text x="140" y="212" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">Funktionsliste · VDI 3814</text>
+                </svg>
+              </div>
+
+              <p class="eyebrow mb-3" x-text="$store.lang.t('engine.v2.tag')"></p>
+              <h3 class="headline-md mb-3" x-text="$store.lang.t('engine.v2.title')"></h3>
+              <p class="body-md flex-1" x-text="$store.lang.t('engine.v2.body')"></p>
+              <div class="flex flex-wrap gap-1.5 mt-5">
+                <span class="norm-chip">VDI 3814</span>
+                <span class="norm-chip">DIN EN ISO 16484-3</span>
+              </div>
+            </article>
+
+            <!-- ── Viz 3: LV ── -->
+            <article class="card flex flex-col">
+              <div class="rounded-md mb-6" :aria-label="$store.lang.t('engine.v3.aria')" role="img">
+                <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
+                  <style>
+                    .v3-frame { fill: var(--bg-elev-strong); stroke: var(--border); stroke-width: 1.5; }
+                    .v3-hub-pulse { transform-origin: 140px 110px; animation: v3-pulse 3s ease-in-out infinite; }
+                    @keyframes v3-pulse {
+                      0%, 100% { opacity: 0.15; transform: scale(0.8); }
+                      50%      { opacity: 0.5;  transform: scale(2.2); }
+                    }
+                    .v3-frag { animation: v3-fly 10s ease-in-out infinite; }
+                    .v3-frag.d1 { animation-delay: 0s; }
+                    .v3-frag.d2 { animation-delay: 0.35s; }
+                    .v3-frag.d3 { animation-delay: 0.7s; }
+                    .v3-frag.d4 { animation-delay: 1.05s; }
+                    @keyframes v3-fly {
+                      0%   { opacity: 0; transform: translate(0, 0); }
+                      6%   { opacity: 1; transform: translate(0, 0); }
+                      26%  { opacity: 0; transform: var(--fly-to); }
+                      100% { opacity: 0; transform: var(--fly-to); }
+                    }
+                    .v3-frag.d1 { --fly-to: translate(75px, 70px); }
+                    .v3-frag.d2 { --fly-to: translate(30px, 75px); }
+                    .v3-frag.d3 { --fly-to: translate(-25px, 70px); }
+                    .v3-frag.d4 { --fly-to: translate(-65px, 70px); }
+                    .v3-header { stroke-dasharray: 120; stroke-dashoffset: 120; animation: v3-draw-header 10s linear infinite; }
+                    @keyframes v3-draw-header {
+                      0%, 38% { stroke-dashoffset: 120; }
+                      48%     { stroke-dashoffset: 0; }
+                      94%     { stroke-dashoffset: 0; }
+                      100%    { stroke-dashoffset: 120; }
+                    }
+                    .v3-row { opacity: 0; animation: v3-row 10s linear infinite; }
+                    .v3-row.r1 { animation-delay: 0s; }
+                    .v3-row.r2 { animation-delay: 0.35s; }
+                    .v3-row.r3 { animation-delay: 0.7s; }
+                    @keyframes v3-row {
+                      0%, 52% { opacity: 0; transform: translateX(-6px); }
+                      62%     { opacity: 1; transform: translateX(0); }
+                      94%     { opacity: 1; transform: translateX(0); }
+                      100%    { opacity: 0; transform: translateX(-6px); }
+                    }
+                    @media (prefers-reduced-motion: reduce) {
+                      .v3-hub-pulse, .v3-frag, .v3-header, .v3-row { animation: none; }
+                      .v3-frag, .v3-row { opacity: 1; transform: none; }
+                      .v3-header { stroke-dashoffset: 0; }
+                    }
+                  </style>
+
+                  <rect class="v3-frame" x="0.75" y="0.75" width="278.5" height="218.5" rx="9.25"/>
+
+                  <!-- Input fragments (top) -->
+                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)" text-anchor="middle">
+                    <g class="v3-frag d1">
+                      <rect x="55" y="32" width="14" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
+                      <text x="62" y="25">DN 200</text>
+                    </g>
+                    <g class="v3-frag d2">
+                      <rect x="100" y="32" width="20" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
+                      <text x="110" y="25">VOB/A</text>
+                    </g>
+                    <g class="v3-frag d3">
+                      <rect x="150" y="32" width="22" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
+                      <text x="161" y="25">2 St.</text>
+                    </g>
+                    <g class="v3-frag d4">
+                      <rect x="200" y="32" width="18" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
+                      <text x="209" y="25">€/Pos</text>
+                    </g>
+                  </g>
+
+                  <!-- Central hub -->
+                  <g>
+                    <circle class="v3-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
+                    <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                    <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                    <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                  </g>
+
+                  <!-- Output: table -->
+                  <g transform="translate(70, 150)">
+                    <line class="v3-header" x1="0" y1="0" x2="140" y2="0" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-muted)">
+                      <text class="v3-header" x="2" y="-3">POS</text>
+                      <text class="v3-header" x="38" y="-3">BEZEICHNUNG</text>
+                      <text class="v3-header" x="110" y="-3">MENGE</text>
+                    </g>
+                    <!-- Rows -->
+                    <g class="v3-row r1" style="transform-origin: 0 8px;">
+                      <line x1="0" y1="14" x2="140" y2="14" stroke="var(--border)" stroke-width="0.75"/>
+                      <text x="2" y="11" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">01.10</text>
+                      <line x1="38" y1="8" x2="100" y2="8" stroke="var(--fg-soft)" stroke-width="1"/>
+                      <text x="110" y="11" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">2 St</text>
+                    </g>
+                    <g class="v3-row r2" style="transform-origin: 0 22px;">
+                      <line x1="0" y1="28" x2="140" y2="28" stroke="var(--border)" stroke-width="0.75"/>
+                      <text x="2" y="25" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">01.20</text>
+                      <line x1="38" y1="22" x2="92" y2="22" stroke="var(--fg-soft)" stroke-width="1"/>
+                      <text x="110" y="25" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">14 m</text>
+                    </g>
+                    <g class="v3-row r3" style="transform-origin: 0 36px;">
+                      <line x1="0" y1="42" x2="140" y2="42" stroke="var(--border)" stroke-width="0.75"/>
+                      <text x="2" y="39" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">01.30</text>
+                      <line x1="38" y1="36" x2="86" y2="36" stroke="var(--fg-soft)" stroke-width="1"/>
+                      <text x="110" y="39" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">1 psch</text>
+                    </g>
+                  </g>
+
+                  <text x="140" y="212" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">LV.gaeb.x86</text>
+                </svg>
+              </div>
+
+              <p class="eyebrow mb-3" x-text="$store.lang.t('engine.v3.tag')"></p>
+              <h3 class="headline-md mb-3" x-text="$store.lang.t('engine.v3.title')"></h3>
+              <p class="body-md flex-1" x-text="$store.lang.t('engine.v3.body')"></p>
+              <div class="flex flex-wrap gap-1.5 mt-5">
+                <span class="norm-chip">VOB/A</span>
+                <span class="norm-chip">GAEB X86</span>
+                <span class="norm-chip">DIN 276</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
       <!-- ===== Use Cases ===== -->
       <section id="use-cases" class="py-24 sm:py-32">
         <div class="container">
