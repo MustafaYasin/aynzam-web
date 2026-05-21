@@ -1,0 +1,9 @@
+<script>
+  (function() {
+    // German is the hard default. English only on explicit user choice.
+    var stored = localStorage.getItem('language');
+    var lang = (stored === 'en') ? 'en' : 'de';
+    document.documentElement.lang = lang;
+    window.__lang = lang;
+  })();
+</script>

@@ -1,0 +1,415 @@
+window.__translations_de = {
+  // ── Header ──────────────────────────────────────────────
+  header: {
+    useCases: 'Use Cases',
+    workflow: 'Workflow',
+    industries: 'Branchen',
+    pricing: 'Preise',
+    bookDemo: 'Demo buchen',
+  },
+
+  // ── Hero ────────────────────────────────────────────────
+  hero: {
+    eyebrow: 'Für TGA- & MSR-Planer · LPH 5 + 6',
+    titleA: 'TGA-Doku in ',
+    titleEm: 'Minuten',
+    titleB: ', nicht Wochen.',
+    deck: 'AynzamAI generiert Funktionsbeschreibungen, Funktionslisten nach VDI 3814 und Leistungsverzeichnisse mit GAEB-X86-Export — direkt aus deinen Anlagedaten, normkonform und prüfungsfähig per Default.',
+    ctaPrimary: 'Demo buchen',
+    ctaSecondary: 'Use Cases ansehen',
+    cardEyebrow: 'Die Engine im Überblick',
+    cardDeck:
+      'Anlagedaten und Norm-Codes konvergieren im Hub — drei prüfungsfähige Doku-Typen kommen raus.',
+    viz: {
+      aria: 'Topologie der AynzamAI-Engine: vier Eingaben (ISO 5, Volumenstrom, VOB/A, VDI 3814) konvergieren zum zentralen Hub und werden in drei Outputs aufgeteilt — FUBE, GA-Schema und LV mit GAEB-Export.',
+      i1: 'BACnet',
+      i2: 'V̇ 12 000',
+      i3: 'VOB/A',
+      i4: 'VDI 3814',
+      o1Tag: 'FUBE',
+      o1Title: 'Funktion',
+      o2Tag: 'GA',
+      o2Title: 'Schema',
+      o3Tag: 'LV',
+      o3Title: 'GAEB',
+    },
+  },
+
+  // ── Trust / Pilot-Projekte ─────────────────────────────
+  trust: {
+    eyebrow: 'Pilot-Projekte 2025 / 2026',
+    titleA: 'Entwickelt mit ',
+    titleEm: 'Engineering-Teams',
+    titleB: ', nicht im Vakuum.',
+    deck: 'Drei aktive Pilot-Engagements quer durch Battery, Automotive und Cleanroom-Engineering. Jeder Output der Engine wird gegen konkrete Anlagen geprüft, bevor wir ihn freigeben.',
+    c1: { name: 'PowerCo', context: 'Battery · Gigafactory' },
+    c2: { name: 'Volkswagen', context: 'Werks-TGA · Automotive' },
+    c3: { name: 'Exyte', context: 'Cleanroom · Halbleiter' },
+    footnote:
+      'Pilot-Status · 2025 gestartet · Engagements laufen. Referenzen und Case-Studies auf Anfrage.',
+  },
+
+  // ── Engine / Live visualisations ───────────────────────
+  engine: {
+    eyebrow: '01 / Live im Loop',
+    titleA: 'So arbeitet die ',
+    titleEm: 'Engine',
+    titleB: ' — auf realer Anlage.',
+    deck: 'Drei Doku-Outputs, ein Workflow: Anlagedaten gehen rein, Norm-geprüfte Doku kommt raus. Keine Excel-Templates, die bei jeder Designänderung erneut geprüft werden müssen.',
+    v1: {
+      aria: 'FUBE-Generierung: Anlagedaten konvergieren in die Engine, Funktionsbeschreibung baut sich Zeile für Zeile auf.',
+      tag: 'Funktionsbeschreibung · FUBE',
+      title: 'Anlage zur fertigen FUBE',
+      body: 'Anlage-ID, Norm-Referenz, Volumenstrom, Druckhaltung — vier Werte rein, vollständige Funktionsbeschreibung raus. Inklusive FAT-Plan, Wartungssektion und Quellen-Nachweis pro Absatz.',
+    },
+    v2: {
+      aria: 'Funktionsliste: Komponenten konvergieren, GA-Schema verkabelt sich.',
+      tag: 'Funktionsliste · GA-Schema',
+      title: 'Komponenten zur Funktionsliste',
+      body: 'Feldgeräte, VAV-Boxen, Brandschutzklappen — werden zur Funktionsliste nach VDI 3814. Tabelle aller Anlagen-Funktionen, bereit für Vergabe und Inbetriebnahme.',
+    },
+    v3: {
+      aria: 'LV-Generierung: Anlagedaten werden zu LV-Positionen mit GAEB-Export.',
+      tag: 'Leistungsverzeichnis · LV',
+      title: 'Anlage zum LV mit GAEB-Export',
+      body: 'Mengen, Einheiten und Standardtexte nach VOB/A. Direkt-Export als GAEB X86 — importierbar in jedes Vergabe-Tool, hierarchisch nach System oder als Sammelbeschreibung.',
+    },
+  },
+
+  // ── Use Cases ──────────────────────────────────────────
+  useCases: {
+    eyebrow: '01 / Was AynzamAI erstellt',
+    titleA: 'Drei Doku-Typen. ',
+    titleEm: 'Ein Workflow',
+    titleB: '.',
+    deck: 'Jede Ausgabe ist normkonform, versioniert und prüfungsfähig per Default. Du startest mit Anlage-Daten — die Engine zieht die richtigen Norm-Kapitel.',
+    c1: {
+      tag: 'Funktionsbeschreibungen',
+      title: 'FUBE für jede TGA-Anlage',
+      body: 'Von Lüftung über Heizung und Kälte bis zur GA-Funktion — vollständig dokumentiert inklusive FAT-Plan und Wartungs-Sektion. Konsistent zu Anlage und Norm.',
+    },
+    c2: {
+      tag: 'Leistungsverzeichnisse',
+      title: 'LV-Positionen nach VOB/A',
+      body: 'Mengen, Einheiten und Standardtexte für die Vergabe. Direkter GAEB-Export — nahtlos in dein bestehendes Procurement-Tooling.',
+    },
+    c3: {
+      tag: 'Fließmatrizen',
+      title: 'Funktionsmatrizen & Schemata',
+      body: 'Anlagenschemata und Funktionsmatrizen, die direkt in draw.io geöffnet, in DWG re-importiert oder als PDF eingereicht werden.',
+    },
+  },
+
+  // ── Workflow ───────────────────────────────────────────
+  workflow: {
+    eyebrow: '02 / Der Workflow',
+    titleA: 'Drei Schritte ',
+    titleEm: 'ohne Excel-Hölle',
+    titleB: '.',
+    deck: 'Vom Konzept-Stand zur prüfungsfähigen Doku — ohne Copy-Paste aus Altprojekten und ohne ungeprüfte Norm-Verweise.',
+    s1: {
+      label: 'Anforderung',
+      title: 'Anlage beschreiben',
+      body: 'Komponente, Reinraum-Klasse, kritische Funktionen — kurz beschreiben, was generiert werden soll. Keine Vorlagen, kein Boilerplate.',
+    },
+    s2: {
+      label: 'Generieren',
+      title: 'AynzamAI zieht die Normen',
+      body: 'Die Engine prüft gegen den passenden Norm-Katalog und erzeugt eine vollständige, konsistente Doku — inklusive Quellen-Nachweis.',
+    },
+    s3: {
+      label: 'Exportieren',
+      title: 'Direkt ins Projekt',
+      body: 'Export in dein Zielformat. Versioniert, mit Audit-Trail, revisionssicher gespeichert — bereit fürs Review.',
+    },
+  },
+
+  // ── Industries ─────────────────────────────────────────
+  industries: {
+    eyebrow: '03 / Für die Branche',
+    titleA: 'Gebaut für ',
+    titleEm: 'Hochpräzisions-Engineering',
+    titleB: '.',
+    deck: 'AynzamAI versteht die Sprache deiner Branche — und kennt die Normen, die im Audit zählen.',
+    i1: {
+      tag: 'Halbleiter & Reinraum',
+      title: 'Cleanroom-konforme Doku',
+      body: 'Von ISO 5 bis Subnano. FUBE für RLT, MAL, PAL und FFU in Halbleiter-Fabs und Forschungseinrichtungen.',
+    },
+    i2: {
+      tag: 'Battery & Gigafactory',
+      title: 'Dryroom & GMP',
+      body: 'Trockenraum-spezifische Anforderungen, GMP-konforme Funktionsbeschreibungen. Skalierbar von Pilot zu Gigafactory.',
+    },
+    i3: {
+      tag: 'Mission Critical',
+      title: 'HVAC für Datacenter',
+      body: 'Tier-III/IV-Doku, Redundanz-Konzepte, Brandschutz — für Hyperscaler und Colocations.',
+    },
+  },
+
+  // ── Final CTA ──────────────────────────────────────────
+  finalCta: {
+    eyebrow: 'Bereit?',
+    titleA: 'Sieh, was AynzamAI in ',
+    titleEm: '20 Minuten',
+    titleB: ' aus deinem Projekt macht.',
+    deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Keine generische Tour — wir generieren live gegen dein Beispiel.',
+    button: 'Demo buchen',
+  },
+
+  // ── Footer ─────────────────────────────────────────────
+  footer: {
+    tagline:
+      'KI-Doku-Engine für TGA. Funktionsbeschreibungen, Leistungsverzeichnisse und Fließmatrizen — geprüft gegen VDI, DIN und GMP Annex 1.',
+    cta: 'Demo buchen',
+    colProduct: 'Produkt',
+    linkUseCases: 'Use Cases',
+    linkWorkflow: 'Workflow',
+    linkIndustries: 'Branchen',
+    linkPricing: 'Preise',
+    colCompany: 'Unternehmen',
+    linkAbout: 'Über uns',
+    linkBlog: 'Blog',
+    linkContact: 'Kontakt',
+    linkImprint: 'Impressum',
+    copyright: '© 2026 AynzamAI · pure-msrplanung.de',
+    privacy: 'Datenschutz',
+    terms: 'AGB',
+    region: 'Made in München',
+  },
+
+  // ── Legacy fallbacks for other pages (about, pricing, signin, etc.) ─
+  // These pages are not yet redesigned. Keys preserved so Alpine doesn't
+  // throw on init when those HTML files reference them.
+  about: {
+    title: 'Über AynzamAI',
+    breadcrumb: 'Über uns',
+    sectionTitle: 'Über AynzamAI',
+    heading: 'Engineering-Doku, neu gedacht.',
+    description: 'AynzamAI wird von TGA-Planern für TGA-Planer gebaut — pure-msrplanung.de.',
+    ctaButton: 'Demo buchen',
+    featuresTitle: 'Was du bekommst',
+    featuresHeading: 'Kernfunktionen',
+    featuresDesc: 'FUBE, LV und Fließmatrizen — normkonform und prüfungsfähig per Default.',
+  },
+
+  pricingPage: {
+    eyebrow: '04 / Preise',
+    titleA: 'Pläne, die mit deinem ',
+    titleEm: 'Büro skalieren',
+    titleB: '.',
+    deck: 'Vom Solo-Planer bis zur Engineering-Abteilung — output-basierte Tiers, keine seat-Gebühren, transparente Token-Kosten.',
+    pilot: {
+      tag: 'Pilot',
+      title: 'Erste 10 Outputs gratis',
+      body: 'Keine Kreditkarte. Teste FUBE, Funktionsliste und LV mit deinem echten Projekt.',
+      button: 'Pilot starten',
+    },
+    toggle: {
+      monthly: 'Monatlich',
+      yearly: 'Jährlich',
+      discount: '−20%',
+    },
+    tiers: {
+      starter: {
+        tag: 'Starter',
+        name: 'Starter',
+        tagline: 'Für Solo-Planer und Freelancer.',
+        price: '119€',
+        priceYearly: '95€',
+        priceNote: 'Jährlich vorab · 1.140€ / Jahr',
+        unit: '/ Monat',
+        f1: '30 Doku-Outputs / Monat',
+        f2: 'Alle Output-Typen (FUBE · Funktionsliste · LV)',
+        f3: 'Word- und PDF-Export',
+        f4: 'Community-Support',
+        f5: 'Single User',
+        cta: 'Starter wählen',
+      },
+      studio: {
+        tag: 'Studio',
+        name: 'Studio',
+        badge: 'Beliebt',
+        tagline: 'Für Planungsbüros (5–15 MA).',
+        price: '549€',
+        priceYearly: '439€',
+        priceNote: 'Jährlich vorab · 5.268€ / Jahr',
+        unit: '/ Monat',
+        f1: '200 Doku-Outputs / Monat',
+        f2: 'Bis zu 8 User',
+        f3: 'Alle Starter-Features',
+        f4: 'GAEB X86-Export',
+        f5: 'Versionierung + Audit-Trail',
+        f6: '5 Custom-Templates',
+        f7: 'E-Mail-Support (24h)',
+        cta: 'Demo buchen',
+      },
+      engineering: {
+        tag: 'Engineering',
+        name: 'Engineering',
+        tagline: 'Für größere Büros (15–50 MA).',
+        price: '1.890€',
+        priceYearly: '1.512€',
+        priceNote: 'Jährlich vorab · 18.144€ / Jahr',
+        unit: '/ Monat',
+        f1: '800 Doku-Outputs / Monat',
+        f2: 'Bis zu 25 User',
+        f3: 'Alle Studio-Features',
+        f4: 'REST-API (Read + Write)',
+        f5: 'SSO / SAML',
+        f6: '99,5% SLA',
+        f7: 'Dedizierter Account-Manager',
+        f8: 'Unlimited Custom-Templates',
+        cta: 'Sales kontaktieren',
+      },
+    },
+    overageNote:
+      'Überschreitung: +5€ / 3,50€ / 2€ pro extra Output (Starter / Studio / Engineering). Volumen-Rabatte ab 500 Outputs / Monat.',
+    enterprise: {
+      eyebrow: 'Enterprise',
+      name: 'Enterprise',
+      titleA: 'Für Konzerne, ',
+      titleEm: 'On-Premise',
+      titleB: ' und große Engineering-Abteilungen.',
+      body: 'Unbegrenzte Outputs. Eigene Norm-Kataloge. Integration in RR-Schema, BIM-Stack, PLM. Auf eurer Infrastruktur, falls gewünscht — z.B. für Halbleiter-Fabs und Defense-Projekte.',
+      b1: 'Unlimited Outputs + User',
+      b2: 'On-Premise verfügbar',
+      b3: 'RR-Schema · BIM · PLM',
+      b4: '99,95% SLA',
+      b5: 'White-Glove-Onboarding',
+      b6: 'Custom-Norm-Katalog',
+      cta: 'Sales kontaktieren',
+      priceLabel: 'Pricing',
+      priceTitle: 'Auf Anfrage',
+      priceBody: 'Typischer Engineering-Konzern: 6.000–15.000€ / Monat oder Jahres-Rahmenvertrag.',
+      priceNote: 'Vertrag · Pilot in 4 Wochen · DSGVO-konform · EU-Hosting oder On-Prem',
+    },
+    compare: {
+      eyebrow: 'Im Detail',
+      title: 'Alle Features im Vergleich',
+      rows: [
+        { label: 'Doku-Outputs / Monat', s: '30', t: '200', e: '800', x: 'Unlimited' },
+        { label: 'Output-Typen', s: 'Alle', t: 'Alle', e: 'Alle', x: 'Alle + Custom' },
+        { label: 'Inkludierte User', s: '1', t: '8', e: '25', x: 'Unlimited' },
+        { label: 'Word + PDF-Export', s: '✓', t: '✓', e: '✓', x: '✓' },
+        { label: 'GAEB X86-Export', s: '—', t: '✓', e: '✓', x: '✓' },
+        { label: 'draw.io / DWG-Export', s: '—', t: '✓', e: '✓', x: '✓' },
+        { label: 'Versionierung + Audit-Trail', s: '—', t: '✓', e: '✓', x: '✓' },
+        { label: 'Custom-Templates', s: '—', t: '5', e: 'Unlimited', x: 'Unlimited' },
+        { label: 'API-Zugang', s: '—', t: 'Read', e: 'Read + Write', x: 'Full' },
+        { label: 'SSO / SAML', s: '—', t: '—', e: '✓', x: '✓' },
+        { label: 'On-Premise', s: '—', t: '—', e: '—', x: '✓' },
+        { label: 'Norm-Katalog Custom', s: '—', t: '—', e: '—', x: '✓' },
+        { label: 'Account-Manager', s: '—', t: '—', e: 'Dediziert', x: 'Dediziert' },
+        { label: 'SLA', s: '—', t: 'Best effort', e: '99,5%', x: '99,95%' },
+        { label: 'Support', s: 'Community', t: 'E-Mail 24h', e: 'Prio 4h', x: 'White-Glove' },
+      ],
+    },
+    faq: {
+      eyebrow: 'FAQ',
+      title: 'Häufige Fragen',
+      items: [
+        {
+          q: 'Was zählt als ein „Doku-Output"?',
+          a: 'Eine generierte FUBE, eine Funktionsliste oder ein LV (als Gesamt-Dokument) zählt jeweils als ein Output. Iterationen, Re-Generierungen mit angepassten Parametern und Norm-Updates am selben Output sind unbegrenzt enthalten — du zahlst nur für neue Outputs.',
+        },
+        {
+          q: 'Was passiert bei Limit-Überschreitung?',
+          a: 'Du bekommst automatisch ein Upgrade-Angebot oder zahlst Overage pro extra Output (5€ / 3,50€ / 2€ je nach Tier). Deine vorhandenen Outputs bleiben jederzeit zugänglich. Keine versteckten Drosselungen.',
+        },
+        {
+          q: 'Warum keine per-Seat-Abrechnung?',
+          a: 'AI-Generation hat reale Token-Kosten pro Output. Per-Seat-Pricing kollabiert, wenn ein Power-User intensiv generiert — wir würden Verluste machen. Output-basiertes Pricing ist 2026 Standard bei AI-SaaS (Anthropic, OpenAI, Vercel AI Gateway).',
+        },
+        {
+          q: 'Gegen welche Normen prüft die Engine?',
+          a: 'VDI 3814, VDI 6022 (inkl. neues Blatt 3, Weißdruck 12/2025), DIN 1946-4, DIN EN ISO 16484-3, GMP Annex 1 (revidiert 2022), GAMP 5, EN 50600, VOB/A und DIN 276. Erweiterungen laufen kontinuierlich. Eigene firmeninterne Standards können in Studio und höher als Templates hinterlegt werden.',
+        },
+        {
+          q: 'On-Premise — wie funktioniert das?',
+          a: 'Im Enterprise-Tier liefern wir eine containerisierte Engine, die in deiner eigenen Infrastruktur läuft — wichtig für Defense-, Halbleiter- und Pharma-Projekte mit strengen IT-Auflagen. Setup typisch 4 Wochen, ein dedizierter Account-Manager begleitet die Inbetriebnahme.',
+        },
+        {
+          q: 'Welche Daten verlassen meine Umgebung?',
+          a: 'In Starter und Studio: nur die Eingaben, die du explizit absendest — verschlüsselt, EU-Rechenzentren (Frankfurt). In Engineering: gleiches plus optional zusätzliche Verschlüsselungsebene (BYO-Key). In Enterprise (On-Premise): nichts verlässt deine Infrastruktur.',
+        },
+        {
+          q: 'Kann ich Pläne unterjährig wechseln?',
+          a: 'Ja, jederzeit. Upgrade ist sofort wirksam und nur die Differenz wird berechnet. Downgrade greift zum nächsten Abrechnungszyklus. Keine Vertragslaufzeit — du kündigst monatlich.',
+        },
+        {
+          q: 'Pilot — wirklich keine Kreditkarte?',
+          a: 'Korrekt. 10 Outputs gegen ein konkretes Projekt von dir, in 4 Wochen, ohne Kreditkarte und ohne automatischen Übergang in ein zahlendes Abo. Erst nach Abschluss entscheidest du, ob du fortsetzen willst.',
+        },
+      ],
+    },
+    finalCta: {
+      eyebrow: 'Bereit?',
+      titleA: 'Sieh zuerst, was die Engine in ',
+      titleEm: '20 Minuten',
+      titleB: ' aus deinem Projekt macht.',
+      deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Wir zeigen live, wie deine FUBE entsteht — und welcher Plan zu dir passt.',
+      button: 'Demo buchen',
+    },
+    title: 'Preise',
+    breadcrumb: 'Preise',
+    sectionBadge: 'Pricing',
+    heading: 'Pläne, die mit dir wachsen.',
+    description: 'Vom Einzelplaner bis zum Engineering-Konzern.',
+  },
+
+  signin: {
+    title: 'Anmelden',
+    breadcrumb: 'Anmelden',
+    sideHeading: 'KI-Doku-Engine für TGA',
+    googleButton: 'Mit Google fortfahren',
+    appleButton: 'Mit Apple fortfahren',
+    divider: 'Oder',
+    emailLabel: 'E-Mail',
+    emailPlaceholder: 'name@firma.de',
+    passwordLabel: 'Passwort',
+    passwordPlaceholder: 'Passwort',
+    forgotPassword: 'Passwort vergessen?',
+    submitButton: 'Anmelden',
+    noAccount: 'Noch kein Konto?',
+    signUpLink: 'Registrieren',
+  },
+
+  signup: {
+    title: 'Registrieren',
+    breadcrumb: 'Registrieren',
+    sideHeading: 'Erste FUBE in 90 Sekunden',
+    googleButton: 'Mit Google registrieren',
+    appleButton: 'Mit Apple registrieren',
+    divider: 'Oder',
+    nameLabel: 'Name',
+    namePlaceholder: 'Vor- und Nachname',
+    emailLabel: 'E-Mail',
+    emailPlaceholder: 'name@firma.de',
+    passwordLabel: 'Passwort',
+    passwordPlaceholder: 'Mindestens 8 Zeichen',
+    submitButton: 'Konto erstellen',
+    hasAccount: 'Bereits ein Konto?',
+    signInLink: 'Anmelden',
+  },
+
+  notFound: {
+    title: 'Fehlerseite',
+    breadcrumb: '404',
+    heading: 'Diese Seite ist nicht im Leistungsverzeichnis.',
+    description: 'Wir konnten die angeforderte Position nicht finden. Geh zurück zur Startseite.',
+    goHome: 'Zur Startseite',
+  },
+
+  blog: {
+    gridTitle: 'Blog',
+    gridBreadcrumb: 'Blog',
+    singleTitle: 'Artikel',
+    singleBreadcrumb: 'Artikel',
+  },
+
+  common: {
+    home: 'Startseite',
+  },
+}

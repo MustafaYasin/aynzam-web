@@ -1,38 +1,61 @@
-<!-- ====== Footer Section Start -->
-<footer class="relative z-10 pb-17.5 lg:pb-22.5 xl:pb-27.5">
-  <!-- bg shapes -->
-  <div class="absolute bottom-0 left-0 w-full flex flex-col gap-3 -z-1 opacity-50">
-    <div class="w-full h-[1.24px] footer-bg-gradient"></div>
-    <div class="w-full h-[2.47px] footer-bg-gradient"></div>
-    <div class="w-full h-[3.71px] footer-bg-gradient"></div>
-    <div class="w-full h-[4.99px] footer-bg-gradient"></div>
-    <div class="w-full h-[6.19px] footer-bg-gradient"></div>
-    <div class="w-full h-[7.42px] footer-bg-gradient"></div>
-    <div class="w-full h-[8.66px] footer-bg-gradient"></div>
-    <div class="w-full h-[9.90px] footer-bg-gradient"></div>
-    <div class="w-full h-[13px] footer-bg-gradient"></div>
-  </div>
+<footer class="stage border-t border-[var(--border-soft)] pt-20 pb-10 relative">
+  <span class="stage-glow" style="bottom: -10%; right: -10%;" aria-hidden="true"></span>
 
-  <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 relative pt-17.5">
-    <div class="w-full h-[1px] footer-divider-gradient absolute top-0 left-0"></div>
+  <div class="container relative">
 
-    <div class="flex flex-wrap justify-between">
-      <div class="mb-10 max-w-[571px] w-full">
-        <a class="mb-8.5 inline-block text-3xl font-bold text-white" href="index.html">
-          Aynzam AI
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 mb-16">
+
+      <!-- Brand block -->
+      <div class="md:col-span-5">
+        <a href="index.html" class="wordmark-lg mb-5" aria-label="AynzamAI">
+          <span>AynzamAI</span><span class="dot">.</span>
         </a>
-        <p class="mb-8 font-medium text-white/80">
-          AI writing tool is designed to empower you with exceptional writing capabilities.
-        </p>
-        <div class="flex gap-6 mb-8">
-          <a href="/impressum.html" class="text-white/80 hover:text-white underline">Impressum</a>
-          <a href="/datenschutz.html" class="text-white/80 hover:text-white underline">Datenschutz</a>
-        </div>
-        <p class="font-medium mt-5.5">
-          Aynzam AI. All rights reserved.
-        </p>
+        <p class="body-md max-w-[34ch] mb-6 mt-4" x-text="$store.lang.t('footer.tagline')"></p>
+        <a
+          href="#"
+          class="btn-outline"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
+        >
+          <span x-text="$store.lang.t('footer.cta')"></span>
+          <span class="btn-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!-- Spacer column -->
+      <div class="hidden md:block md:col-span-1"></div>
+
+      <!-- Product column -->
+      <div class="md:col-span-3">
+        <p class="eyebrow mb-5" x-text="$store.lang.t('footer.colProduct')"></p>
+        <ul class="flex flex-col gap-3 text-[14.5px] text-[var(--fg-soft)]">
+          <li><a href="index.html#use-cases" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkUseCases')"></a></li>
+          <li><a href="index.html#workflow" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkWorkflow')"></a></li>
+          <li><a href="index.html#industries" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkIndustries')"></a></li>
+          <li><a href="pricing.html" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkPricing')"></a></li>
+        </ul>
+      </div>
+
+      <!-- Company column -->
+      <div class="md:col-span-3">
+        <p class="eyebrow mb-5" x-text="$store.lang.t('footer.colCompany')"></p>
+        <ul class="flex flex-col gap-3 text-[14.5px] text-[var(--fg-soft)]">
+          <li><a href="about.html" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkAbout')"></a></li>
+          <li><a href="mailto:nisani@pure-msrplanung.de" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkContact')"></a></li>
+          <li><a href="#" class="hover:text-[var(--clay)] transition-colors" x-text="$store.lang.t('footer.linkImprint')"></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Foot bar -->
+    <div class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-4 pt-8 border-t border-[var(--border-soft)]">
+      <p class="mono-sm" x-text="$store.lang.t('footer.copyright')"></p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="mono-sm hover:text-[var(--fg)] transition-colors" x-text="$store.lang.t('footer.privacy')"></a>
+        <a href="#" class="mono-sm hover:text-[var(--fg)] transition-colors" x-text="$store.lang.t('footer.terms')"></a>
+        <span class="mono-sm" x-text="$store.lang.t('footer.region')"></span>
       </div>
     </div>
+
   </div>
 </footer>
-<!-- ====== Footer Section End -->
