@@ -1,1 +1,1 @@
-# ai-website
+# AynzamAI website
