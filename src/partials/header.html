@@ -13,9 +13,9 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
-      <a href="#use-cases" class="nav-link" x-text="$store.lang.t('header.useCases')"></a>
-      <a href="#workflow" class="nav-link" x-text="$store.lang.t('header.workflow')"></a>
-      <a href="#industries" class="nav-link" x-text="$store.lang.t('header.industries')"></a>
+      <a href="index.html#use-cases" class="nav-link" x-text="$store.lang.t('header.useCases')"></a>
+      <a href="index.html#workflow" class="nav-link" x-text="$store.lang.t('header.workflow')"></a>
+      <a href="index.html#industries" class="nav-link" x-text="$store.lang.t('header.industries')"></a>
       <a href="pricing.html" class="nav-link" x-text="$store.lang.t('header.pricing')"></a>
     </nav>
 
@@ -25,7 +25,7 @@
       <button
         type="button"
         @click="$store.lang.toggle()"
-        class="mono-sm uppercase tracking-[0.12em] hover:text-[var(--fg)] transition-colors"
+        class="min-w-[40px] h-10 inline-flex items-center justify-center mono-sm uppercase tracking-[0.12em] hover:text-[var(--fg)] transition-colors"
         :aria-label="$store.lang.current === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten'"
         x-text="$store.lang.current === 'de' ? 'EN' : 'DE'"
       ></button>
@@ -34,7 +34,7 @@
       <button
         type="button"
         @click="$store.theme.toggle()"
-        class="w-8 h-8 inline-flex items-center justify-center text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
+        class="w-10 h-10 inline-flex items-center justify-center text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
         aria-label="Toggle theme"
       >
         <template x-if="$store.theme.isDark">
@@ -62,7 +62,7 @@
       <!-- Mobile Toggle -->
       <button
         type="button"
-        class="lg:hidden w-9 h-9 inline-flex items-center justify-center text-[var(--fg)] transition-colors"
+        class="lg:hidden w-11 h-11 inline-flex items-center justify-center text-[var(--fg)] transition-colors"
         @click="mobileMenuOpen = !mobileMenuOpen"
         :aria-expanded="mobileMenuOpen"
         aria-label="Menu"
@@ -90,13 +90,13 @@
     class="lg:hidden absolute top-full left-0 w-full border-b border-[var(--border-soft)] bg-[var(--bg-deep)]"
   >
     <div class="container py-5 flex flex-col gap-1">
-      <a href="#use-cases" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+      <a href="index.html#use-cases" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
         <span x-text="$store.lang.t('header.useCases')"></span>
       </a>
-      <a href="#workflow" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+      <a href="index.html#workflow" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
         <span x-text="$store.lang.t('header.workflow')"></span>
       </a>
-      <a href="#industries" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
+      <a href="index.html#industries" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
         <span x-text="$store.lang.t('header.industries')"></span>
       </a>
       <a href="pricing.html" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">

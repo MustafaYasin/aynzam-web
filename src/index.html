@@ -50,37 +50,138 @@
               </div>
             </div>
 
-            <!-- Right: value-list editorial card -->
+            <!-- Right: topology visualisation card -->
             <aside class="lg:col-span-5 animate-fade-up delay-3">
-              <div class="card relative">
-                <p class="eyebrow mb-5" x-text="$store.lang.t('hero.cardEyebrow')"></p>
-                <ul class="value-list">
-                  <li>
-                    <span class="mark">01</span>
-                    <span>
-                      <strong class="text-[var(--fg)] font-medium" x-text="$store.lang.t('hero.value1Strong')"></strong>
-                      <span x-text="$store.lang.t('hero.value1Rest')"></span>
-                    </span>
-                  </li>
-                  <li>
-                    <span class="mark">02</span>
-                    <span>
-                      <strong class="text-[var(--fg)] font-medium" x-text="$store.lang.t('hero.value2Strong')"></strong>
-                      <span x-text="$store.lang.t('hero.value2Rest')"></span>
-                    </span>
-                  </li>
-                  <li>
-                    <span class="mark">03</span>
-                    <span>
-                      <strong class="text-[var(--fg)] font-medium" x-text="$store.lang.t('hero.value3Strong')"></strong>
-                      <span x-text="$store.lang.t('hero.value3Rest')"></span>
-                    </span>
-                  </li>
-                  <li>
-                    <span class="mark-clay">→</span>
-                    <span class="text-[var(--fg)]" x-text="$store.lang.t('hero.value4')"></span>
-                  </li>
-                </ul>
+              <div class="card relative overflow-hidden">
+                <p class="eyebrow mb-2" x-text="$store.lang.t('hero.cardEyebrow')"></p>
+                <p class="body-sm mb-5 max-w-[42ch]" x-text="$store.lang.t('hero.cardDeck')"></p>
+
+                <div :aria-label="$store.lang.t('hero.viz.aria')" role="img">
+                  <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
+                    <style>
+                      .hv-hub-pulse {
+                        transform-origin: 240px 180px;
+                        animation: hv-pulse 4s ease-in-out infinite;
+                      }
+                      @keyframes hv-pulse {
+                        0%, 100% { opacity: 0.16; transform: scale(0.85); }
+                        50%      { opacity: 0.42; transform: scale(1.55); }
+                      }
+                      .hv-hub-bounce {
+                        transform-origin: 240px 180px;
+                        animation: hv-bounce 2.5s ease-in-out infinite;
+                      }
+                      @keyframes hv-bounce {
+                        0%, 88%, 100% { transform: scale(1); }
+                        92%           { transform: scale(1.06); }
+                      }
+                      .hv-in { animation: hv-bob 5s ease-in-out infinite; }
+                      .hv-in.b1 { animation-delay: 0s; transform-origin: 70px 60px; }
+                      .hv-in.b2 { animation-delay: 0.7s; transform-origin: 180px 60px; }
+                      .hv-in.b3 { animation-delay: 1.4s; transform-origin: 310px 60px; }
+                      .hv-in.b4 { animation-delay: 2.1s; transform-origin: 420px 60px; }
+                      @keyframes hv-bob {
+                        0%, 100% { transform: translateY(0); }
+                        50%      { transform: translateY(-3px); }
+                      }
+                      .hv-trace {
+                        stroke-dasharray: 30 700;
+                        stroke-dashoffset: 30;
+                        opacity: 0;
+                        animation: hv-trace 10s linear infinite;
+                      }
+                      .hv-trace.t1 { animation-delay: 0s; }
+                      .hv-trace.t2 { animation-delay: 2.5s; }
+                      .hv-trace.t3 { animation-delay: 5s; }
+                      .hv-trace.t4 { animation-delay: 7.5s; }
+                      @keyframes hv-trace {
+                        0%   { stroke-dashoffset: 30;   opacity: 0; }
+                        2%   { stroke-dashoffset: 30;   opacity: 1; }
+                        22%  { stroke-dashoffset: -620; opacity: 1; }
+                        24%  { stroke-dashoffset: -620; opacity: 0; }
+                        100% { stroke-dashoffset: -620; opacity: 0; }
+                      }
+                      .hv-out { animation: hv-out-flash 10s linear infinite; }
+                      .hv-out.o1 { animation-delay: 1.7s; }
+                      .hv-out.o2 { animation-delay: 4.2s; }
+                      .hv-out.o3 { animation-delay: 6.7s; }
+                      @keyframes hv-out-flash {
+                        0%, 5%, 18%, 100% { stroke: var(--border); }
+                        9%                 { stroke: var(--clay); }
+                      }
+                      @media (prefers-reduced-motion: reduce) {
+                        .hv-hub-pulse, .hv-hub-bounce, .hv-in, .hv-trace, .hv-out {
+                          animation: none;
+                        }
+                        .hv-trace { opacity: 0; }
+                      }
+                    </style>
+
+                    <!-- Pale background connection lines (always visible) -->
+                    <g fill="none" stroke="var(--border-soft)" stroke-width="1" opacity="0.7">
+                      <path d="M 70 60 Q 155 120 240 180 Q 165 235 90 290"/>
+                      <path d="M 180 60 Q 210 120 240 180 Q 240 235 240 290"/>
+                      <path d="M 310 60 Q 270 120 240 180 Q 315 235 390 290"/>
+                      <path d="M 420 60 Q 330 120 240 180 Q 165 235 90 290"/>
+                    </g>
+
+                    <!-- Input chips (top) -->
+                    <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="14" font-weight="500" fill="var(--fg-muted)" text-anchor="middle">
+                      <g class="hv-in b1">
+                        <text x="70" y="38" x-text="$store.lang.t('hero.viz.i1')">ISO 5</text>
+                        <circle cx="70" cy="60" r="5" fill="var(--clay)"/>
+                      </g>
+                      <g class="hv-in b2">
+                        <text x="180" y="38" x-text="$store.lang.t('hero.viz.i2')">V̇ 12 000</text>
+                        <circle cx="180" cy="60" r="5" fill="var(--clay)"/>
+                      </g>
+                      <g class="hv-in b3">
+                        <text x="310" y="38" x-text="$store.lang.t('hero.viz.i3')">VOB/A</text>
+                        <circle cx="310" cy="60" r="5" fill="var(--clay)"/>
+                      </g>
+                      <g class="hv-in b4">
+                        <text x="420" y="38" x-text="$store.lang.t('hero.viz.i4')">VDI 3814</text>
+                        <circle cx="420" cy="60" r="5" fill="var(--clay)"/>
+                      </g>
+                    </g>
+
+                    <!-- Central hub -->
+                    <g>
+                      <circle class="hv-hub-pulse" cx="240" cy="180" r="26" fill="var(--clay)" opacity="0.3"/>
+                      <g class="hv-hub-bounce">
+                        <rect x="212" y="152" width="56" height="56" rx="8" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                        <text x="236" y="192" font-family="Georgia, ui-serif, Times New Roman, serif" font-size="26" font-weight="500" fill="var(--fg)">A</text>
+                        <circle cx="258" cy="192" r="3" fill="var(--clay)"/>
+                      </g>
+                    </g>
+
+                    <!-- Active traces (clay) -->
+                    <g fill="none" stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round">
+                      <path class="hv-trace t1" d="M 70 60 Q 155 120 240 180 Q 165 235 90 290"/>
+                      <path class="hv-trace t2" d="M 180 60 Q 210 120 240 180 Q 240 235 240 290"/>
+                      <path class="hv-trace t3" d="M 310 60 Q 270 120 240 180 Q 315 235 390 290"/>
+                      <path class="hv-trace t4" d="M 420 60 Q 330 120 240 180 Q 165 235 90 290"/>
+                    </g>
+
+                    <!-- Output modules (bottom) -->
+                    <g>
+                      <!-- o1: FUBE -->
+                      <rect class="hv-out o1" x="36" y="290" width="108" height="56" rx="7" fill="var(--bg-elev-strong)" stroke="var(--border)" stroke-width="1.5"/>
+                      <text x="90" y="312" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="13" font-weight="500" letter-spacing="0.05em" fill="var(--fg-muted)" x-text="$store.lang.t('hero.viz.o1Tag')">FUBE</text>
+                      <text x="90" y="332" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)" x-text="$store.lang.t('hero.viz.o1Title')">Funktion</text>
+
+                      <!-- o2: GA-Schema / Funktionsliste -->
+                      <rect class="hv-out o2" x="186" y="290" width="108" height="56" rx="7" fill="var(--bg-elev-strong)" stroke="var(--border)" stroke-width="1.5"/>
+                      <text x="240" y="312" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="13" font-weight="500" letter-spacing="0.05em" fill="var(--fg-muted)" x-text="$store.lang.t('hero.viz.o2Tag')">GA</text>
+                      <text x="240" y="332" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)" x-text="$store.lang.t('hero.viz.o2Title')">Schema</text>
+
+                      <!-- o3: LV / GAEB -->
+                      <rect class="hv-out o3" x="336" y="290" width="108" height="56" rx="7" fill="var(--bg-elev-strong)" stroke="var(--border)" stroke-width="1.5"/>
+                      <text x="390" y="312" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="13" font-weight="500" letter-spacing="0.05em" fill="var(--fg-muted)" x-text="$store.lang.t('hero.viz.o3Tag')">LV</text>
+                      <text x="390" y="332" text-anchor="middle" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)" x-text="$store.lang.t('hero.viz.o3Title')">GAEB</text>
+                    </g>
+                  </svg>
+                </div>
               </div>
             </aside>
 
@@ -125,90 +226,126 @@
                 <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
                   <style>
                     .v1-frame { fill: var(--bg-elev-strong); stroke: var(--border); stroke-width: 1.5; }
-                    .v1-hub-pulse { transform-origin: 140px 110px; animation: v1-pulse 3s ease-in-out infinite; }
+                    .v1-hub-pulse { transform-origin: 140px 110px; animation: v1-pulse 3.2s ease-in-out infinite; }
                     @keyframes v1-pulse {
-                      0%, 100% { opacity: 0.15; transform: scale(0.8); }
-                      50%      { opacity: 0.5;  transform: scale(2.2); }
+                      0%, 100% { opacity: 0.14; transform: scale(0.85); }
+                      50%      { opacity: 0.42; transform: scale(1.95); }
                     }
-                    .v1-dot { animation: v1-fly 10s ease-in-out infinite; }
-                    .v1-dot.d1 { animation-delay: 0s; }
-                    .v1-dot.d2 { animation-delay: 0.4s; }
-                    .v1-dot.d3 { animation-delay: 0.8s; }
-                    .v1-dot.d4 { animation-delay: 1.2s; }
-                    @keyframes v1-fly {
+                    .v1-hub-box { transform-origin: 140px 110px; animation: v1-bounce 8s ease-in-out infinite; }
+                    @keyframes v1-bounce {
+                      0%, 28%, 44%, 100% { transform: scale(1); }
+                      36%                 { transform: scale(1.06); }
+                    }
+                    .v1-particle { opacity: 0; animation: v1-stream 2s ease-in-out infinite; }
+                    .v1-particle.p1  { --to: translate(80px, 60px); animation-delay: 0s; }
+                    .v1-particle.p1b { --to: translate(80px, 60px); animation-delay: 1s; }
+                    .v1-particle.p2  { --to: translate(40px, 54px); animation-delay: 0.25s; }
+                    .v1-particle.p2b { --to: translate(40px, 54px); animation-delay: 1.25s; }
+                    .v1-particle.p3  { --to: translate(-30px, 60px); animation-delay: 0.5s; }
+                    .v1-particle.p3b { --to: translate(-30px, 60px); animation-delay: 1.5s; }
+                    .v1-particle.p4  { --to: translate(-70px, 54px); animation-delay: 0.75s; }
+                    .v1-particle.p4b { --to: translate(-70px, 54px); animation-delay: 1.75s; }
+                    @keyframes v1-stream {
                       0%   { opacity: 0; transform: translate(0, 0); }
-                      6%   { opacity: 1; transform: translate(0, 0); }
-                      26%  { opacity: 0; transform: var(--fly-to); }
-                      100% { opacity: 0; transform: var(--fly-to); }
+                      14%  { opacity: 1; transform: translate(0, 0); }
+                      82%  { opacity: 0; transform: var(--to); }
+                      100% { opacity: 0; transform: var(--to); }
                     }
-                    .v1-dot.d1 { --fly-to: translate(80px, 75px); }
-                    .v1-dot.d2 { --fly-to: translate(40px, 70px); }
-                    .v1-dot.d3 { --fly-to: translate(-30px, 75px); }
-                    .v1-dot.d4 { --fly-to: translate(-65px, 65px); }
-                    .v1-doc-outline {
-                      stroke-dasharray: 350; stroke-dashoffset: 350;
-                      animation: v1-draw 10s linear infinite;
+                    .v1-doc { stroke-dasharray: 350; stroke-dashoffset: 350; opacity: 0; animation: v1-doc 8s linear infinite; }
+                    @keyframes v1-doc {
+                      0%, 32%  { stroke-dashoffset: 350; opacity: 0; }
+                      36%      { stroke-dashoffset: 350; opacity: 1; }
+                      52%      { stroke-dashoffset: 0; opacity: 1; }
+                      88%      { stroke-dashoffset: 0; opacity: 1; }
+                      100%     { stroke-dashoffset: 0; opacity: 0; }
                     }
-                    @keyframes v1-draw {
-                      0%, 35% { stroke-dashoffset: 350; }
-                      48%     { stroke-dashoffset: 0; }
-                      94%     { stroke-dashoffset: 0; }
-                      100%    { stroke-dashoffset: 350; }
-                    }
-                    .v1-line { stroke-dasharray: 80; stroke-dashoffset: 80; animation: v1-line 10s linear infinite; }
+                    .v1-line { stroke-dasharray: 80; stroke-dashoffset: 80; opacity: 0; animation: v1-line 8s linear infinite; }
                     .v1-line.l1 { animation-delay: 0s; }
-                    .v1-line.l2 { animation-delay: 0.35s; }
-                    .v1-line.l3 { animation-delay: 0.7s; }
+                    .v1-line.l2 { animation-delay: 0.3s; }
+                    .v1-line.l3 { animation-delay: 0.6s; }
                     @keyframes v1-line {
-                      0%, 52% { stroke-dashoffset: 80; }
-                      62%     { stroke-dashoffset: 0; }
-                      94%     { stroke-dashoffset: 0; }
-                      100%    { stroke-dashoffset: 80; }
+                      0%, 48%  { stroke-dashoffset: 80; opacity: 0; }
+                      55%      { stroke-dashoffset: 80; opacity: 1; }
+                      66%      { stroke-dashoffset: 0; opacity: 1; }
+                      88%      { stroke-dashoffset: 0; opacity: 1; }
+                      100%     { stroke-dashoffset: 0; opacity: 0; }
+                    }
+                    .v1-tick { opacity: 0; transform-origin: 110px 47px; animation: v1-tick 8s linear infinite; }
+                    @keyframes v1-tick {
+                      0%, 68% { opacity: 0; transform: scale(0.5); }
+                      75%     { opacity: 1; transform: scale(1); }
+                      88%     { opacity: 1; transform: scale(1); }
+                      100%    { opacity: 0; transform: scale(1); }
+                    }
+                    .v1-name { opacity: 0; animation: v1-name 8s linear infinite; }
+                    @keyframes v1-name {
+                      0%, 60%  { opacity: 0; }
+                      68%      { opacity: 1; }
+                      88%      { opacity: 1; }
+                      100%     { opacity: 0; }
                     }
                     @media (prefers-reduced-motion: reduce) {
-                      .v1-hub-pulse, .v1-dot, .v1-doc-outline, .v1-line { animation: none; }
-                      .v1-doc-outline, .v1-line { stroke-dashoffset: 0; }
-                      .v1-dot { opacity: 1; }
+                      .v1-hub-pulse, .v1-hub-box, .v1-particle, .v1-doc, .v1-line, .v1-tick, .v1-name { animation: none; }
+                      .v1-doc, .v1-line { stroke-dashoffset: 0; opacity: 1; }
+                      .v1-tick, .v1-name { opacity: 1; }
+                      .v1-particle { opacity: 0; }
                     }
                   </style>
 
                   <rect class="v1-frame" x="0.75" y="0.75" width="278.5" height="218.5" rx="9.25"/>
 
-                  <!-- Input dots with mono labels -->
-                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)" text-anchor="middle">
-                    <g class="v1-dot d1">
-                      <circle cx="60" cy="35" r="3" fill="var(--clay)"/>
-                      <text x="60" y="25">ISO 5</text>
+                  <!-- Static input chips with mono labels -->
+                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="9.5" font-weight="500" fill="var(--fg-muted)" text-anchor="middle">
+                    <g>
+                      <text x="60" y="36">ISO 5</text>
+                      <circle cx="60" cy="50" r="3.2" fill="none" stroke="var(--clay)" stroke-width="1.3"/>
                     </g>
-                    <g class="v1-dot d2">
-                      <circle cx="100" cy="40" r="3" fill="var(--clay)"/>
-                      <text x="100" y="30">H14</text>
+                    <g>
+                      <text x="100" y="42">H14</text>
+                      <circle cx="100" cy="56" r="3.2" fill="none" stroke="var(--clay)" stroke-width="1.3"/>
                     </g>
-                    <g class="v1-dot d3">
-                      <circle cx="170" cy="35" r="3" fill="var(--clay)"/>
-                      <text x="170" y="25">V̇ 12000</text>
+                    <g>
+                      <text x="170" y="36">V̇ 12 000</text>
+                      <circle cx="170" cy="50" r="3.2" fill="none" stroke="var(--clay)" stroke-width="1.3"/>
                     </g>
-                    <g class="v1-dot d4">
-                      <circle cx="210" cy="45" r="3" fill="var(--clay)"/>
-                      <text x="210" y="35">Δp 400</text>
+                    <g>
+                      <text x="212" y="42">Δp 400</text>
+                      <circle cx="212" cy="56" r="3.2" fill="none" stroke="var(--clay)" stroke-width="1.3"/>
                     </g>
+                  </g>
+
+                  <!-- Continuous particle stream from each input to hub -->
+                  <g fill="var(--clay)">
+                    <circle class="v1-particle p1"  cx="60"  cy="50" r="2.4"/>
+                    <circle class="v1-particle p1b" cx="60"  cy="50" r="2.4"/>
+                    <circle class="v1-particle p2"  cx="100" cy="56" r="2.4"/>
+                    <circle class="v1-particle p2b" cx="100" cy="56" r="2.4"/>
+                    <circle class="v1-particle p3"  cx="170" cy="50" r="2.4"/>
+                    <circle class="v1-particle p3b" cx="170" cy="50" r="2.4"/>
+                    <circle class="v1-particle p4"  cx="212" cy="56" r="2.4"/>
+                    <circle class="v1-particle p4b" cx="212" cy="56" r="2.4"/>
                   </g>
 
                   <!-- Central hub -->
                   <g>
                     <circle class="v1-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
-                    <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                    <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
-                    <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                    <g class="v1-hub-box">
+                      <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                      <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                      <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                    </g>
                   </g>
 
-                  <!-- Output: document with text lines -->
+                  <!-- Output: document with text lines + completion tick + filename -->
                   <g transform="translate(80, 150)">
-                    <rect class="v1-doc-outline" x="0" y="0" width="120" height="55" rx="3" fill="none" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <rect class="v1-doc" x="0" y="0" width="120" height="55" rx="3" fill="none" stroke="var(--fg-soft)" stroke-width="1.5"/>
                     <line class="v1-line l1" x1="10" y1="14" x2="80" y2="14" stroke="var(--fg-soft)" stroke-width="1.5" stroke-linecap="round"/>
                     <line class="v1-line l2" x1="10" y1="26" x2="92" y2="26" stroke="var(--fg-soft)" stroke-width="1.5" stroke-linecap="round"/>
                     <line class="v1-line l3" x1="10" y1="38" x2="68" y2="38" stroke="var(--fg-soft)" stroke-width="1.5" stroke-linecap="round"/>
-                    <text x="60" y="71" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">RLT-RA1.FUBE.docx</text>
+                    <g class="v1-tick">
+                      <path d="M 104 47 L 109 52 L 117 43" fill="none" stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <text class="v1-name" x="60" y="65" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">RLT-RA1.FUBE.docx</text>
                   </g>
                 </svg>
               </div>
@@ -229,81 +366,113 @@
                 <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
                   <style>
                     .v2-frame { fill: var(--bg-elev-strong); stroke: var(--border); stroke-width: 1.5; }
-                    .v2-hub-pulse { transform-origin: 140px 110px; animation: v2-pulse 3s ease-in-out infinite; }
+                    .v2-hub-pulse { transform-origin: 140px 110px; animation: v2-pulse 3.2s ease-in-out infinite; }
                     @keyframes v2-pulse {
-                      0%, 100% { opacity: 0.15; transform: scale(0.8); }
-                      50%      { opacity: 0.5;  transform: scale(2.2); }
+                      0%, 100% { opacity: 0.14; transform: scale(0.85); }
+                      50%      { opacity: 0.42; transform: scale(1.95); }
                     }
-                    .v2-comp { animation: v2-fly 10s ease-in-out infinite; }
-                    .v2-comp.d1 { animation-delay: 0s; }
-                    .v2-comp.d2 { animation-delay: 0.4s; }
-                    .v2-comp.d3 { animation-delay: 0.8s; }
-                    @keyframes v2-fly {
+                    .v2-hub-box { transform-origin: 140px 110px; animation: v2-bounce 8s ease-in-out infinite; }
+                    @keyframes v2-bounce {
+                      0%, 28%, 44%, 100% { transform: scale(1); }
+                      36%                 { transform: scale(1.06); }
+                    }
+                    .v2-particle { opacity: 0; animation: v2-stream 2s ease-in-out infinite; }
+                    .v2-particle.p1  { --to: translate(69px, 60px); animation-delay: 0s; }
+                    .v2-particle.p1b { --to: translate(69px, 60px); animation-delay: 1s; }
+                    .v2-particle.p2  { --to: translate(0px, 56px); animation-delay: 0.25s; }
+                    .v2-particle.p2b { --to: translate(0px, 56px); animation-delay: 1.25s; }
+                    .v2-particle.p3  { --to: translate(-63px, 60px); animation-delay: 0.5s; }
+                    .v2-particle.p3b { --to: translate(-63px, 60px); animation-delay: 1.5s; }
+                    @keyframes v2-stream {
                       0%   { opacity: 0; transform: translate(0, 0); }
-                      6%   { opacity: 1; transform: translate(0, 0); }
-                      26%  { opacity: 0; transform: var(--fly-to); }
-                      100% { opacity: 0; transform: var(--fly-to); }
+                      14%  { opacity: 1; transform: translate(0, 0); }
+                      82%  { opacity: 0; transform: var(--to); }
+                      100% { opacity: 0; transform: var(--to); }
                     }
-                    .v2-comp.d1 { --fly-to: translate(60px, 65px); }
-                    .v2-comp.d2 { --fly-to: translate(0px, 70px); }
-                    .v2-comp.d3 { --fly-to: translate(-60px, 65px); }
-                    .v2-node { opacity: 0; animation: v2-node-in 10s linear infinite; }
+                    .v2-node { opacity: 0; animation: v2-node-in 8s linear infinite; }
                     .v2-node.n1 { animation-delay: 0s; }
-                    .v2-node.n2 { animation-delay: 0.4s; }
-                    .v2-node.n3 { animation-delay: 0.8s; }
-                    .v2-node.n4 { animation-delay: 1.2s; }
+                    .v2-node.n2 { animation-delay: 0.2s; }
+                    .v2-node.n3 { animation-delay: 0.4s; }
+                    .v2-node.n4 { animation-delay: 0.6s; }
                     @keyframes v2-node-in {
-                      0%, 38% { opacity: 0; transform: scale(0.4); }
-                      48%     { opacity: 1; transform: scale(1); }
-                      94%     { opacity: 1; transform: scale(1); }
-                      100%    { opacity: 0; transform: scale(0.4); }
+                      0%, 34%  { opacity: 0; transform: scale(0.4); }
+                      48%      { opacity: 1; transform: scale(1); }
+                      88%      { opacity: 1; transform: scale(1); }
+                      100%     { opacity: 0; transform: scale(1); }
                     }
-                    .v2-link { stroke-dasharray: 60; stroke-dashoffset: 60; animation: v2-link 10s linear infinite; }
+                    .v2-link { stroke-dasharray: 60; stroke-dashoffset: 60; opacity: 0; animation: v2-link 8s linear infinite; }
                     .v2-link.k1 { animation-delay: 0s; }
-                    .v2-link.k2 { animation-delay: 0.3s; }
-                    .v2-link.k3 { animation-delay: 0.6s; }
+                    .v2-link.k2 { animation-delay: 0.2s; }
+                    .v2-link.k3 { animation-delay: 0.4s; }
                     @keyframes v2-link {
-                      0%, 56% { stroke-dashoffset: 60; }
-                      68%     { stroke-dashoffset: 0; }
-                      94%     { stroke-dashoffset: 0; }
-                      100%    { stroke-dashoffset: 60; }
+                      0%, 50%  { stroke-dashoffset: 60; opacity: 0; }
+                      58%      { stroke-dashoffset: 60; opacity: 1; }
+                      68%      { stroke-dashoffset: 0; opacity: 1; }
+                      88%      { stroke-dashoffset: 0; opacity: 1; }
+                      100%     { stroke-dashoffset: 0; opacity: 0; }
+                    }
+                    .v2-tick { opacity: 0; transform-origin: 232px 192px; animation: v2-tick 8s linear infinite; }
+                    @keyframes v2-tick {
+                      0%, 70% { opacity: 0; transform: scale(0.5); }
+                      78%     { opacity: 1; transform: scale(1); }
+                      88%     { opacity: 1; transform: scale(1); }
+                      100%    { opacity: 0; transform: scale(1); }
+                    }
+                    .v2-name { opacity: 0; animation: v2-name 8s linear infinite; }
+                    @keyframes v2-name {
+                      0%, 60%  { opacity: 0; }
+                      68%      { opacity: 1; }
+                      88%      { opacity: 1; }
+                      100%     { opacity: 0; }
                     }
                     @media (prefers-reduced-motion: reduce) {
-                      .v2-hub-pulse, .v2-comp, .v2-node, .v2-link { animation: none; }
-                      .v2-node, .v2-comp { opacity: 1; transform: none; }
-                      .v2-link { stroke-dashoffset: 0; }
+                      .v2-hub-pulse, .v2-hub-box, .v2-particle, .v2-node, .v2-link, .v2-tick, .v2-name { animation: none; }
+                      .v2-node, .v2-tick, .v2-name { opacity: 1; transform: none; }
+                      .v2-link { stroke-dashoffset: 0; opacity: 1; }
+                      .v2-particle { opacity: 0; }
                     }
                   </style>
 
                   <rect class="v2-frame" x="0.75" y="0.75" width="278.5" height="218.5" rx="9.25"/>
 
-                  <!-- Input components (top): different shapes -->
-                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)" text-anchor="middle">
-                    <g class="v2-comp d1">
-                      <rect x="68" y="32" width="10" height="10" fill="var(--clay)"/>
-                      <text x="73" y="25">RLT</text>
+                  <!-- Static input components (always visible) -->
+                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="9.5" font-weight="500" fill="var(--fg-muted)" text-anchor="middle">
+                    <g>
+                      <text x="71" y="36">RLT</text>
+                      <rect x="65" y="44" width="12" height="12" fill="none" stroke="var(--clay)" stroke-width="1.4"/>
                     </g>
-                    <g class="v2-comp d2">
-                      <circle cx="140" cy="37" r="5" fill="var(--clay)"/>
-                      <text x="140" y="25">VAV</text>
+                    <g>
+                      <text x="140" y="36">VAV</text>
+                      <circle cx="140" cy="50" r="6" fill="none" stroke="var(--clay)" stroke-width="1.4"/>
                     </g>
-                    <g class="v2-comp d3">
-                      <path d="M 200 32 L 211 32 L 205.5 42 Z" fill="var(--clay)"/>
-                      <text x="205.5" y="25">BSK</text>
+                    <g>
+                      <text x="205" y="36">BSK</text>
+                      <path d="M 197 44 L 213 44 L 205 56 Z" fill="none" stroke="var(--clay)" stroke-width="1.4" stroke-linejoin="round"/>
                     </g>
+                  </g>
+
+                  <!-- Particle streams from each component to hub -->
+                  <g fill="var(--clay)">
+                    <circle class="v2-particle p1"  cx="71"  cy="50" r="2.4"/>
+                    <circle class="v2-particle p1b" cx="71"  cy="50" r="2.4"/>
+                    <circle class="v2-particle p2"  cx="140" cy="50" r="2.4"/>
+                    <circle class="v2-particle p2b" cx="140" cy="50" r="2.4"/>
+                    <circle class="v2-particle p3"  cx="205" cy="50" r="2.4"/>
+                    <circle class="v2-particle p3b" cx="205" cy="50" r="2.4"/>
                   </g>
 
                   <!-- Central hub -->
                   <g>
                     <circle class="v2-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
-                    <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                    <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
-                    <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                    <g class="v2-hub-box">
+                      <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                      <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                      <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                    </g>
                   </g>
 
-                  <!-- Output: network of nodes connected by lines -->
-                  <g transform="translate(0, 0)">
-                    <!-- Nodes -->
+                  <!-- Output: knot network + completion tick -->
+                  <g>
                     <g class="v2-node n1" style="transform-origin: 90px 175px;">
                       <circle cx="90" cy="175" r="6" fill="var(--bg-elev)" stroke="var(--fg-soft)" stroke-width="1.5"/>
                     </g>
@@ -313,16 +482,18 @@
                     <g class="v2-node n3" style="transform-origin: 190px 175px;">
                       <circle cx="190" cy="175" r="6" fill="var(--bg-elev)" stroke="var(--fg-soft)" stroke-width="1.5"/>
                     </g>
-                    <g class="v2-node n4" style="transform-origin: 140px 195px;">
-                      <circle cx="140" cy="195" r="5" fill="var(--clay)" stroke="var(--clay)" stroke-width="1.5"/>
+                    <g class="v2-node n4" style="transform-origin: 140px 192px;">
+                      <circle cx="140" cy="192" r="5" fill="var(--clay)"/>
                     </g>
-                    <!-- Links -->
-                    <line class="v2-link k1" x1="96" y1="175" x2="134" y2="165" stroke="var(--fg-soft)" stroke-width="1.5"/>
-                    <line class="v2-link k2" x1="146" y1="165" x2="184" y2="175" stroke="var(--fg-soft)" stroke-width="1.5"/>
-                    <line class="v2-link k3" x1="140" y1="171" x2="140" y2="189" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <line class="v2-link k1" x1="96" y1="174" x2="134" y2="166" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <line class="v2-link k2" x1="146" y1="166" x2="184" y2="174" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <line class="v2-link k3" x1="140" y1="171" x2="140" y2="187" stroke="var(--fg-soft)" stroke-width="1.5"/>
+                    <g class="v2-tick">
+                      <path d="M 226 192 L 231 197 L 239 188" fill="none" stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
                   </g>
 
-                  <text x="140" y="212" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">Funktionsliste · VDI 3814</text>
+                  <text class="v2-name" x="140" y="210" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="9.5" fill="var(--fg-muted)">Funktionsliste · VDI 3814</text>
                 </svg>
               </div>
 
@@ -341,110 +512,147 @@
                 <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" class="block w-full h-auto">
                   <style>
                     .v3-frame { fill: var(--bg-elev-strong); stroke: var(--border); stroke-width: 1.5; }
-                    .v3-hub-pulse { transform-origin: 140px 110px; animation: v3-pulse 3s ease-in-out infinite; }
+                    .v3-hub-pulse { transform-origin: 140px 110px; animation: v3-pulse 3.2s ease-in-out infinite; }
                     @keyframes v3-pulse {
-                      0%, 100% { opacity: 0.15; transform: scale(0.8); }
-                      50%      { opacity: 0.5;  transform: scale(2.2); }
+                      0%, 100% { opacity: 0.14; transform: scale(0.85); }
+                      50%      { opacity: 0.42; transform: scale(1.95); }
                     }
-                    .v3-frag { animation: v3-fly 10s ease-in-out infinite; }
-                    .v3-frag.d1 { animation-delay: 0s; }
-                    .v3-frag.d2 { animation-delay: 0.35s; }
-                    .v3-frag.d3 { animation-delay: 0.7s; }
-                    .v3-frag.d4 { animation-delay: 1.05s; }
-                    @keyframes v3-fly {
+                    .v3-hub-box { transform-origin: 140px 110px; animation: v3-bounce 8s ease-in-out infinite; }
+                    @keyframes v3-bounce {
+                      0%, 28%, 44%, 100% { transform: scale(1); }
+                      36%                 { transform: scale(1.06); }
+                    }
+                    .v3-particle { opacity: 0; animation: v3-stream 2s ease-in-out infinite; }
+                    .v3-particle.p1  { --to: translate(78px, 58px); animation-delay: 0s; }
+                    .v3-particle.p1b { --to: translate(78px, 58px); animation-delay: 1s; }
+                    .v3-particle.p2  { --to: translate(33px, 60px); animation-delay: 0.25s; }
+                    .v3-particle.p2b { --to: translate(33px, 60px); animation-delay: 1.25s; }
+                    .v3-particle.p3  { --to: translate(-17px, 58px); animation-delay: 0.5s; }
+                    .v3-particle.p3b { --to: translate(-17px, 58px); animation-delay: 1.5s; }
+                    .v3-particle.p4  { --to: translate(-66px, 60px); animation-delay: 0.75s; }
+                    .v3-particle.p4b { --to: translate(-66px, 60px); animation-delay: 1.75s; }
+                    @keyframes v3-stream {
                       0%   { opacity: 0; transform: translate(0, 0); }
-                      6%   { opacity: 1; transform: translate(0, 0); }
-                      26%  { opacity: 0; transform: var(--fly-to); }
-                      100% { opacity: 0; transform: var(--fly-to); }
+                      14%  { opacity: 1; transform: translate(0, 0); }
+                      82%  { opacity: 0; transform: var(--to); }
+                      100% { opacity: 0; transform: var(--to); }
                     }
-                    .v3-frag.d1 { --fly-to: translate(75px, 70px); }
-                    .v3-frag.d2 { --fly-to: translate(30px, 75px); }
-                    .v3-frag.d3 { --fly-to: translate(-25px, 70px); }
-                    .v3-frag.d4 { --fly-to: translate(-65px, 70px); }
-                    .v3-header { stroke-dasharray: 120; stroke-dashoffset: 120; animation: v3-draw-header 10s linear infinite; }
+                    .v3-header { stroke-dasharray: 140; stroke-dashoffset: 140; opacity: 0; animation: v3-draw-header 8s linear infinite; }
                     @keyframes v3-draw-header {
-                      0%, 38% { stroke-dashoffset: 120; }
-                      48%     { stroke-dashoffset: 0; }
-                      94%     { stroke-dashoffset: 0; }
-                      100%    { stroke-dashoffset: 120; }
+                      0%, 34%  { stroke-dashoffset: 140; opacity: 0; }
+                      40%      { stroke-dashoffset: 140; opacity: 1; }
+                      52%      { stroke-dashoffset: 0; opacity: 1; }
+                      88%      { stroke-dashoffset: 0; opacity: 1; }
+                      100%     { stroke-dashoffset: 0; opacity: 0; }
                     }
-                    .v3-row { opacity: 0; animation: v3-row 10s linear infinite; }
+                    .v3-row { opacity: 0; animation: v3-row 8s linear infinite; }
                     .v3-row.r1 { animation-delay: 0s; }
-                    .v3-row.r2 { animation-delay: 0.35s; }
-                    .v3-row.r3 { animation-delay: 0.7s; }
+                    .v3-row.r2 { animation-delay: 0.25s; }
+                    .v3-row.r3 { animation-delay: 0.5s; }
                     @keyframes v3-row {
-                      0%, 52% { opacity: 0; transform: translateX(-6px); }
+                      0%, 50% { opacity: 0; transform: translateX(-4px); }
                       62%     { opacity: 1; transform: translateX(0); }
-                      94%     { opacity: 1; transform: translateX(0); }
-                      100%    { opacity: 0; transform: translateX(-6px); }
+                      88%     { opacity: 1; transform: translateX(0); }
+                      100%    { opacity: 0; transform: translateX(0); }
+                    }
+                    .v3-tick { opacity: 0; transform-origin: 218px 188px; animation: v3-tick 8s linear infinite; }
+                    @keyframes v3-tick {
+                      0%, 70% { opacity: 0; transform: scale(0.5); }
+                      78%     { opacity: 1; transform: scale(1); }
+                      88%     { opacity: 1; transform: scale(1); }
+                      100%    { opacity: 0; transform: scale(1); }
+                    }
+                    .v3-name { opacity: 0; animation: v3-name 8s linear infinite; }
+                    @keyframes v3-name {
+                      0%, 60%  { opacity: 0; }
+                      68%      { opacity: 1; }
+                      88%      { opacity: 1; }
+                      100%     { opacity: 0; }
                     }
                     @media (prefers-reduced-motion: reduce) {
-                      .v3-hub-pulse, .v3-frag, .v3-header, .v3-row { animation: none; }
-                      .v3-frag, .v3-row { opacity: 1; transform: none; }
-                      .v3-header { stroke-dashoffset: 0; }
+                      .v3-hub-pulse, .v3-hub-box, .v3-particle, .v3-header, .v3-row, .v3-tick, .v3-name { animation: none; }
+                      .v3-header { stroke-dashoffset: 0; opacity: 1; }
+                      .v3-row, .v3-tick, .v3-name { opacity: 1; transform: none; }
+                      .v3-particle { opacity: 0; }
                     }
                   </style>
 
                   <rect class="v3-frame" x="0.75" y="0.75" width="278.5" height="218.5" rx="9.25"/>
 
-                  <!-- Input fragments (top) -->
-                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)" text-anchor="middle">
-                    <g class="v3-frag d1">
-                      <rect x="55" y="32" width="14" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
-                      <text x="62" y="25">DN 200</text>
+                  <!-- Static input chips -->
+                  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="9.5" font-weight="500" fill="var(--fg-muted)" text-anchor="middle">
+                    <g>
+                      <text x="62" y="38">DN 200</text>
+                      <rect x="51" y="46" width="22" height="11" rx="2" fill="none" stroke="var(--clay)" stroke-width="1.4"/>
                     </g>
-                    <g class="v3-frag d2">
-                      <rect x="100" y="32" width="20" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
-                      <text x="110" y="25">VOB/A</text>
+                    <g>
+                      <text x="107" y="38">VOB/A</text>
+                      <rect x="95" y="46" width="24" height="11" rx="2" fill="none" stroke="var(--clay)" stroke-width="1.4"/>
                     </g>
-                    <g class="v3-frag d3">
-                      <rect x="150" y="32" width="22" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
-                      <text x="161" y="25">2 St.</text>
+                    <g>
+                      <text x="157" y="38">2 St.</text>
+                      <rect x="146" y="46" width="22" height="11" rx="2" fill="none" stroke="var(--clay)" stroke-width="1.4"/>
                     </g>
-                    <g class="v3-frag d4">
-                      <rect x="200" y="32" width="18" height="10" rx="1.5" fill="none" stroke="var(--clay)" stroke-width="1.2"/>
-                      <text x="209" y="25">€/Pos</text>
+                    <g>
+                      <text x="206" y="38">€/Pos</text>
+                      <rect x="194" y="46" width="24" height="11" rx="2" fill="none" stroke="var(--clay)" stroke-width="1.4"/>
                     </g>
+                  </g>
+
+                  <!-- Particle streams from each chip to hub -->
+                  <g fill="var(--clay)">
+                    <circle class="v3-particle p1"  cx="62"  cy="52" r="2.4"/>
+                    <circle class="v3-particle p1b" cx="62"  cy="52" r="2.4"/>
+                    <circle class="v3-particle p2"  cx="107" cy="52" r="2.4"/>
+                    <circle class="v3-particle p2b" cx="107" cy="52" r="2.4"/>
+                    <circle class="v3-particle p3"  cx="157" cy="52" r="2.4"/>
+                    <circle class="v3-particle p3b" cx="157" cy="52" r="2.4"/>
+                    <circle class="v3-particle p4"  cx="206" cy="52" r="2.4"/>
+                    <circle class="v3-particle p4b" cx="206" cy="52" r="2.4"/>
                   </g>
 
                   <!-- Central hub -->
                   <g>
                     <circle class="v3-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
-                    <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                    <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
-                    <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                    <g class="v3-hub-box">
+                      <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
+                      <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                      <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
+                    </g>
                   </g>
 
-                  <!-- Output: table -->
-                  <g transform="translate(70, 150)">
+                  <!-- Output: table + completion tick + filename -->
+                  <g transform="translate(70, 152)">
                     <line class="v3-header" x1="0" y1="0" x2="140" y2="0" stroke="var(--fg-soft)" stroke-width="1.5"/>
-                    <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-muted)">
+                    <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-muted)">
                       <text class="v3-header" x="2" y="-3">POS</text>
                       <text class="v3-header" x="38" y="-3">BEZEICHNUNG</text>
-                      <text class="v3-header" x="110" y="-3">MENGE</text>
+                      <text class="v3-header" x="108" y="-3">MENGE</text>
                     </g>
-                    <!-- Rows -->
-                    <g class="v3-row r1" style="transform-origin: 0 8px;">
+                    <g class="v3-row r1">
                       <line x1="0" y1="14" x2="140" y2="14" stroke="var(--border)" stroke-width="0.75"/>
-                      <text x="2" y="11" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">01.10</text>
-                      <line x1="38" y1="8" x2="100" y2="8" stroke="var(--fg-soft)" stroke-width="1"/>
-                      <text x="110" y="11" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">2 St</text>
+                      <text x="2" y="11" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-soft)">01.10</text>
+                      <line x1="38" y1="8" x2="98" y2="8" stroke="var(--fg-soft)" stroke-width="1"/>
+                      <text x="110" y="11" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-soft)">2 St</text>
                     </g>
-                    <g class="v3-row r2" style="transform-origin: 0 22px;">
+                    <g class="v3-row r2">
                       <line x1="0" y1="28" x2="140" y2="28" stroke="var(--border)" stroke-width="0.75"/>
-                      <text x="2" y="25" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">01.20</text>
+                      <text x="2" y="25" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-soft)">01.20</text>
                       <line x1="38" y1="22" x2="92" y2="22" stroke="var(--fg-soft)" stroke-width="1"/>
-                      <text x="110" y="25" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">14 m</text>
+                      <text x="110" y="25" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-soft)">14 m</text>
                     </g>
-                    <g class="v3-row r3" style="transform-origin: 0 36px;">
+                    <g class="v3-row r3">
                       <line x1="0" y1="42" x2="140" y2="42" stroke="var(--border)" stroke-width="0.75"/>
-                      <text x="2" y="39" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">01.30</text>
+                      <text x="2" y="39" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-soft)">01.30</text>
                       <line x1="38" y1="36" x2="86" y2="36" stroke="var(--fg-soft)" stroke-width="1"/>
-                      <text x="110" y="39" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="7.5" fill="var(--fg-soft)">1 psch</text>
+                      <text x="110" y="39" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8" fill="var(--fg-soft)">1 psch</text>
+                    </g>
+                    <g class="v3-tick">
+                      <path d="M 142 38 L 147 43 L 155 34" fill="none" stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
                   </g>
 
-                  <text x="140" y="212" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="8.5" fill="var(--fg-muted)">LV.gaeb.x86</text>
+                  <text class="v3-name" x="140" y="210" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="9.5" fill="var(--fg-muted)">LV.gaeb.x86</text>
                 </svg>
               </div>
 

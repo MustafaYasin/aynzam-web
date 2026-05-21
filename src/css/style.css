@@ -461,11 +461,17 @@
   background: var(--bg-elev);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 20px;
   transition:
     border-color 220ms ease,
     transform 220ms ease,
     box-shadow 220ms ease;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 28px;
+  }
 }
 
 .card:hover {
@@ -476,19 +482,31 @@
   background: var(--bg-elev-strong);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 20px;
   position: relative;
   transition: border-color 220ms ease;
+}
+
+@media (min-width: 768px) {
+  .card-clay {
+    padding: 28px;
+  }
 }
 
 .card-clay::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 28px;
+  left: 20px;
   width: 32px;
   height: 2px;
   background: var(--clay);
+}
+
+@media (min-width: 768px) {
+  .card-clay::before {
+    left: 28px;
+  }
 }
 
 /* ================================ */

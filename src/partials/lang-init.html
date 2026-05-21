@@ -1,10 +1,8 @@
 <script>
   (function() {
-    var lang = localStorage.getItem('language');
-    if (!lang) {
-      var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      lang = nav.indexOf('en') === 0 ? 'en' : 'de';
-    }
+    // German is the hard default. English only on explicit user choice.
+    var stored = localStorage.getItem('language');
+    var lang = (stored === 'en') ? 'en' : 'de';
     document.documentElement.lang = lang;
     window.__lang = lang;
   })();

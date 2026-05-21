@@ -3,13 +3,9 @@ document.addEventListener('alpine:init', () => {
     current: window.__lang || 'de',
 
     init() {
+      // German is the hard default. English only on explicit user choice.
       const stored = localStorage.getItem('language')
-      if (stored === 'en' || stored === 'de') {
-        this.current = stored
-      } else {
-        const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase()
-        this.current = browserLang.startsWith('en') ? 'en' : 'de'
-      }
+      this.current = stored === 'en' ? 'en' : 'de'
       this.update()
     },
 
