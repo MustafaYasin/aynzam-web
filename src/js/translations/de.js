@@ -14,14 +14,14 @@ window.__translations_de = {
     titleA: 'TGA-Doku in ',
     titleEm: 'Minuten',
     titleB: ', nicht Wochen.',
-    deck: 'AynzamAI generiert Funktionsbeschreibungen, Funktionslisten nach VDI 3814 und Leistungsverzeichnisse mit GAEB-X86-Export — direkt aus deinen Anlagedaten, normkonform und prüfungsfähig per Default.',
+    deck: 'AynzamAI generiert Funktionsbeschreibungen, Funktionslisten nach VDI 3814 und Leistungsverzeichnisse mit GAEB-X86-Export, direkt aus deinen Anlagedaten, normkonform und prüfungsfähig per Default.',
     ctaPrimary: 'Demo buchen',
     ctaSecondary: 'Use Cases ansehen',
     cardEyebrow: 'Die Engine im Überblick',
     cardDeck:
-      'Anlagedaten und Norm-Codes konvergieren im Hub — drei prüfungsfähige Doku-Typen kommen raus.',
+      'Anlagedaten und Norm-Codes konvergieren im Hub, drei prüfungsfähige Doku-Typen kommen raus.',
     viz: {
-      aria: 'Topologie der AynzamAI-Engine: vier Eingaben (ISO 5, Volumenstrom, VOB/A, VDI 3814) konvergieren zum zentralen Hub und werden in drei Outputs aufgeteilt — FUBE, GA-Schema und LV mit GAEB-Export.',
+      aria: 'Topologie der AynzamAI-Engine: vier Eingaben (ISO 5, Volumenstrom, VOB/A, VDI 3814) konvergieren zum zentralen Hub und werden in drei Outputs aufgeteilt: FUBE, GA-Schema und LV mit GAEB-Export.',
       i1: 'BACnet',
       i2: 'V̇ 12 000',
       i3: 'VOB/A',
@@ -54,25 +54,25 @@ window.__translations_de = {
     eyebrow: '01 / Live im Loop',
     titleA: 'So arbeitet die ',
     titleEm: 'Engine',
-    titleB: ' — auf realer Anlage.',
+    titleB: '. Auf realer Anlage.',
     deck: 'Drei Doku-Outputs, ein Workflow: Anlagedaten gehen rein, Norm-geprüfte Doku kommt raus. Keine Excel-Templates, die bei jeder Designänderung erneut geprüft werden müssen.',
     v1: {
       aria: 'FUBE-Generierung: Anlagedaten konvergieren in die Engine, Funktionsbeschreibung baut sich Zeile für Zeile auf.',
       tag: 'Funktionsbeschreibung · FUBE',
       title: 'Anlage zur fertigen FUBE',
-      body: 'Anlage-ID, Norm-Referenz, Volumenstrom, Druckhaltung — vier Werte rein, vollständige Funktionsbeschreibung raus. Inklusive FAT-Plan, Wartungssektion und Quellen-Nachweis pro Absatz.',
+      body: 'Anlage-ID, Norm-Referenz, Volumenstrom, Druckhaltung: vier Werte rein, vollständige Funktionsbeschreibung raus. Inklusive FAT-Plan, Wartungssektion und Quellen-Nachweis pro Absatz.',
     },
     v2: {
       aria: 'Funktionsliste: Komponenten konvergieren, GA-Schema verkabelt sich.',
       tag: 'Funktionsliste · GA-Schema',
       title: 'Komponenten zur Funktionsliste',
-      body: 'Feldgeräte, VAV-Boxen, Brandschutzklappen — werden zur Funktionsliste nach VDI 3814. Tabelle aller Anlagen-Funktionen, bereit für Vergabe und Inbetriebnahme.',
+      body: 'Feldgeräte, VAV-Boxen, Brandschutzklappen werden zur Funktionsliste nach VDI 3814. Tabelle aller Anlagen-Funktionen, bereit für Vergabe und Inbetriebnahme.',
     },
     v3: {
       aria: 'LV-Generierung: Anlagedaten werden zu LV-Positionen mit GAEB-Export.',
       tag: 'Leistungsverzeichnis · LV',
       title: 'Anlage zum LV mit GAEB-Export',
-      body: 'Mengen, Einheiten und Standardtexte nach VOB/A. Direkt-Export als GAEB X86 — importierbar in jedes Vergabe-Tool, hierarchisch nach System oder als Sammelbeschreibung.',
+      body: 'Mengen, Einheiten und Standardtexte nach VOB/A. Direkt-Export als GAEB X86, importierbar in jedes Vergabe-Tool, hierarchisch nach System oder als Sammelbeschreibung.',
     },
   },
 
@@ -82,16 +82,16 @@ window.__translations_de = {
     titleA: 'Drei Doku-Typen. ',
     titleEm: 'Ein Workflow',
     titleB: '.',
-    deck: 'Jede Ausgabe ist normkonform, versioniert und prüfungsfähig per Default. Du startest mit Anlage-Daten — die Engine zieht die richtigen Norm-Kapitel.',
+    deck: 'Jede Ausgabe ist normkonform, versioniert und prüfungsfähig per Default. Du startest mit Anlage-Daten, die Engine zieht die richtigen Norm-Kapitel.',
     c1: {
       tag: 'Funktionsbeschreibungen',
       title: 'FUBE für jede TGA-Anlage',
-      body: 'Von Lüftung über Heizung und Kälte bis zur GA-Funktion — vollständig dokumentiert inklusive FAT-Plan und Wartungs-Sektion. Konsistent zu Anlage und Norm.',
+      body: 'Von Lüftung über Heizung und Kälte bis zur GA-Funktion, vollständig dokumentiert inklusive FAT-Plan und Wartungs-Sektion. Konsistent zu Anlage und Norm.',
     },
     c2: {
       tag: 'Leistungsverzeichnisse',
       title: 'LV-Positionen nach VOB/A',
-      body: 'Mengen, Einheiten und Standardtexte für die Vergabe. Direkter GAEB-Export — nahtlos in dein bestehendes Procurement-Tooling.',
+      body: 'Mengen, Einheiten und Standardtexte für die Vergabe. Direkter GAEB-Export, nahtlos in dein bestehendes Procurement-Tooling.',
     },
     c3: {
       tag: 'Fließmatrizen',
@@ -106,21 +106,21 @@ window.__translations_de = {
     titleA: 'Drei Schritte ',
     titleEm: 'ohne Excel-Hölle',
     titleB: '.',
-    deck: 'Vom Konzept-Stand zur prüfungsfähigen Doku — ohne Copy-Paste aus Altprojekten und ohne ungeprüfte Norm-Verweise.',
+    deck: 'Vom Konzept-Stand zur prüfungsfähigen Doku, ohne Copy-Paste aus Altprojekten und ohne ungeprüfte Norm-Verweise.',
     s1: {
       label: 'Anforderung',
       title: 'Anlage beschreiben',
-      body: 'Komponente, Reinraum-Klasse, kritische Funktionen — kurz beschreiben, was generiert werden soll. Keine Vorlagen, kein Boilerplate.',
+      body: 'Komponente, Reinraum-Klasse, kritische Funktionen: kurz beschreiben, was generiert werden soll. Keine Vorlagen, kein Boilerplate.',
     },
     s2: {
       label: 'Generieren',
       title: 'AynzamAI zieht die Normen',
-      body: 'Die Engine prüft gegen den passenden Norm-Katalog und erzeugt eine vollständige, konsistente Doku — inklusive Quellen-Nachweis.',
+      body: 'Die Engine prüft gegen den passenden Norm-Katalog und erzeugt eine vollständige, konsistente Doku inklusive Quellen-Nachweis.',
     },
     s3: {
       label: 'Exportieren',
       title: 'Direkt ins Projekt',
-      body: 'Export in dein Zielformat. Versioniert, mit Audit-Trail, revisionssicher gespeichert — bereit fürs Review.',
+      body: 'Export in dein Zielformat. Versioniert, mit Audit-Trail, revisionssicher gespeichert, bereit fürs Review.',
     },
   },
 
@@ -130,7 +130,7 @@ window.__translations_de = {
     titleA: 'Gebaut für ',
     titleEm: 'Hochpräzisions-Engineering',
     titleB: '.',
-    deck: 'AynzamAI versteht die Sprache deiner Branche — und kennt die Normen, die im Audit zählen.',
+    deck: 'AynzamAI versteht die Sprache deiner Branche und kennt die Normen, die im Audit zählen.',
     i1: {
       tag: 'Halbleiter & Reinraum',
       title: 'Cleanroom-konforme Doku',
@@ -144,7 +144,7 @@ window.__translations_de = {
     i3: {
       tag: 'Mission Critical',
       title: 'HVAC für Datacenter',
-      body: 'Tier-III/IV-Doku, Redundanz-Konzepte, Brandschutz — für Hyperscaler und Colocations.',
+      body: 'Tier-III/IV-Doku, Redundanz-Konzepte, Brandschutz für Hyperscaler und Colocations.',
     },
   },
 
@@ -154,14 +154,14 @@ window.__translations_de = {
     titleA: 'Sieh, was AynzamAI in ',
     titleEm: '20 Minuten',
     titleB: ' aus deinem Projekt macht.',
-    deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Keine generische Tour — wir generieren live gegen dein Beispiel.',
+    deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Keine generische Tour, wir generieren live gegen dein Beispiel.',
     button: 'Demo buchen',
   },
 
   // ── Footer ─────────────────────────────────────────────
   footer: {
     tagline:
-      'KI-Doku-Engine für TGA. Funktionsbeschreibungen, Leistungsverzeichnisse und Fließmatrizen — geprüft gegen VDI, DIN und GMP Annex 1.',
+      'KI-Doku-Engine für TGA. Funktionsbeschreibungen, Leistungsverzeichnisse und Fließmatrizen, geprüft gegen VDI, DIN und GMP Annex 1.',
     cta: 'Demo buchen',
     colProduct: 'Produkt',
     linkUseCases: 'Use Cases',
@@ -187,11 +187,11 @@ window.__translations_de = {
     breadcrumb: 'Über uns',
     sectionTitle: 'Über AynzamAI',
     heading: 'Engineering-Doku, neu gedacht.',
-    description: 'AynzamAI wird von TGA-Planern für TGA-Planer gebaut — pure-msrplanung.de.',
+    description: 'AynzamAI wird von TGA-Planern für TGA-Planer gebaut. pure-msrplanung.de.',
     ctaButton: 'Demo buchen',
     featuresTitle: 'Was du bekommst',
     featuresHeading: 'Kernfunktionen',
-    featuresDesc: 'FUBE, LV und Fließmatrizen — normkonform und prüfungsfähig per Default.',
+    featuresDesc: 'FUBE, LV und Fließmatrizen, normkonform und prüfungsfähig per Default.',
   },
 
   pricingPage: {
@@ -199,7 +199,7 @@ window.__translations_de = {
     titleA: 'Pläne, die mit deinem ',
     titleEm: 'Büro skalieren',
     titleB: '.',
-    deck: 'Vom Solo-Planer bis zur Engineering-Abteilung — output-basierte Tiers, keine seat-Gebühren, transparente Token-Kosten.',
+    deck: 'Vom Solo-Planer bis zur Engineering-Abteilung: output-basierte Tiers, keine seat-Gebühren, transparente Token-Kosten.',
     pilot: {
       tag: 'Pilot',
       title: 'Erste 10 Outputs gratis',
@@ -272,7 +272,7 @@ window.__translations_de = {
       titleA: 'Für Konzerne, ',
       titleEm: 'On-Premise',
       titleB: ' und große Engineering-Abteilungen.',
-      body: 'Unbegrenzte Outputs. Eigene Norm-Kataloge. Integration in RR-Schema, BIM-Stack, PLM. Auf eurer Infrastruktur, falls gewünscht — z.B. für Halbleiter-Fabs und Defense-Projekte.',
+      body: 'Unbegrenzte Outputs. Eigene Norm-Kataloge. Integration in RR-Schema, BIM-Stack, PLM. Auf eurer Infrastruktur, falls gewünscht, z.B. für Halbleiter-Fabs und Defense-Projekte.',
       b1: 'Unlimited Outputs + User',
       b2: 'On-Premise verfügbar',
       b3: 'RR-Schema · BIM · PLM',
@@ -312,7 +312,7 @@ window.__translations_de = {
       items: [
         {
           q: 'Was zählt als ein „Doku-Output"?',
-          a: 'Eine generierte FUBE, eine Funktionsliste oder ein LV (als Gesamt-Dokument) zählt jeweils als ein Output. Iterationen, Re-Generierungen mit angepassten Parametern und Norm-Updates am selben Output sind unbegrenzt enthalten — du zahlst nur für neue Outputs.',
+          a: 'Eine generierte FUBE, eine Funktionsliste oder ein LV (als Gesamt-Dokument) zählt jeweils als ein Output. Iterationen, Re-Generierungen mit angepassten Parametern und Norm-Updates am selben Output sind unbegrenzt enthalten, du zahlst nur für neue Outputs.',
         },
         {
           q: 'Was passiert bei Limit-Überschreitung?',
@@ -320,26 +320,26 @@ window.__translations_de = {
         },
         {
           q: 'Warum keine per-Seat-Abrechnung?',
-          a: 'AI-Generation hat reale Token-Kosten pro Output. Per-Seat-Pricing kollabiert, wenn ein Power-User intensiv generiert — wir würden Verluste machen. Output-basiertes Pricing ist 2026 Standard bei AI-SaaS (Anthropic, OpenAI, Vercel AI Gateway).',
+          a: 'AI-Generation hat reale Token-Kosten pro Output. Per-Seat-Pricing kollabiert, wenn ein Power-User intensiv generiert, dann würden wir Verluste machen. Output-basiertes Pricing ist 2026 Standard bei AI-SaaS (Anthropic, OpenAI, Vercel AI Gateway).',
         },
         {
           q: 'Gegen welche Normen prüft die Engine?',
           a: 'VDI 3814, VDI 6022 (inkl. neues Blatt 3, Weißdruck 12/2025), DIN 1946-4, DIN EN ISO 16484-3, GMP Annex 1 (revidiert 2022), GAMP 5, EN 50600, VOB/A und DIN 276. Erweiterungen laufen kontinuierlich. Eigene firmeninterne Standards können in Studio und höher als Templates hinterlegt werden.',
         },
         {
-          q: 'On-Premise — wie funktioniert das?',
-          a: 'Im Enterprise-Tier liefern wir eine containerisierte Engine, die in deiner eigenen Infrastruktur läuft — wichtig für Defense-, Halbleiter- und Pharma-Projekte mit strengen IT-Auflagen. Setup typisch 4 Wochen, ein dedizierter Account-Manager begleitet die Inbetriebnahme.',
+          q: 'On-Premise: wie funktioniert das?',
+          a: 'Im Enterprise-Tier liefern wir eine containerisierte Engine, die in deiner eigenen Infrastruktur läuft, wichtig für Defense-, Halbleiter- und Pharma-Projekte mit strengen IT-Auflagen. Setup typisch 4 Wochen, ein dedizierter Account-Manager begleitet die Inbetriebnahme.',
         },
         {
           q: 'Welche Daten verlassen meine Umgebung?',
-          a: 'In Starter und Studio: nur die Eingaben, die du explizit absendest — verschlüsselt, EU-Rechenzentren (Frankfurt). In Engineering: gleiches plus optional zusätzliche Verschlüsselungsebene (BYO-Key). In Enterprise (On-Premise): nichts verlässt deine Infrastruktur.',
+          a: 'In Starter und Studio: nur die Eingaben, die du explizit absendest, verschlüsselt in EU-Rechenzentren (Frankfurt). In Engineering: gleiches plus optional zusätzliche Verschlüsselungsebene (BYO-Key). In Enterprise (On-Premise): nichts verlässt deine Infrastruktur.',
         },
         {
           q: 'Kann ich Pläne unterjährig wechseln?',
-          a: 'Ja, jederzeit. Upgrade ist sofort wirksam und nur die Differenz wird berechnet. Downgrade greift zum nächsten Abrechnungszyklus. Keine Vertragslaufzeit — du kündigst monatlich.',
+          a: 'Ja, jederzeit. Upgrade ist sofort wirksam und nur die Differenz wird berechnet. Downgrade greift zum nächsten Abrechnungszyklus. Keine Vertragslaufzeit, du kündigst monatlich.',
         },
         {
-          q: 'Pilot — wirklich keine Kreditkarte?',
+          q: 'Pilot: wirklich keine Kreditkarte?',
           a: 'Korrekt. 10 Outputs gegen ein konkretes Projekt von dir, in 4 Wochen, ohne Kreditkarte und ohne automatischen Übergang in ein zahlendes Abo. Erst nach Abschluss entscheidest du, ob du fortsetzen willst.',
         },
       ],
@@ -349,7 +349,7 @@ window.__translations_de = {
       titleA: 'Sieh zuerst, was die Engine in ',
       titleEm: '20 Minuten',
       titleB: ' aus deinem Projekt macht.',
-      deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Wir zeigen live, wie deine FUBE entsteht — und welcher Plan zu dir passt.',
+      deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Wir zeigen live, wie deine FUBE entsteht und welcher Plan zu dir passt.',
       button: 'Demo buchen',
     },
     title: 'Preise',

@@ -14,14 +14,14 @@ window.__translations_en = {
     titleA: 'HVAC docs in ',
     titleEm: 'minutes',
     titleB: ', not weeks.',
-    deck: 'AynzamAI generates function descriptions, function lists per VDI 3814, and bills of quantities with GAEB X86 export — straight from your plant data, compliant and audit-ready by default.',
+    deck: 'AynzamAI generates function descriptions, function lists per VDI 3814, and bills of quantities with GAEB X86 export, straight from your plant data, compliant and audit-ready by default.',
     ctaPrimary: 'Book a demo',
     ctaSecondary: 'See use cases',
     cardEyebrow: 'The engine at a glance',
     cardDeck:
-      'Plant data and standards codes converge in the hub — three audit-ready doc types come out.',
+      'Plant data and standards codes converge in the hub, then three audit-ready doc types come out.',
     viz: {
-      aria: 'Topology of the AynzamAI engine: four inputs (ISO 5, volume flow, VOB/A, VDI 3814) converge to the central hub and fan out as three outputs — FUBE, GA schema, and BOQ with GAEB export.',
+      aria: 'Topology of the AynzamAI engine: four inputs (ISO 5, volume flow, VOB/A, VDI 3814) converge to the central hub and fan out as three outputs: FUBE, GA schema, and BOQ with GAEB export.',
       i1: 'BACnet',
       i2: 'V̇ 12 000',
       i3: 'VOB/A',
@@ -54,25 +54,25 @@ window.__translations_en = {
     eyebrow: '01 / Live in loop',
     titleA: 'How the ',
     titleEm: 'engine',
-    titleB: ' works — on real plant data.',
+    titleB: ' works. On real plant data.',
     deck: 'Three doc outputs, one workflow: plant data goes in, compliant docs come out. No Excel templates to re-check on every design change.',
     v1: {
       aria: 'FUBE generation: plant data converges into the engine, function description builds up line by line.',
       tag: 'Function description · FUBE',
       title: 'Plant to ready FUBE',
-      body: 'Plant ID, standards reference, volume flow, pressure regulation — four values in, full function description out. Including FAT plan, maintenance section, and source references per paragraph.',
+      body: 'Plant ID, standards reference, volume flow, pressure regulation: four values in, full function description out. Including FAT plan, maintenance section, and source references per paragraph.',
     },
     v2: {
       aria: 'Function list: components converge, building-automation schema wires itself up.',
       tag: 'Function list · GA schema',
       title: 'Components to function list',
-      body: 'Field devices, VAV boxes, fire dampers — turn into a function list per VDI 3814. A table of all plant functions, ready for procurement and commissioning.',
+      body: 'Field devices, VAV boxes, fire dampers turn into a function list per VDI 3814. A table of all plant functions, ready for procurement and commissioning.',
     },
     v3: {
       aria: 'BOQ generation: plant data becomes line items with GAEB export.',
       tag: 'Bill of quantities · BOQ',
       title: 'Plant to BOQ with GAEB export',
-      body: 'Quantities, units, and standard texts per VOB/A. Direct GAEB X86 export — importable to any procurement tool, hierarchical by system or as a summary spec.',
+      body: 'Quantities, units, and standard texts per VOB/A. Direct GAEB X86 export, importable to any procurement tool, hierarchical by system or as a summary spec.',
     },
   },
 
@@ -82,16 +82,16 @@ window.__translations_en = {
     titleA: 'Three doc types. ',
     titleEm: 'One workflow',
     titleB: '.',
-    deck: 'Every output is compliant, versioned, and audit-ready by default. You start with plant data — the engine pulls the right standards chapters.',
+    deck: 'Every output is compliant, versioned, and audit-ready by default. You start with plant data, and the engine pulls the right standards chapters.',
     c1: {
       tag: 'Function descriptions',
       title: 'FUBE for every HVAC plant',
-      body: 'From ventilation to heating, cooling, and building-automation functions — fully documented including FAT plan and maintenance section. Consistent with plant and standard.',
+      body: 'From ventilation to heating, cooling, and building-automation functions, fully documented including FAT plan and maintenance section. Consistent with plant and standard.',
     },
     c2: {
       tag: 'Bills of quantities',
       title: 'BOQ items per VOB/A',
-      body: 'Quantities, units, and standard texts for procurement. Direct GAEB export — seamless into your existing procurement tooling.',
+      body: 'Quantities, units, and standard texts for procurement. Direct GAEB export, seamless into your existing procurement tooling.',
     },
     c3: {
       tag: 'Flow matrices',
@@ -106,21 +106,21 @@ window.__translations_en = {
     titleA: 'Three steps ',
     titleEm: 'without Excel hell',
     titleB: '.',
-    deck: 'From concept data to audit-ready documentation — no copy-paste from legacy projects, no unchecked references to standards.',
+    deck: 'From concept data to audit-ready documentation, with no copy-paste from legacy projects and no unchecked references to standards.',
     s1: {
       label: 'Brief',
       title: 'Describe the plant',
-      body: 'Component, cleanroom class, critical functions — briefly describe what to generate. No templates, no boilerplate.',
+      body: 'Component, cleanroom class, critical functions: briefly describe what to generate. No templates, no boilerplate.',
     },
     s2: {
       label: 'Generate',
       title: 'AynzamAI pulls the standards',
-      body: 'The engine checks against the matching standards catalog and produces a complete, consistent doc — including source references.',
+      body: 'The engine checks against the matching standards catalog and produces a complete, consistent doc, including source references.',
     },
     s3: {
       label: 'Export',
       title: 'Straight into the project',
-      body: 'Export to your target format. Versioned, audit trail, revision-safe storage — ready for review.',
+      body: 'Export to your target format. Versioned, audit trail, revision-safe storage, ready for review.',
     },
   },
 
@@ -130,7 +130,7 @@ window.__translations_en = {
     titleA: 'Built for ',
     titleEm: 'high-precision engineering',
     titleB: '.',
-    deck: 'AynzamAI speaks your industry — and knows the standards that matter in audit.',
+    deck: 'AynzamAI speaks your industry and knows the standards that matter in audit.',
     i1: {
       tag: 'Semiconductor & cleanroom',
       title: 'Cleanroom-compliant docs',
@@ -144,7 +144,7 @@ window.__translations_en = {
     i3: {
       tag: 'Mission critical',
       title: 'HVAC for data centers',
-      body: 'Tier III/IV docs, redundancy concepts, fire protection — for hyperscalers and colocation.',
+      body: 'Tier III/IV docs, redundancy concepts, fire protection for hyperscalers and colocation.',
     },
   },
 
@@ -154,14 +154,14 @@ window.__translations_en = {
     titleA: 'See what AynzamAI makes of your project in ',
     titleEm: '20 minutes',
     titleB: '.',
-    deck: 'A demo against a concrete plant from your backlog. No generic tour — we generate live against your example.',
+    deck: 'A demo against a concrete plant from your backlog. No generic tour, we generate live against your example.',
     button: 'Book a demo',
   },
 
   // ── Footer ─────────────────────────────────────────────
   footer: {
     tagline:
-      'AI documentation engine for HVAC. Function descriptions, bills of quantities, and flow matrices — checked against VDI, DIN, and GMP Annex 1.',
+      'AI documentation engine for HVAC. Function descriptions, bills of quantities, and flow matrices, checked against VDI, DIN, and GMP Annex 1.',
     cta: 'Book a demo',
     colProduct: 'Product',
     linkUseCases: 'Use cases',
@@ -185,11 +185,11 @@ window.__translations_en = {
     breadcrumb: 'About',
     sectionTitle: 'About AynzamAI',
     heading: 'Engineering docs, rethought.',
-    description: 'AynzamAI is built by HVAC planners for HVAC planners — pure-msrplanung.de.',
+    description: 'AynzamAI is built by HVAC planners for HVAC planners. pure-msrplanung.de.',
     ctaButton: 'Book a demo',
     featuresTitle: 'What you get',
     featuresHeading: 'Core features',
-    featuresDesc: 'FUBE, BOQ, and flow matrices — compliant and audit-ready by default.',
+    featuresDesc: 'FUBE, BOQ, and flow matrices, compliant and audit-ready by default.',
   },
 
   pricingPage: {
@@ -197,7 +197,7 @@ window.__translations_en = {
     titleA: 'Plans that scale with your ',
     titleEm: 'engineering office',
     titleB: '.',
-    deck: 'From solo planner to engineering department — output-based tiers, no per-seat fees, transparent token economics.',
+    deck: 'From solo planner to engineering department: output-based tiers, no per-seat fees, transparent token economics.',
     pilot: {
       tag: 'Pilot',
       title: 'First 10 outputs free',
@@ -270,7 +270,7 @@ window.__translations_en = {
       titleA: 'For corporations, ',
       titleEm: 'on-premise',
       titleB: ', and large engineering departments.',
-      body: 'Unlimited outputs. Custom standards catalog. Integration with RR-Schema, BIM stack, PLM. On your infrastructure if needed — for semiconductor fabs and defense projects.',
+      body: 'Unlimited outputs. Custom standards catalog. Integration with RR-Schema, BIM stack, PLM. On your infrastructure if needed, for semiconductor fabs and defense projects.',
       b1: 'Unlimited outputs + users',
       b2: 'On-premise available',
       b3: 'RR-Schema · BIM · PLM',
@@ -311,7 +311,7 @@ window.__translations_en = {
       items: [
         {
           q: 'What counts as one "doc output"?',
-          a: 'A generated FUBE, a function list, or a BOQ (as a complete document) each counts as one output. Iterations, regenerations with adjusted parameters, and standards updates on the same output are unlimited — you only pay for new outputs.',
+          a: 'A generated FUBE, a function list, or a BOQ (as a complete document) each counts as one output. Iterations, regenerations with adjusted parameters, and standards updates on the same output are unlimited, and you only pay for new outputs.',
         },
         {
           q: 'What happens if I exceed my limit?',
@@ -319,26 +319,26 @@ window.__translations_en = {
         },
         {
           q: 'Why no per-seat billing?',
-          a: 'AI generation has real per-output token costs. Per-seat pricing collapses when a power user generates heavily — we would lose money. Output-based pricing is the 2026 standard for AI SaaS (Anthropic, OpenAI, Vercel AI Gateway).',
+          a: 'AI generation has real per-output token costs. Per-seat pricing collapses when a power user generates heavily, and we would lose money. Output-based pricing is the 2026 standard for AI SaaS (Anthropic, OpenAI, Vercel AI Gateway).',
         },
         {
           q: 'Which standards does the engine check against?',
           a: 'VDI 3814, VDI 6022 (incl. new sheet 3, white draft 12/2025), DIN 1946-4, DIN EN ISO 16484-3, GMP Annex 1 (revised 2022), GAMP 5, EN 50600, VOB/A, and DIN 276. Continuously expanding. Internal company standards can be configured as templates in Studio and higher.',
         },
         {
-          q: 'On-premise — how does it work?',
-          a: 'In Enterprise, we deliver a containerized engine that runs in your own infrastructure — important for defense, semiconductor, and pharma projects with strict IT requirements. Typical setup takes 4 weeks, with a dedicated account manager guiding deployment.',
+          q: 'On-premise: how does it work?',
+          a: 'In Enterprise, we deliver a containerized engine that runs in your own infrastructure, important for defense, semiconductor, and pharma projects with strict IT requirements. Typical setup takes 4 weeks, with a dedicated account manager guiding deployment.',
         },
         {
           q: 'Which data leaves my environment?',
-          a: 'On Starter and Studio: only the inputs you explicitly submit — encrypted, EU data centers (Frankfurt). On Engineering: same, plus optional extra encryption layer (BYO key). On Enterprise (on-premise): nothing leaves your infrastructure.',
+          a: 'On Starter and Studio: only the inputs you explicitly submit, encrypted in EU data centers (Frankfurt). On Engineering: same, plus optional extra encryption layer (BYO key). On Enterprise (on-premise): nothing leaves your infrastructure.',
         },
         {
           q: 'Can I switch plans during the year?',
-          a: 'Yes, anytime. Upgrades are effective immediately and only the difference is billed. Downgrades take effect next billing cycle. No fixed contract term — cancel monthly.',
+          a: 'Yes, anytime. Upgrades are effective immediately and only the difference is billed. Downgrades take effect next billing cycle. No fixed contract term, cancel monthly.',
         },
         {
-          q: 'Pilot — really no credit card?',
+          q: 'Pilot: really no credit card?',
           a: 'Correct. 10 outputs against a concrete project of yours, in 4 weeks, no credit card, no automatic transition to a paid plan. Only after completion you decide whether to continue.',
         },
       ],
@@ -348,7 +348,7 @@ window.__translations_en = {
       titleA: 'First see what the engine makes of your project in ',
       titleEm: '20 minutes',
       titleB: '.',
-      deck: 'Demo against a concrete plant from your backlog. We show your FUBE being created live — and which plan fits your operation.',
+      deck: 'Demo against a concrete plant from your backlog. We show your FUBE being created live and which plan fits your operation.',
       button: 'Book a demo',
     },
     title: 'Pricing',

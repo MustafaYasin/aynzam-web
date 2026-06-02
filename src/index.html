@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AynzamAI — Engineering-Doku für TGA</title>
-    <meta name="description" content="AynzamAI generiert Funktionsbeschreibungen, Leistungsverzeichnisse und Fließmatrizen für TGA — geprüft gegen VDI, DIN und GMP Annex 1." />
+    <title>AynzamAI · Engineering-Doku für TGA</title>
+    <meta name="description" content="AynzamAI generiert Funktionsbeschreibungen, Leistungsverzeichnisse und Fließmatrizen für TGA, geprüft gegen VDI, DIN und GMP Annex 1." />
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
     <include src="./partials/lang-init.html" />
   </head>
 
@@ -150,7 +153,7 @@
                       <circle class="hv-hub-pulse" cx="240" cy="180" r="26" fill="var(--clay)" opacity="0.3"/>
                       <g class="hv-hub-bounce">
                         <rect x="212" y="152" width="56" height="56" rx="8" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                        <text x="236" y="192" font-family="Georgia, ui-serif, Times New Roman, serif" font-size="26" font-weight="500" fill="var(--fg)">A</text>
+                        <text x="236" y="192" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="30" font-weight="500" fill="var(--fg)">A</text>
                         <circle cx="258" cy="192" r="3" fill="var(--clay)"/>
                       </g>
                     </g>
@@ -315,7 +318,7 @@
                     <circle class="v1-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
                     <g class="v1-hub-box">
                       <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                      <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                      <text x="138" y="116" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="18" font-weight="500" fill="var(--fg)">A</text>
                       <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
                     </g>
                   </g>
@@ -450,7 +453,7 @@
                     <circle class="v2-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
                     <g class="v2-hub-box">
                       <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                      <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                      <text x="138" y="116" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="18" font-weight="500" fill="var(--fg)">A</text>
                       <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
                     </g>
                   </g>
@@ -600,7 +603,7 @@
                     <circle class="v3-hub-pulse" cx="140" cy="110" r="14" fill="var(--clay)" opacity="0.3"/>
                     <g class="v3-hub-box">
                       <rect x="124" y="94" width="32" height="32" rx="5" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-                      <text x="138" y="116" font-family="Georgia, ui-serif, serif" font-size="16" font-weight="500" fill="var(--fg)">A</text>
+                      <text x="138" y="116" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="18" font-weight="500" fill="var(--fg)">A</text>
                       <circle cx="151" cy="116" r="1.8" fill="var(--clay)"/>
                     </g>
                   </g>
@@ -742,7 +745,7 @@
               <hr class="hr-tick mb-6" />
               <p class="mono-sm mb-3">
                 <span class="text-[var(--clay)] font-semibold">01</span>
-                <span class="mx-2">—</span>
+                <span class="mx-2">/</span>
                 <span x-text="$store.lang.t('workflow.s1.label')"></span>
               </p>
               <h3 class="headline-sm mb-3" x-text="$store.lang.t('workflow.s1.title')"></h3>
@@ -753,7 +756,7 @@
               <hr class="hr-tick mb-6" />
               <p class="mono-sm mb-3">
                 <span class="text-[var(--clay)] font-semibold">02</span>
-                <span class="mx-2">—</span>
+                <span class="mx-2">/</span>
                 <span x-text="$store.lang.t('workflow.s2.label')"></span>
               </p>
               <h3 class="headline-sm mb-3" x-text="$store.lang.t('workflow.s2.title')"></h3>
@@ -770,7 +773,7 @@
               <hr class="hr-tick mb-6" />
               <p class="mono-sm mb-3">
                 <span class="text-[var(--clay)] font-semibold">03</span>
-                <span class="mx-2">—</span>
+                <span class="mx-2">/</span>
                 <span x-text="$store.lang.t('workflow.s3.label')"></span>
               </p>
               <h3 class="headline-sm mb-3" x-text="$store.lang.t('workflow.s3.title')"></h3>
@@ -854,24 +857,72 @@
             <p class="deck max-w-[60ch]" x-text="$store.lang.t('trust.deck')"></p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl">
-            <!-- PowerCo -->
-            <article class="card text-center flex flex-col items-center justify-center py-10">
-              <div class="text-[28px] sm:text-[30px] tracking-tight text-[var(--fg)] mb-3" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600;" x-text="$store.lang.t('trust.c1.name')">PowerCo</div>
-              <p class="mono-sm" x-text="$store.lang.t('trust.c1.context')"></p>
-            </article>
+          <div class="marquee">
+            <div class="marquee-track">
+              <!-- PowerCo -->
+              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0">
+                <div class="h-12 sm:h-14 flex items-center justify-center">
+                  <img
+                    src="./images/logos/powerco.png"
+                    :alt="$store.lang.t('trust.c1.name')"
+                    class="logo-mark h-7 sm:h-8"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <p class="mono-sm" x-text="$store.lang.t('trust.c1.context')"></p>
+              </article>
 
-            <!-- Volkswagen -->
-            <article class="card text-center flex flex-col items-center justify-center py-10">
-              <div class="text-[26px] sm:text-[28px] tracking-tight text-[var(--fg)] mb-3" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600; letter-spacing: -0.01em;" x-text="$store.lang.t('trust.c2.name')">Volkswagen</div>
-              <p class="mono-sm" x-text="$store.lang.t('trust.c2.context')"></p>
-            </article>
+              <!-- Volkswagen -->
+              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0">
+                <div class="h-12 sm:h-14 flex items-center justify-center">
+                  <img
+                    src="./images/logos/vw.png"
+                    :alt="$store.lang.t('trust.c2.name')"
+                    class="logo-mark h-11 sm:h-12"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <p class="mono-sm" x-text="$store.lang.t('trust.c2.context')"></p>
+              </article>
 
-            <!-- Exyte -->
-            <article class="card text-center flex flex-col items-center justify-center py-10">
-              <div class="text-[28px] sm:text-[30px] tracking-tight text-[var(--fg)] mb-3" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600; letter-spacing: 0.02em;" x-text="$store.lang.t('trust.c3.name')">Exyte</div>
-              <p class="mono-sm" x-text="$store.lang.t('trust.c3.context')"></p>
-            </article>
+              <!-- Exyte -->
+              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0">
+                <div class="h-12 sm:h-14 flex items-center justify-center">
+                  <img
+                    src="./images/logos/exyte.png"
+                    :alt="$store.lang.t('trust.c3.name')"
+                    class="logo-mark h-8 sm:h-9"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <p class="mono-sm" x-text="$store.lang.t('trust.c3.context')"></p>
+              </article>
+
+              <!-- Duplicate set for seamless loop -->
+              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0" aria-hidden="true">
+                <div class="h-12 sm:h-14 flex items-center justify-center">
+                  <img src="./images/logos/powerco.png" alt="" class="logo-mark h-7 sm:h-8" loading="lazy" decoding="async" />
+                </div>
+                <p class="mono-sm" x-text="$store.lang.t('trust.c1.context')"></p>
+              </article>
+
+              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0" aria-hidden="true">
+                <div class="h-12 sm:h-14 flex items-center justify-center">
+                  <img src="./images/logos/vw.png" alt="" class="logo-mark h-11 sm:h-12" loading="lazy" decoding="async" />
+                </div>
+                <p class="mono-sm" x-text="$store.lang.t('trust.c2.context')"></p>
+              </article>
+
+              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0" aria-hidden="true">
+                <div class="h-12 sm:h-14 flex items-center justify-center">
+                  <img src="./images/logos/exyte.png" alt="" class="logo-mark h-8 sm:h-9" loading="lazy" decoding="async" />
+                </div>
+                <p class="mono-sm" x-text="$store.lang.t('trust.c3.context')"></p>
+              </article>
+            </div>
           </div>
 
           <p class="mono-sm mt-10 max-w-[60ch]" x-text="$store.lang.t('trust.footnote')"></p>

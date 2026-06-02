@@ -520,15 +520,7 @@
 }
 
 .stage::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 80px 80px;
-  background-position: -1px -1px;
-  pointer-events: none;
+  content: none;
 }
 
 .stage > * {
@@ -722,6 +714,59 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@utility logo-mark {
+  width: auto;
+  max-width: 78%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.45) opacity(0.7);
+  transition:
+    filter 380ms ease,
+    transform 380ms ease;
+  will-change: transform;
+}
+
+.dark .logo-mark {
+  filter: brightness(0) invert(1) opacity(0.72);
+}
+
+.logo-mark:hover {
+  filter: grayscale(0%) brightness(1) opacity(1);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.dark .logo-mark:hover {
+  filter: brightness(0) invert(1) opacity(1);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@utility marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+@utility marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
 }
 
 .animate-fade-up {
