@@ -581,6 +581,93 @@
 }
 
 /* ================================ */
+/* LIQUID GLASS                     */
+/* ================================ */
+
+/* Translucent "liquid glass" material: refractive blur + saturation,
+   specular bevel via layered inset highlights, and a diagonal sheen.
+   Only reads where there's content behind it (header, hero card). */
+@utility glass {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.14) 44%,
+    rgba(255, 255, 255, 0.26) 100%
+  );
+  backdrop-filter: blur(18px) saturate(185%);
+  -webkit-backdrop-filter: blur(18px) saturate(185%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 12px 40px -14px rgba(38, 30, 22, 0.24),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -12px 30px -18px rgba(255, 255, 255, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Specular sheen — sits above the glass body, below the content */
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 26%,
+    rgba(255, 255, 255, 0) 68%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+.glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 14px 44px -14px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -12px 30px -18px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.dark .glass::after {
+  opacity: 0.18;
+}
+
+/* Full-width glass bar (sticky header) — no all-round border, hairline base */
+.glass-bar {
+  background: rgba(250, 249, 245, 0.62);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 6px 30px -14px rgba(38, 30, 22, 0.22),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+}
+
+.dark .glass-bar {
+  background: rgba(28, 29, 32, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px -14px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
+/* ================================ */
 /* STAGE — editorial section bg     */
 /* ================================ */
 
