@@ -1,6 +1,6 @@
 <header
   class="fixed left-0 top-0 w-full z-50 transition-all duration-300"
-  :class="stickyMenu ? 'py-3 bg-[var(--bg-deep)]/95 backdrop-blur-md border-b border-[var(--border-soft)]' : 'py-5'"
+  :class="stickyMenu ? 'py-3 bg-[var(--bg-deep)]/80 backdrop-blur-xl border-b border-[var(--border-soft)] shadow-[0_4px_24px_-12px_rgba(38,30,22,0.25)]' : 'py-5'"
   x-data="{ stickyMenu: false, mobileMenuOpen: false }"
   @scroll.window="stickyMenu = window.scrollY > 16"
 >

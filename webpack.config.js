@@ -40,6 +40,10 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, './build'),
+      // Don't watch the build dir: webpack already triggers a reload on
+      // recompile. Watching its own output dir caused a second, redundant
+      // reload (the "page refreshes itself again" bug).
+      watch: false,
     },
     compress: true,
     port: 3000,
