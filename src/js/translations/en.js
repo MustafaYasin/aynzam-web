@@ -22,7 +22,7 @@ window.__translations_en = {
     cardDeck:
       'Plant data and standards codes converge in the hub, then three audit-ready doc types come out.',
     viz: {
-      aria: 'Topology of the AynzamAI engine: four inputs (ISO 5, volume flow, VOB/A, VDI 3814) converge to the central hub and fan out as three outputs: FUBE, GA schema, and BOQ with GAEB export.',
+      aria: 'Topology of the aynzamAI engine: four inputs (ISO 5, volume flow, VOB/A, VDI 3814) converge to the central hub and fan out as three outputs: FUBE, GA schema, and BOQ with GAEB export.',
       i1: 'BACnet',
       i2: 'V̇ 12 000',
       i3: 'VOB/A',
@@ -78,7 +78,7 @@ window.__translations_en = {
 
   // ── Use Cases ──────────────────────────────────────────
   useCases: {
-    eyebrow: '01 / What AynzamAI creates',
+    eyebrow: '01 / What aynzamAI creates',
     titleA: 'Three doc types. ',
     titleEm: 'One workflow',
     titleB: '.',
@@ -114,7 +114,7 @@ window.__translations_en = {
     },
     s2: {
       label: 'Generate',
-      title: 'AynzamAI pulls the standards',
+      title: 'aynzamAI pulls the standards',
       body: 'The engine checks against the matching standards catalog and produces consistent docs with source references.',
     },
     s3: {
@@ -130,7 +130,7 @@ window.__translations_en = {
     titleA: 'Built for ',
     titleEm: 'high-precision engineering',
     titleB: '.',
-    deck: 'AynzamAI speaks your industry and knows the standards that matter in audit.',
+    deck: 'aynzamAI speaks your industry and knows the standards that matter in audit.',
     i1: {
       tag: 'Semiconductor & cleanroom',
       title: 'Cleanroom-compliant docs',
@@ -151,7 +151,7 @@ window.__translations_en = {
   // ── Final CTA ──────────────────────────────────────────
   finalCta: {
     eyebrow: 'Ready?',
-    titleA: 'See what AynzamAI makes of your project in ',
+    titleA: 'See what aynzamAI makes of your project in ',
     titleEm: '20 minutes',
     titleB: '.',
     deck: 'A demo against a concrete plant from your backlog. No generic tour, we generate live against your example.',
@@ -173,7 +173,7 @@ window.__translations_en = {
     linkBlog: 'Blog',
     linkContact: 'Contact',
     linkImprint: 'Imprint',
-    copyright: '© 2026 AynzamAI · pure-msrplanung.de',
+    copyright: '© 2026 aynzamAI · pure-msrplanung.de',
     privacy: 'Privacy',
     terms: 'Terms',
     region: 'Made in Munich',
@@ -181,11 +181,11 @@ window.__translations_en = {
 
   // ── Legacy fallbacks for other pages ─────────────────────
   about: {
-    title: 'About AynzamAI',
+    title: 'About aynzamAI',
     breadcrumb: 'About',
-    sectionTitle: 'About AynzamAI',
+    sectionTitle: 'About aynzamAI',
     heading: 'Engineering docs, rethought.',
-    description: 'AynzamAI is built by HVAC planners for HVAC planners. pure-msrplanung.de.',
+    description: 'aynzamAI is built by HVAC planners for HVAC planners. pure-msrplanung.de.',
     ctaButton: 'Book a demo',
     featuresTitle: 'What you get',
     featuresHeading: 'Core features',

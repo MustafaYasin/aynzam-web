@@ -13,16 +13,8 @@ window.Alpine = Alpine
 
 Alpine.start()
 
-// Always open at the top on reload — don't let the browser restore the
-// previous scroll position (which made refreshes land mid-page).
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual'
-}
-window.addEventListener('load', () => {
-  if (!window.location.hash) {
-    window.scrollTo(0, 0)
-  }
-})
+// Note: scroll-to-top / scrollRestoration is handled early in the <head>
+// (partials/lang-init.html) so it runs before the browser restores scroll.
 
 // Smooth Scroll Active Link
 const sections = document.querySelectorAll('section[id]')

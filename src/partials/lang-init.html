@@ -5,5 +5,18 @@
     var lang = (stored === 'en') ? 'en' : 'de';
     document.documentElement.lang = lang;
     window.__lang = lang;
+
+    // Always open a page at the top. Set this in the <head> (before the
+    // browser restores any saved scroll) so navigating pricing -> back to
+    // the landing page never drops you mid-page. pageshow also fires on
+    // back-forward-cache restores, where load does not.
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('pageshow', function() {
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+      }
+    });
   })();
 </script>

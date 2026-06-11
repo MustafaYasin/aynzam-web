@@ -22,7 +22,7 @@ window.__translations_de = {
     cardDeck:
       'Anlagedaten und Norm-Codes konvergieren im Hub, drei prüfungsfähige Doku-Typen kommen raus.',
     viz: {
-      aria: 'Topologie der AynzamAI-Engine: vier Eingaben (ISO 5, Volumenstrom, VOB/A, VDI 3814) konvergieren zum zentralen Hub und werden in drei Outputs aufgeteilt: FUBE, GA-Schema und LV mit GAEB-Export.',
+      aria: 'Topologie der aynzamAI-Engine: vier Eingaben (ISO 5, Volumenstrom, VOB/A, VDI 3814) konvergieren zum zentralen Hub und werden in drei Outputs aufgeteilt: FUBE, GA-Schema und LV mit GAEB-Export.',
       i1: 'BACnet',
       i2: 'V̇ 12 000',
       i3: 'VOB/A',
@@ -78,7 +78,7 @@ window.__translations_de = {
 
   // ── Use Cases ──────────────────────────────────────────
   useCases: {
-    eyebrow: '01 / Was AynzamAI erstellt',
+    eyebrow: '01 / Was aynzamAI erstellt',
     titleA: 'Drei Doku-Typen. ',
     titleEm: 'Ein Workflow',
     titleB: '.',
@@ -114,7 +114,7 @@ window.__translations_de = {
     },
     s2: {
       label: 'Generieren',
-      title: 'AynzamAI zieht die Normen',
+      title: 'aynzamAI zieht die Normen',
       body: 'Die Engine prüft gegen den passenden Norm-Katalog und erzeugt konsistente Doku mit Quellen-Nachweis.',
     },
     s3: {
@@ -130,7 +130,7 @@ window.__translations_de = {
     titleA: 'Gebaut für ',
     titleEm: 'Hochpräzisions-Engineering',
     titleB: '.',
-    deck: 'AynzamAI kennt die Normen, die im Audit zählen.',
+    deck: 'aynzamAI kennt die Normen, die im Audit zählen.',
     i1: {
       tag: 'Halbleiter & Reinraum',
       title: 'Cleanroom-konforme Doku',
@@ -151,7 +151,7 @@ window.__translations_de = {
   // ── Final CTA ──────────────────────────────────────────
   finalCta: {
     eyebrow: 'Bereit?',
-    titleA: 'Sieh, was AynzamAI in ',
+    titleA: 'Sieh, was aynzamAI in ',
     titleEm: '20 Minuten',
     titleB: ' aus deinem Projekt macht.',
     deck: 'Demo gegen eine konkrete Anlage aus deinem Backlog. Keine generische Tour, wir generieren live gegen dein Beispiel.',
@@ -173,7 +173,7 @@ window.__translations_de = {
     linkBlog: 'Blog',
     linkContact: 'Kontakt',
     linkImprint: 'Impressum',
-    copyright: '© 2026 AynzamAI · pure-msrplanung.de',
+    copyright: '© 2026 aynzamAI · pure-msrplanung.de',
     privacy: 'Datenschutz',
     terms: 'AGB',
     region: 'Made in München',
@@ -183,11 +183,11 @@ window.__translations_de = {
   // These pages are not yet redesigned. Keys preserved so Alpine doesn't
   // throw on init when those HTML files reference them.
   about: {
-    title: 'Über AynzamAI',
+    title: 'Über aynzamAI',
     breadcrumb: 'Über uns',
-    sectionTitle: 'Über AynzamAI',
+    sectionTitle: 'Über aynzamAI',
     heading: 'Engineering-Doku, neu gedacht.',
-    description: 'AynzamAI wird von TGA-Planern für TGA-Planer gebaut. pure-msrplanung.de.',
+    description: 'aynzamAI wird von TGA-Planern für TGA-Planer gebaut. pure-msrplanung.de.',
     ctaButton: 'Demo buchen',
     featuresTitle: 'Was du bekommst',
     featuresHeading: 'Kernfunktionen',
