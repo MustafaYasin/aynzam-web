@@ -11,10 +11,11 @@ window.__translations_en = {
   // ── Hero ────────────────────────────────────────────────
   hero: {
     eyebrow: 'For HVAC & MSR planners · stage 5 + 6',
+    trustLabel: 'Validated against',
     titleA: 'HVAC docs in ',
     titleEm: 'minutes',
     titleB: ', not weeks.',
-    deck: 'AynzamAI generates function descriptions, function lists per VDI 3814, and bills of quantities with GAEB X86 export, straight from your plant data, compliant and audit-ready by default.',
+    deck: 'Function descriptions, function lists, and bills of quantities, straight from your plant data. Compliant by default.',
     ctaPrimary: 'Book a demo',
     ctaSecondary: 'See use cases',
     cardEyebrow: 'The engine at a glance',
@@ -41,12 +42,11 @@ window.__translations_en = {
     titleA: 'Built with ',
     titleEm: 'engineering teams',
     titleB: ', not in a vacuum.',
-    deck: 'Three active pilot engagements spanning battery, automotive, and cleanroom engineering. Every output of the engine is tested against concrete plants before we ship it.',
+    deck: 'Three active pilot engagements in battery, automotive, and cleanroom. Every output is tested against real plants.',
     c1: { name: 'PowerCo', context: 'Battery · Gigafactory' },
     c2: { name: 'Volkswagen', context: 'Plant HVAC · Automotive' },
     c3: { name: 'Exyte', context: 'Cleanroom · Semiconductor' },
-    footnote:
-      'Pilot status · launched 2025 · engagements ongoing. References and case studies on request.',
+    footnote: 'Pilot status · since 2025 · references on request.',
   },
 
   // ── Engine / Live visualisations ───────────────────────
@@ -55,24 +55,24 @@ window.__translations_en = {
     titleA: 'How the ',
     titleEm: 'engine',
     titleB: ' works. On real plant data.',
-    deck: 'Three doc outputs, one workflow: plant data goes in, compliant docs come out. No Excel templates to re-check on every design change.',
+    deck: 'Plant data goes in, compliant docs come out. Three outputs, one workflow.',
     v1: {
       aria: 'FUBE generation: plant data converges into the engine, function description builds up line by line.',
       tag: 'Function description · FUBE',
       title: 'Plant to ready FUBE',
-      body: 'Plant ID, standards reference, volume flow, pressure regulation: four values in, full function description out. Including FAT plan, maintenance section, and source references per paragraph.',
+      body: 'Four values in, full function description out, including FAT plan and source references.',
     },
     v2: {
       aria: 'Function list: components converge, building-automation schema wires itself up.',
       tag: 'Function list · GA schema',
       title: 'Components to function list',
-      body: 'Field devices, VAV boxes, fire dampers turn into a function list per VDI 3814. A table of all plant functions, ready for procurement and commissioning.',
+      body: 'Field devices and dampers turn into a function list per VDI 3814, ready for procurement and commissioning.',
     },
     v3: {
       aria: 'BOQ generation: plant data becomes line items with GAEB export.',
       tag: 'Bill of quantities · BOQ',
       title: 'Plant to BOQ with GAEB export',
-      body: 'Quantities, units, and standard texts per VOB/A. Direct GAEB X86 export, importable to any procurement tool, hierarchical by system or as a summary spec.',
+      body: 'Quantities, units, and standard texts per VOB/A, exported as GAEB X86 for any procurement tool.',
     },
   },
 
@@ -82,45 +82,45 @@ window.__translations_en = {
     titleA: 'Three doc types. ',
     titleEm: 'One workflow',
     titleB: '.',
-    deck: 'Every output is compliant, versioned, and audit-ready by default. You start with plant data, and the engine pulls the right standards chapters.',
+    deck: 'Every output is compliant, versioned, and audit-ready by default.',
     c1: {
       tag: 'Function descriptions',
       title: 'FUBE for every HVAC plant',
-      body: 'From ventilation to heating, cooling, and building-automation functions, fully documented including FAT plan and maintenance section. Consistent with plant and standard.',
+      body: 'From ventilation to building-automation functions, fully documented including FAT plan and maintenance.',
     },
     c2: {
       tag: 'Bills of quantities',
       title: 'BOQ items per VOB/A',
-      body: 'Quantities, units, and standard texts for procurement. Direct GAEB export, seamless into your existing procurement tooling.',
+      body: 'Quantities, units, and standard texts for procurement, with direct GAEB export.',
     },
     c3: {
       tag: 'Flow matrices',
       title: 'Function matrices & schematics',
-      body: 'Plant schematics and function matrices that open directly in draw.io, re-import to DWG, or go to PDF for submission.',
+      body: 'Plant schematics and function matrices, direct to draw.io, DWG, or PDF.',
     },
   },
 
   // ── Workflow ───────────────────────────────────────────
   workflow: {
     eyebrow: '02 / The workflow',
-    titleA: 'Three steps ',
-    titleEm: 'without Excel hell',
+    titleA: 'In three steps ',
+    titleEm: 'to finished docs',
     titleB: '.',
-    deck: 'From concept data to audit-ready documentation, with no copy-paste from legacy projects and no unchecked references to standards.',
+    deck: 'From concept data to audit-ready documentation, with no copy-paste from legacy projects.',
     s1: {
       label: 'Brief',
       title: 'Describe the plant',
-      body: 'Component, cleanroom class, critical functions: briefly describe what to generate. No templates, no boilerplate.',
+      body: 'Briefly describe what to generate: component, cleanroom class, critical functions.',
     },
     s2: {
       label: 'Generate',
       title: 'AynzamAI pulls the standards',
-      body: 'The engine checks against the matching standards catalog and produces a complete, consistent doc, including source references.',
+      body: 'The engine checks against the matching standards catalog and produces consistent docs with source references.',
     },
     s3: {
       label: 'Export',
       title: 'Straight into the project',
-      body: 'Export to your target format. Versioned, audit trail, revision-safe storage, ready for review.',
+      body: 'Export to your target format, versioned, with audit trail, ready for review.',
     },
   },
 

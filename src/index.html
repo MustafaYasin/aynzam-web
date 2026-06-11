@@ -8,9 +8,7 @@
     <meta name="description" content="AynzamAI generiert Funktionsbeschreibungen, Leistungsverzeichnisse und Fließmatrizen für TGA, geprüft gegen VDI, DIN und GMP Annex 1." />
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <include src="./partials/fonts.html" />
     <include src="./partials/lang-init.html" />
   </head>
 
@@ -28,16 +26,16 @@
 
             <!-- Left: editorial block -->
             <div class="lg:col-span-7 max-w-[640px]">
-              <p class="eyebrow mb-6 animate-fade-up delay-0" x-text="$store.lang.t('hero.eyebrow')"></p>
+              <p class="eyebrow mb-5 animate-fade-up delay-0" x-text="$store.lang.t('hero.eyebrow')"></p>
 
               <h1 class="headline-xl mb-7 animate-fade-up delay-1">
                 <span x-text="$store.lang.t('hero.titleA')"></span>
                 <em x-text="$store.lang.t('hero.titleEm')"></em><span x-text="$store.lang.t('hero.titleB')"></span>
               </h1>
 
-              <p class="deck mb-10 max-w-[58ch] animate-fade-up delay-2" x-text="$store.lang.t('hero.deck')"></p>
+              <p class="deck mb-9 max-w-[58ch] animate-fade-up delay-2" x-text="$store.lang.t('hero.deck')"></p>
 
-              <div class="flex flex-wrap items-center gap-4 mb-12 animate-fade-up delay-3">
+              <div class="flex flex-wrap items-center gap-4 mb-10 animate-fade-up delay-3">
                 <a
                   href="#"
                   class="btn-primary"
@@ -50,6 +48,17 @@
                   <span x-text="$store.lang.t('hero.ctaSecondary')"></span>
                   <span class="btn-arrow" aria-hidden="true"></span>
                 </a>
+              </div>
+
+              <!-- Proof row -->
+              <div class="flex items-center gap-x-4 gap-y-3 flex-wrap animate-fade-up delay-4">
+                <span class="mono-sm uppercase tracking-[0.12em]" x-text="$store.lang.t('hero.trustLabel')"></span>
+                <span class="h-3.5 w-px bg-[var(--border)] hidden sm:inline-block" aria-hidden="true"></span>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="norm-chip">VDI 3814</span>
+                  <span class="norm-chip">DIN 1946-4</span>
+                  <span class="norm-chip">GMP Annex 1</span>
+                </div>
               </div>
             </div>
 
@@ -682,11 +691,8 @@
               <div class="flex flex-wrap gap-1.5 mt-auto">
                 <span class="norm-chip">RLT</span>
                 <span class="norm-chip">HZG</span>
-                <span class="norm-chip">KÄL</span>
                 <span class="norm-chip">VAV</span>
                 <span class="norm-chip">BSK</span>
-                <span class="norm-chip">FCU</span>
-                <span class="norm-chip">FFU</span>
               </div>
             </article>
 
@@ -857,75 +863,48 @@
             <p class="deck max-w-[60ch]" x-text="$store.lang.t('trust.deck')"></p>
           </div>
 
-          <div class="marquee">
-            <div class="marquee-track">
-              <!-- PowerCo -->
-              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0">
-                <div class="h-12 sm:h-14 flex items-center justify-center">
-                  <img
-                    src="./images/logos/powerco.png"
-                    :alt="$store.lang.t('trust.c1.name')"
-                    class="logo-mark h-7 sm:h-8"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <p class="mono-sm" x-text="$store.lang.t('trust.c1.context')"></p>
-              </article>
+          <div class="logo-showcase">
+            <!-- PowerCo -->
+            <div class="logo-tile">
+              <span class="logo-tile-no" aria-hidden="true">01</span>
+              <img
+                src="./images/logos/powerco.png"
+                :alt="$store.lang.t('trust.c1.name')"
+                class="logo-tile-mark h-8 sm:h-10"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="logo-tile-context" x-text="$store.lang.t('trust.c1.context')"></span>
+            </div>
 
-              <!-- Volkswagen -->
-              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0">
-                <div class="h-12 sm:h-14 flex items-center justify-center">
-                  <img
-                    src="./images/logos/vw.png"
-                    :alt="$store.lang.t('trust.c2.name')"
-                    class="logo-mark h-11 sm:h-12"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <p class="mono-sm" x-text="$store.lang.t('trust.c2.context')"></p>
-              </article>
+            <!-- Volkswagen -->
+            <div class="logo-tile">
+              <span class="logo-tile-no" aria-hidden="true">02</span>
+              <img
+                src="./images/logos/vw.png"
+                :alt="$store.lang.t('trust.c2.name')"
+                class="logo-tile-mark h-12 sm:h-14"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="logo-tile-context" x-text="$store.lang.t('trust.c2.context')"></span>
+            </div>
 
-              <!-- Exyte -->
-              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0">
-                <div class="h-12 sm:h-14 flex items-center justify-center">
-                  <img
-                    src="./images/logos/exyte.png"
-                    :alt="$store.lang.t('trust.c3.name')"
-                    class="logo-mark h-8 sm:h-9"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <p class="mono-sm" x-text="$store.lang.t('trust.c3.context')"></p>
-              </article>
-
-              <!-- Duplicate set for seamless loop -->
-              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0" aria-hidden="true">
-                <div class="h-12 sm:h-14 flex items-center justify-center">
-                  <img src="./images/logos/powerco.png" alt="" class="logo-mark h-7 sm:h-8" loading="lazy" decoding="async" />
-                </div>
-                <p class="mono-sm" x-text="$store.lang.t('trust.c1.context')"></p>
-              </article>
-
-              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0" aria-hidden="true">
-                <div class="h-12 sm:h-14 flex items-center justify-center">
-                  <img src="./images/logos/vw.png" alt="" class="logo-mark h-11 sm:h-12" loading="lazy" decoding="async" />
-                </div>
-                <p class="mono-sm" x-text="$store.lang.t('trust.c2.context')"></p>
-              </article>
-
-              <article class="card text-center flex flex-col items-center justify-center gap-5 py-10 sm:py-12 w-[260px] sm:w-[300px] shrink-0" aria-hidden="true">
-                <div class="h-12 sm:h-14 flex items-center justify-center">
-                  <img src="./images/logos/exyte.png" alt="" class="logo-mark h-8 sm:h-9" loading="lazy" decoding="async" />
-                </div>
-                <p class="mono-sm" x-text="$store.lang.t('trust.c3.context')"></p>
-              </article>
+            <!-- Exyte -->
+            <div class="logo-tile">
+              <span class="logo-tile-no" aria-hidden="true">03</span>
+              <img
+                src="./images/logos/exyte.png"
+                :alt="$store.lang.t('trust.c3.name')"
+                class="logo-tile-mark h-9 sm:h-11"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="logo-tile-context" x-text="$store.lang.t('trust.c3.context')"></span>
             </div>
           </div>
 
-          <p class="mono-sm mt-10 max-w-[60ch]" x-text="$store.lang.t('trust.footnote')"></p>
+          <p class="mono-sm mt-8" x-text="$store.lang.t('trust.footnote')"></p>
         </div>
       </section>
 
