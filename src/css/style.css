@@ -331,42 +331,47 @@
 /* BUTTONS                          */
 /* ================================ */
 
+/* Primary CTA — clay liquid glass (no flat fill) */
 @utility btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 1.5px solid var(--fg);
-  background: var(--fg);
-  color: var(--bg-deep);
-  border-radius: var(--radius);
-  padding: 14px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, rgba(228, 138, 106, 0.92) 0%, rgba(204, 100, 70, 0.92) 100%);
+  color: #fff;
+  border-radius: 999px;
+  padding: 14px 26px;
   font-family: var(--font-mono);
   font-size: 12.5px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  box-shadow:
+    0 10px 28px -10px rgba(217, 119, 87, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.55);
   transition:
     background 260ms cubic-bezier(0.22, 1, 0.36, 1),
-    color 260ms ease,
-    border-color 260ms ease,
     box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 160ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .btn-primary:hover {
-  background: var(--clay);
-  color: #fff;
-  border-color: var(--clay);
+  background: linear-gradient(135deg, rgba(233, 148, 117, 0.96) 0%, rgba(212, 108, 78, 0.96) 100%);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-clay);
+  box-shadow:
+    0 16px 38px -10px rgba(217, 119, 87, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.65);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    0 8px 20px -10px rgba(217, 119, 87, 0.45),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.55);
 }
 
 @utility btn-outline {
@@ -516,15 +521,31 @@
 /* ================================ */
 
 @utility card {
-  background: var(--bg-elev);
-  border: 1px solid var(--border-soft);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: var(--radius-lg);
   padding: 22px;
-  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px) saturate(165%);
+  -webkit-backdrop-filter: blur(14px) saturate(165%);
+  box-shadow:
+    0 10px 30px -16px rgba(38, 30, 22, 0.18),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.75);
   transition:
     border-color 280ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark .card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 12px 34px -16px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
 }
 
 @media (min-width: 768px) {
@@ -534,29 +555,63 @@
 }
 
 .card:hover {
-  border-color: var(--border);
+  border-color: rgba(255, 255, 255, 0.7);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    0 22px 48px -20px rgba(38, 30, 22, 0.28),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85);
+}
+
+.dark .card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 26px 54px -22px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
 }
 
 @utility card-clay {
-  background: var(--bg-elev);
-  border: 1px solid var(--border-soft);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: var(--radius-lg);
   padding: 22px;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px) saturate(165%);
+  -webkit-backdrop-filter: blur(14px) saturate(165%);
+  box-shadow:
+    0 10px 30px -16px rgba(38, 30, 22, 0.18),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.75);
   transition:
     border-color 280ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.dark .card-clay {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 12px 34px -16px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
 .card-clay:hover {
-  border-color: var(--border);
+  border-color: rgba(255, 255, 255, 0.7);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    0 22px 48px -20px rgba(38, 30, 22, 0.28),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85);
+}
+
+.dark .card-clay:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 26px 54px -22px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
 }
 
 @media (min-width: 768px) {
@@ -578,6 +633,199 @@
 
 .card-clay:hover::before {
   background: linear-gradient(90deg, var(--clay) 0%, var(--clay) 100%);
+}
+
+/* ================================ */
+/* LIQUID GLASS                     */
+/* ================================ */
+
+/* Translucent "liquid glass" material: refractive blur + saturation,
+   specular bevel via layered inset highlights, and a diagonal sheen.
+   Only reads where there's content behind it (header, hero card). */
+@utility glass {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.14) 44%,
+    rgba(255, 255, 255, 0.26) 100%
+  );
+  backdrop-filter: blur(18px) saturate(185%);
+  -webkit-backdrop-filter: blur(18px) saturate(185%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 12px 40px -14px rgba(38, 30, 22, 0.24),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -12px 30px -18px rgba(255, 255, 255, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Real refraction: warp the backdrop with an SVG displacement map.
+   Chromium-only — guarded so Safari/Firefox keep the clean frosted blur. */
+@supports (backdrop-filter: url('#liquid-glass')) {
+  .glass {
+    backdrop-filter: url('#liquid-glass') blur(11px) saturate(185%);
+    -webkit-backdrop-filter: url('#liquid-glass') blur(11px) saturate(185%);
+  }
+}
+
+/* Specular sheen — sits above the glass body, below the content */
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 26%,
+    rgba(255, 255, 255, 0) 68%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+.glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 14px 44px -14px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -12px 30px -18px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.dark .glass::after {
+  opacity: 0.18;
+}
+
+/* Full-width glass bar (sticky header) — no all-round border, hairline base */
+.glass-bar {
+  background: rgba(250, 249, 245, 0.62);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 6px 30px -14px rgba(38, 30, 22, 0.22),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+}
+
+.dark .glass-bar {
+  background: rgba(28, 29, 32, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px -14px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Glass pill button — Apple-style translucent CTA */
+@utility btn-glass {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--fg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.18) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 6px 22px -10px rgba(38, 30, 22, 0.28),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition:
+    color 240ms ease,
+    transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-glass:hover {
+  color: var(--clay);
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px -10px rgba(217, 119, 87, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+}
+
+.btn-glass:active {
+  transform: translateY(0);
+}
+
+.dark .btn-glass {
+  color: var(--fg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 8px 24px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Glass icon/text toggle — round translucent control */
+@utility toggle-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.14) 100%);
+  backdrop-filter: blur(10px) saturate(170%);
+  -webkit-backdrop-filter: blur(10px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  box-shadow:
+    0 4px 14px -8px rgba(38, 30, 22, 0.25),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85);
+  transition:
+    color 200ms ease,
+    transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms ease;
+}
+
+.toggle-glass:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 20px -8px rgba(38, 30, 22, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+}
+
+.dark .toggle-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 6px 16px -8px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
+}
+
+/* Glass dropdown panel (mobile menu) */
+.glass-panel {
+  background: rgba(250, 249, 245, 0.72);
+  backdrop-filter: blur(22px) saturate(185%);
+  -webkit-backdrop-filter: blur(22px) saturate(185%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 16px 40px -16px rgba(38, 30, 22, 0.3);
+}
+
+.dark .glass-panel {
+  background: rgba(28, 29, 32, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.65);
 }
 
 /* ================================ */
@@ -608,6 +856,23 @@
   pointer-events: none;
   filter: blur(20px);
   z-index: 0;
+}
+
+/* Soft ambient colour behind glass card sections — gives the glass
+   something to refract so the transparency actually reads. */
+@utility tinted-section {
+  position: relative;
+  background:
+    radial-gradient(640px 400px at 14% 16%, rgba(217, 119, 87, 0.08) 0%, transparent 62%),
+    radial-gradient(580px 440px at 86% 84%, rgba(106, 140, 175, 0.08) 0%, transparent 62%),
+    radial-gradient(520px 360px at 60% 50%, rgba(120, 140, 93, 0.05) 0%, transparent 60%);
+}
+
+.dark .tinted-section {
+  background:
+    radial-gradient(640px 400px at 14% 16%, rgba(217, 119, 87, 0.13) 0%, transparent 62%),
+    radial-gradient(580px 440px at 86% 84%, rgba(106, 140, 175, 0.12) 0%, transparent 62%),
+    radial-gradient(520px 360px at 60% 50%, rgba(120, 140, 93, 0.08) 0%, transparent 60%);
 }
 
 /* Hero — atmospheric, layered warm backdrop */
@@ -673,12 +938,39 @@ body::after {
 
 @utility wordmark {
   display: inline-flex;
-  align-items: baseline;
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 20px;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 17px;
   color: var(--fg);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  padding: 7px 15px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.12) 100%);
+  backdrop-filter: blur(10px) saturate(170%);
+  -webkit-backdrop-filter: blur(10px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 4px 14px -8px rgba(38, 30, 22, 0.22),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85);
+  transition:
+    transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms ease;
+}
+
+.wordmark:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 20px -8px rgba(38, 30, 22, 0.28),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+}
+
+.dark .wordmark {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 6px 16px -8px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
 }
 
 .wordmark .dot {
@@ -687,12 +979,12 @@ body::after {
 
 @utility wordmark-lg {
   display: inline-flex;
-  align-items: baseline;
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 28px;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 24px;
   color: var(--fg);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.025em;
 }
 
 .wordmark-lg .dot {
@@ -844,13 +1136,75 @@ body::after {
 
 /* ── Interactive logo showcase (pilot projects) ── */
 @utility logo-showcase {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
-  background: var(--bg-elev);
-  border: 1px solid var(--border-soft);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    0 16px 44px -18px rgba(38, 30, 22, 0.26),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.dark .logo-showcase {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 18px 48px -18px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
+}
+
+/* Vivid colour orbs behind the glass showcase — give the glass something
+   to refract so the transparency is clearly visible. */
+.showcase-orb {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(55px);
+  pointer-events: none;
+}
+
+.showcase-orb-a {
+  width: 340px;
+  height: 340px;
+  background: rgba(217, 119, 87, 0.38);
+  left: 4%;
+  bottom: 2%;
+}
+
+.showcase-orb-b {
+  width: 320px;
+  height: 320px;
+  background: rgba(106, 140, 175, 0.34);
+  right: 6%;
+  bottom: 8%;
+}
+
+.showcase-orb-c {
+  width: 280px;
+  height: 280px;
+  background: rgba(120, 140, 93, 0.3);
+  left: 44%;
+  bottom: -6%;
+}
+
+.dark .showcase-orb-a {
+  background: rgba(217, 119, 87, 0.5);
+}
+.dark .showcase-orb-b {
+  background: rgba(106, 140, 175, 0.42);
+}
+.dark .showcase-orb-c {
+  background: rgba(120, 140, 93, 0.36);
 }
 
 @media (min-width: 640px) {
@@ -898,7 +1252,11 @@ body::after {
 }
 
 .logo-tile:hover {
-  background: var(--bg-elev-strong);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.dark .logo-tile:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .logo-tile:hover::after {
@@ -922,9 +1280,9 @@ body::after {
 
 .logo-tile-mark {
   width: auto;
-  max-width: 70%;
+  max-width: 78%;
   object-fit: contain;
-  filter: grayscale(100%) brightness(0.4) opacity(0.65);
+  filter: grayscale(100%) opacity(0.92);
   transition:
     filter 420ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -932,7 +1290,7 @@ body::after {
 }
 
 .dark .logo-tile-mark {
-  filter: brightness(0) invert(1) opacity(0.68);
+  filter: brightness(0) invert(1) opacity(0.82);
 }
 
 .logo-tile:hover .logo-tile-mark {
@@ -1015,15 +1373,7 @@ body::after {
 /* DARK MODE TWEAKS                 */
 /* ================================ */
 
-/* In dark mode the .btn-primary still inverts cleanly */
+/* Primary CTA keeps its clay-glass look in dark mode (white text on clay) */
 .dark .btn-primary {
-  border-color: var(--fg);
-  background: var(--fg);
-  color: var(--bg-deep);
-}
-
-.dark .btn-primary:hover {
-  background: var(--clay);
-  border-color: var(--clay);
-  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
 }
