@@ -1,19 +1,12 @@
 document.addEventListener('alpine:init', () => {
   Alpine.store('theme', {
     init() {
-      // Check if theme is stored in localStorage, otherwise check system preference
+      // Dark mode is the default; light only when the user explicitly chose it
       const storedTheme = localStorage.getItem('theme')
-      if (
-        storedTheme === 'dark' ||
-        (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        this.isDark = true
-      } else {
-        this.isDark = false
-      }
+      this.isDark = storedTheme !== 'light'
       this.update()
     },
-    isDark: false,
+    isDark: true,
     toggle() {
       this.isDark = !this.isDark
       localStorage.setItem('theme', this.isDark ? 'dark' : 'light')

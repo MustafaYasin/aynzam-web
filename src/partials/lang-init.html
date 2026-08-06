@@ -6,6 +6,12 @@
     document.documentElement.lang = lang;
     window.__lang = lang;
 
+    // Dark mode is the default. Apply the class before first paint so the
+    // page never flashes light; Alpine's theme store takes over afterwards.
+    if (localStorage.getItem('theme') !== 'light') {
+      document.documentElement.classList.add('dark');
+    }
+
     // Always open a page at the top. Set this in the <head> (before the
     // browser restores any saved scroll) so navigating pricing -> back to
     // the landing page never drops you mid-page. pageshow also fires on
