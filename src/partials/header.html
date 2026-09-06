@@ -1,92 +1,77 @@
-<!-- Liquid-glass refraction filter (referenced by .glass via backdrop-filter) -->
-<svg width="0" height="0" aria-hidden="true" style="position: absolute; pointer-events: none;">
-  <filter id="liquid-glass" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.011" numOctaves="2" seed="42" result="noise" />
-    <feGaussianBlur in="noise" stdDeviation="1.4" result="softNoise" />
-    <feDisplacementMap in="SourceGraphic" in2="softNoise" scale="18" xChannelSelector="R" yChannelSelector="G" />
-  </filter>
-</svg>
-
 <header
-  class="fixed left-0 top-0 w-full z-50 transition-all duration-300"
-  :class="stickyMenu ? 'py-3 glass-bar' : 'py-5'"
-  x-data="{ stickyMenu: false, mobileMenuOpen: false }"
-  @scroll.window="stickyMenu = window.scrollY > 16"
+  class="site-header"
+  :class="{ 'is-stuck': stuck, 'on-hero': onHero }"
+  x-data="{
+    stuck: false,
+    onHero: document.body.dataset.hero === 'silver',
+    mobileMenuOpen: false,
+    check() { this.stuck = window.scrollY > 24 }
+  }"
+  x-init="check()"
+  @scroll.window.passive="check()"
 >
-  <div class="container flex items-center justify-between gap-6">
-
-    <!-- Wordmark -->
-    <a href="index.html" class="wordmark group" aria-label="aynzamAI">
-      <span>aynzamAI</span><span class="dot">.</span>
+  <!-- Announcement bar -->
+  <div class="announce" x-show="!stuck" x-transition.opacity.duration.200ms>
+    <span x-text="$store.lang.t('announce.text')"></span>
+    <a href="pricing.html" class="text-link">
+      <span x-text="$store.lang.t('announce.link')"></span>
+      <span class="btn-arrow" aria-hidden="true"></span>
     </a>
+  </div>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-1" aria-label="Hauptnavigation">
-      <a href="index.html#use-cases" class="nav-link" x-text="$store.lang.t('header.useCases')"></a>
-      <a href="index.html#workflow" class="nav-link" x-text="$store.lang.t('header.workflow')"></a>
-      <a href="index.html#industries" class="nav-link" x-text="$store.lang.t('header.industries')"></a>
-      <a href="pricing.html" class="nav-link" x-text="$store.lang.t('header.pricing')"></a>
-    </nav>
+  <div class="container">
+    <div class="header-bar">
 
-    <!-- Actions -->
-    <div class="flex items-center gap-3">
-      <!-- Language Toggle -->
-      <button
-        type="button"
-        @click="$store.lang.toggle()"
-        class="toggle-glass min-w-[42px] h-10 px-3 inline-flex items-center justify-center mono-sm uppercase tracking-[0.12em] text-[var(--fg-soft)] hover:text-[var(--clay)]"
-        :aria-label="$store.lang.current === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten'"
-        x-text="$store.lang.current === 'de' ? 'EN' : 'DE'"
-      ></button>
-
-      <!-- Theme Toggle -->
-      <button
-        type="button"
-        @click="$store.theme.toggle()"
-        class="toggle-glass w-10 h-10 inline-flex items-center justify-center text-[var(--fg-muted)] hover:text-[var(--clay)]"
-        aria-label="Toggle theme"
-      >
-        <template x-if="$store.theme.isDark">
-          <svg class="w-[16px] h-[16px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        </template>
-        <template x-if="!$store.theme.isDark">
-          <svg class="w-[16px] h-[16px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </template>
-      </button>
-
-      <!-- CTA -->
-      <a
-        href="#"
-        class="hidden md:inline-flex btn-glass"
-        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
-      >
-        <span x-text="$store.lang.t('header.bookDemo')"></span>
-        <span class="btn-arrow" aria-hidden="true"></span>
+      <!-- Wordmark -->
+      <a href="index.html" class="wordmark" aria-label="aynzamAI">
+        <span>aynzam</span><span class="tail">AI</span>
       </a>
 
-      <!-- Mobile Toggle -->
-      <button
-        type="button"
-        class="lg:hidden w-11 h-11 inline-flex items-center justify-center text-[var(--fg)] transition-colors"
-        @click="mobileMenuOpen = !mobileMenuOpen"
-        :aria-expanded="mobileMenuOpen"
-        aria-label="Menu"
-      >
-        <svg x-show="!mobileMenuOpen" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
-        </svg>
-        <svg x-show="mobileMenuOpen" x-cloak class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2" aria-label="Hauptnavigation">
+        <a href="index.html#platform" class="nav-link" x-text="$store.lang.t('header.platform')"></a>
+        <a href="index.html#industries" class="nav-link" x-text="$store.lang.t('header.industries')"></a>
+        <a href="about.html" class="nav-link" x-text="$store.lang.t('header.company')"></a>
+        <a href="pricing.html" class="nav-link" x-text="$store.lang.t('header.pricing')"></a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          @click="$store.lang.toggle()"
+          class="hdr-pill"
+          :aria-label="$store.lang.current === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten'"
+          x-text="$store.lang.current === 'de' ? 'DE' : 'EN'"
+        ></button>
+
+        <a
+          href="#"
+          class="hidden sm:inline-flex hdr-cta"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
+        >
+          <span x-text="$store.lang.t('header.cta')"></span>
+        </a>
+
+        <button
+          type="button"
+          class="lg:hidden hdr-pill w-8 !px-0"
+          @click="mobileMenuOpen = !mobileMenuOpen"
+          :aria-expanded="mobileMenuOpen"
+          aria-label="Menu"
+        >
+          <svg x-show="!mobileMenuOpen" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg x-show="mobileMenuOpen" x-cloak class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile menu -->
   <div
     x-show="mobileMenuOpen"
     x-cloak
@@ -96,30 +81,21 @@
     x-transition:leave="transition ease-in duration-150"
     x-transition:leave-start="opacity-100 translate-y-0"
     x-transition:leave-end="opacity-0 -translate-y-2"
-    class="lg:hidden absolute top-full left-0 w-full glass-panel"
+    class="lg:hidden absolute top-full left-0 w-full menu-panel"
   >
-    <div class="container py-5 flex flex-col gap-1">
-      <a href="index.html#use-cases" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
-        <span x-text="$store.lang.t('header.useCases')"></span>
-      </a>
-      <a href="index.html#workflow" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
-        <span x-text="$store.lang.t('header.workflow')"></span>
-      </a>
-      <a href="index.html#industries" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
-        <span x-text="$store.lang.t('header.industries')"></span>
-      </a>
-      <a href="pricing.html" class="nav-link justify-between py-3" @click="mobileMenuOpen = false">
-        <span x-text="$store.lang.t('header.pricing')"></span>
-      </a>
-      <div class="pt-4 mt-2 border-t border-[var(--border-soft)]">
+    <div class="container py-4 flex flex-col">
+      <a href="index.html#platform" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.platform')"></a>
+      <a href="index.html#industries" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.industries')"></a>
+      <a href="about.html" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.company')"></a>
+      <a href="pricing.html" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.pricing')"></a>
+      <div class="pt-4 mt-2 border-t border-[var(--line)]">
         <a
           href="#"
-          class="btn-primary w-full"
+          class="btn btn-primary w-full"
           @click="mobileMenuOpen = false"
           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;"
         >
-          <span x-text="$store.lang.t('header.bookDemo')"></span>
-          <span class="btn-arrow" aria-hidden="true"></span>
+          <span x-text="$store.lang.t('header.cta')"></span>
         </a>
       </div>
     </div>
