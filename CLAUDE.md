@@ -56,9 +56,9 @@ Plain component classes (header, cards, rail, stage backgrounds, footer, motion)
 
 7 HTML pages in `src/`: index (landing), about, blog-grid, blog-single, signin, signup, 404. There is deliberately no pricing page. Each uses `<include>` tags for shared partials (`header`, `footer`, `fonts`, `lang-init`).
 
-### Favicon
+### Favicon and titles
 
-The favicon (`src/images/favicon.svg`) should stay in sync with the wordmark. The wordmark is now plain text (`aynzam` medium + `AI` light) in near-black; when it changes, update the favicon SVG.
+There is deliberately no favicon (the owner does not want an icon in the tab) and every page `<title>` is exactly `aynzamAI`. Do not add a favicon or page-specific titles unless asked.
 
 ### Internationalization (i18n)
 

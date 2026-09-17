@@ -25,13 +25,16 @@ window.__translations_en = {
 
   // ── Logo wall ───────────────────────────────────────────
   logos: {
-    title: 'Built with project partners in industrial, automotive and cleanroom construction',
+    title:
+      'Built with project partners in industrial, automotive, cleanroom construction and building technology',
     c1: 'PowerCo',
     c2: 'Volkswagen',
     c3: 'Exyte',
+    c4: 'Ariston Group',
     l1: 'Gigafactory · Industrial',
     l2: 'Plant planning · Automotive',
     l3: 'Cleanroom · Semiconductor',
+    l4: 'Heating · HVAC · Hot water',
   },
 
   // ── Stories rail ────────────────────────────────────────

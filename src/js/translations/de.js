@@ -25,13 +25,16 @@ window.__translations_de = {
 
   // ── Logo wall ───────────────────────────────────────────
   logos: {
-    title: 'Entwickelt mit Projektpartnern aus Industrie, Automotive und Reinraumbau',
+    title:
+      'Entwickelt mit Projektpartnern aus Industrie, Automotive, Reinraumbau und Gebäudetechnik',
     c1: 'PowerCo',
     c2: 'Volkswagen',
     c3: 'Exyte',
+    c4: 'Ariston Group',
     l1: 'Gigafactory · Industriebau',
     l2: 'Werksplanung · Automotive',
     l3: 'Reinraum · Halbleiter',
+    l4: 'Wärme · Klima · Warmwasser',
   },
 
   // ── Stories rail ────────────────────────────────────────
