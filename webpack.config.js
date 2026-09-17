@@ -35,7 +35,7 @@ const generateHTMLPlugins = () => glob.sync('./src/*.html').map((dir) => {
 });
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/js/index.js',
   devServer: {
     static: {
@@ -102,13 +102,16 @@ module.exports = {
   },
   plugins: [
     ...generateHTMLPlugins(),
+    // Content hashes in the file names: every deploy gets new URLs, so
+    // browsers and the CDN can never pair a new HTML file with a stale
+    // CSS/JS file (the "site looks broken after an update" bug).
     new MiniCssExtractPlugin({
-      filename: 'style.css',
-      chunkFilename: 'style.css',
+      filename: 'style.[contenthash:8].css',
+      chunkFilename: 'style.[contenthash:8].css',
     }),
   ],
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash:8].js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
     assetModuleFilename: 'images/[name][ext]',
