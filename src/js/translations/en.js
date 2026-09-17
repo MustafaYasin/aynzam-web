@@ -1,8 +1,8 @@
 window.__translations_en = {
   // ── Announcement bar ───────────────────────────────────────
   announce: {
-    text: 'aynzamAI pilot 2026: first 10 outputs free',
-    link: 'Read more',
+    text: 'aynzamAI pilot phase 2026: we are looking for project partners in construction',
+    link: 'Schedule a call',
   },
 
   // ── Header ──────────────────────────────────────────────
@@ -10,78 +10,81 @@ window.__translations_en = {
     platform: 'Platform',
     industries: 'Industries',
     company: 'Company',
-    pricing: 'Pricing',
-    cta: 'Book a demo',
+    blog: 'Blog',
+    cta: 'Schedule a call',
   },
 
   // ── Hero ────────────────────────────────────────────────
   hero: {
     line1: 'Applied AI for',
-    line2: 'building services engineering',
-    deck: 'aynzamAI helps engineering firms produce functional descriptions, bills of quantities and function lists in minutes instead of weeks.',
-    ctaPrimary: 'Book a demo',
+    line2: 'the construction industry',
+    deck: 'aynzamAI helps engineering firms, contractors and operators create, check and hand over technical documentation in minutes instead of weeks.',
+    ctaPrimary: 'Schedule a call',
     ctaSecondary: 'Explore the platform',
   },
 
   // ── Logo wall ───────────────────────────────────────────
   logos: {
-    title: 'Built with engineering teams in battery, automotive and cleanroom',
+    title: 'Built with project partners in industrial, automotive and cleanroom construction',
     c1: 'PowerCo',
     c2: 'Volkswagen',
     c3: 'Exyte',
-    l1: 'Gigafactory · Battery',
-    l2: 'Plant HVAC · Automotive',
+    l1: 'Gigafactory · Industrial',
+    l2: 'Plant planning · Automotive',
     l3: 'Cleanroom · Semiconductor',
   },
 
   // ── Stories rail ────────────────────────────────────────
   stories: {
     title1: 'We solve the problems',
-    title2: 'that actually slow engineering firms down',
+    title2: 'that actually slow construction projects down',
     s1: {
-      title: 'Functional description for a complete AHU system in 4 minutes',
-      meta: 'Cleanroom · ISO 5',
+      title: 'Bills of quantities from planning data, exported straight to GAEB',
+      meta: 'Tendering · Procurement',
     },
     s2: {
-      title: 'Bill of quantities to VOB/A, exported straight to GAEB X86',
-      meta: 'Tendering · Stage 6',
+      title: 'Functional descriptions and system documentation for all MEP trades',
+      meta: 'Design · Stage 5',
     },
     s3: {
-      title: 'Function list to VDI 3814 from field devices and dampers',
-      meta: 'BMS · Stage 5',
+      title: 'Check drawings and specs automatically against DIN, VDI and VOB',
+      meta: 'Quality · Review',
     },
     s4: {
-      title: 'GMP-compliant documentation for dry rooms and gigafactories',
-      meta: 'Battery · Annex 1',
+      title: 'Complete, structured as-built and handover documentation',
+      meta: 'Construction · Commissioning',
     },
-    s5: { title: 'System schematics and function matrices as draw.io', meta: 'Schematic · Export' },
-    s6: { title: 'Versioned and audit-ready, with source references', meta: 'Audit · Review' },
+    s5: {
+      title: 'System schematics and function matrices from as-is data',
+      meta: 'Design · Existing assets',
+    },
+    s6: { title: 'Maintenance and operating documentation for operators', meta: 'Operations · FM' },
   },
 
   // ── Statement ───────────────────────────────────────────
   statement: {
-    text: 'We bring plant data, standards catalogues and engineering know-how together to transform how building services engineers work.',
+    text: 'We bring planning data, standards and construction know-how together to transform how the construction industry works.',
   },
 
   // ── Platform ────────────────────────────────────────────
   platform: {
-    title1: 'The unified documentation layer',
-    title2: 'for the AI-native engineering firm',
+    title1: 'The unified AI layer',
+    title2: 'for design, construction and operations',
     cta: 'Explore the engine',
   },
 
   // ── Pillars ─────────────────────────────────────────────
   pillars: {
     p1: {
-      title1: 'One workflow',
-      title2: 'in three steps.',
-      body: 'Describe the system, standards are pulled automatically, export straight into the project. No copy-paste from old projects.',
-      cta: 'See plans',
+      title1: 'One system',
+      title2: 'for every trade.',
+      body: 'From HVAC and electrical to building automation: one engine that understands planning data and turns it into audit-ready documents.',
+      cta: 'About us',
     },
     p2: {
       title1: 'Compliant',
       title2: 'by default.',
-      body: 'VDI 3814, VDI 6022, DIN 1946-4, GMP Annex 1 and EN 50600. Every output with source references and an audit trail.',
+      body: 'DIN, VDI, VOB and HOAI as the basis for every check. Each output with source references, versioning and an audit trail.',
       cta: 'Explore industries',
     },
   },
@@ -89,7 +92,7 @@ window.__translations_en = {
   // ── Industries ──────────────────────────────────────────
   industries: {
     title1: 'Deep in regulated,',
-    title2: 'mission-critical industries',
+    title2: 'mission-critical construction projects',
     cta: 'Discover more',
     tabs: {
       semi: 'Semiconductor',
@@ -101,7 +104,7 @@ window.__translations_en = {
     items: {
       semi: {
         title: 'Semiconductor',
-        sub: 'Cleanroom-compliant documentation from ISO 5 to sub-nano',
+        sub: 'Cleanroom-compliant design and documentation from ISO 5 to sub-nano',
         chips: ['ISO 14644', 'VDI 2083', 'SEMI F'],
       },
       battery: {
@@ -116,12 +119,12 @@ window.__translations_en = {
       },
       pharma: {
         title: 'Pharma',
-        sub: 'GMP-compliant functional descriptions with FAT plan',
+        sub: 'GMP-compliant design and qualification documents',
         chips: ['GMP Annex 1', 'GAMP 5', 'DIN 1946-4'],
       },
       automotive: {
         title: 'Automotive',
-        sub: 'Plant HVAC with function lists to VDI 3814',
+        sub: 'Plant planning with audit-ready documentation per trade',
         chips: ['VDI 3814', 'ISO 16484-3', 'VOB/A'],
       },
     },
@@ -130,33 +133,35 @@ window.__translations_en = {
   // ── Company ─────────────────────────────────────────────
   company: {
     title1: 'The team building the future',
-    title2: 'of engineering documentation.',
-    body: 'Built by HVAC and controls engineers for engineers. We are at the very beginning and work with the engineering teams that will shape this field.',
+    title2: 'of construction documentation.',
+    body: 'Built by planners and engineers for the construction industry. We are at the very beginning and work with the project partners who will shape this field.',
     card1: 'About us',
-    card2: 'Pricing',
+    card2: 'Contact',
   },
 
   // ── Final CTA ───────────────────────────────────────────
   finalCta: {
-    title: 'Transform your documentation processes with aynzamAI.',
-    button: 'Book a demo',
+    title: "Let's talk about your project.",
+    note: 'Terms on request. We define scope and rollout together in a call.',
+    button: 'Schedule a call',
   },
 
   // ── Footer ──────────────────────────────────────────────
   footer: {
     tagline:
-      'Applied AI for building services engineering. Functional descriptions, bills of quantities and function lists.',
-    cta: 'Book a demo',
+      'Applied AI for the construction industry. Design, tendering, documentation and operations.',
+    cta: 'Schedule a call',
     colPlatform: 'Platform',
     linkEngine: 'Engine',
-    linkOutputs: 'Outputs',
+    linkOutputs: 'Use cases',
     linkWorkflow: 'Workflow',
-    linkPricing: 'Pricing',
+    linkIndustries: 'Industries',
     colIndustries: 'Industries',
     colCompany: 'Company',
     linkAbout: 'About us',
     linkBlog: 'Blog',
     linkContact: 'Contact',
+    linkCall: 'Schedule a call',
     linkSignin: 'Sign in',
     colLegal: 'Legal',
     linkImprint: 'Imprint',
@@ -168,181 +173,28 @@ window.__translations_en = {
 
   // ── About page ──────────────────────────────────────────
   about: {
-    title1: 'Built by engineers',
-    title2: 'who know the pain.',
-    deck: 'aynzamAI is developed at pure-msrplanung in Munich. We spent years stitching functional descriptions together from old projects. Now we are building the engine that does it for us.',
+    title1: 'Built by planners',
+    title2: 'who know the job site.',
+    deck: 'aynzamAI is developed at pure-msrplanung in Munich. We spent years stitching tenders, functional descriptions and handover documents together from old projects. Now we are building the engine that does it for us.',
     v1: {
       title: 'Standards, not prose',
-      body: 'Every output is checked against the matching standards catalogue. No generic text, but audit-ready documentation with source references.',
+      body: 'Every output is checked against the matching standards catalogue. No generic text, but audit-ready documents with source references.',
     },
     v2: {
-      title: 'On real plants',
-      body: 'Three pilot engagements in battery, automotive and cleanroom. Every function is validated against real AHU, BMS and controls systems.',
+      title: 'On real projects',
+      body: 'Three pilot projects in industrial, automotive and cleanroom construction. Every function is validated against real planning and as-built data.',
     },
     v3: {
       title: 'Data stays in Europe',
-      body: 'EU hosting in Frankfurt, optional BYO key or on-premise for semiconductor, pharma and defence projects.',
+      body: 'EU hosting in Frankfurt, optional own key or on-premise for semiconductor, pharma and defence projects.',
     },
-    statTitle: 'Numbers from the pilot',
-    s1: { value: '4 min', label: 'to a finished functional description' },
+    statTitle: 'Numbers from the pilot phase',
+    s1: { value: '4 min', label: 'to the first finished document' },
     s2: { value: '9', label: 'standards catalogues integrated' },
-    s3: { value: '3', label: 'active pilot customers' },
+    s3: { value: '3', label: 'active pilot projects' },
     s4: { value: '100 %', label: 'source references per output' },
     ctaTitle: 'Meet the team.',
     ctaButton: 'Schedule a call',
-  },
-
-  // ── Pricing page ────────────────────────────────────────
-  pricingPage: {
-    eyebrow: 'Pricing',
-    title1: 'Plans that scale',
-    title2: 'with your firm.',
-    deck: 'From solo engineer to engineering department: output-based tiers, no seat fees, transparent costs.',
-    pilot: {
-      tag: 'Pilot',
-      title: 'First 10 outputs free',
-      body: 'No credit card. Test functional descriptions, function lists and bills of quantities with your real project.',
-      button: 'Start pilot',
-    },
-    toggle: {
-      monthly: 'Monthly',
-      yearly: 'Yearly',
-      discount: '−20 %',
-    },
-    tiers: {
-      starter: {
-        name: 'Starter',
-        tagline: 'For solo engineers and freelancers.',
-        price: '€119',
-        priceYearly: '€95',
-        priceNote: 'Billed yearly · €1,140 / year',
-        unit: '/ month',
-        f1: '30 documentation outputs / month',
-        f2: 'All output types (FUBE · function list · BoQ)',
-        f3: 'DOCX and PDF export',
-        f4: 'Community support',
-        f5: 'Single user',
-        cta: 'Choose Starter',
-      },
-      studio: {
-        name: 'Studio',
-        badge: 'Popular',
-        tagline: 'For engineering firms (5–15 staff).',
-        price: '€549',
-        priceYearly: '€439',
-        priceNote: 'Billed yearly · €5,268 / year',
-        unit: '/ month',
-        f1: '200 documentation outputs / month',
-        f2: 'Up to 8 users',
-        f3: 'All Starter features',
-        f4: 'GAEB X86 export',
-        f5: 'Versioning + audit trail',
-        f6: '5 custom templates',
-        f7: 'Email support (24h)',
-        cta: 'Book a demo',
-      },
-      engineering: {
-        name: 'Engineering',
-        tagline: 'For larger firms (15–50 staff).',
-        price: '€1,890',
-        priceYearly: '€1,512',
-        priceNote: 'Billed yearly · €18,144 / year',
-        unit: '/ month',
-        f1: '800 documentation outputs / month',
-        f2: 'Up to 25 users',
-        f3: 'All Studio features',
-        f4: 'REST API (read + write)',
-        f5: 'SSO / SAML',
-        f6: '99.5 % SLA',
-        f7: 'Dedicated account manager',
-        f8: 'Unlimited custom templates',
-        cta: 'Contact sales',
-      },
-    },
-    overageNote:
-      'Overage: +€5 / €3.50 / €2 per extra output (Starter / Studio / Engineering). Volume discounts from 500 outputs / month.',
-    enterprise: {
-      eyebrow: 'Enterprise',
-      name: 'Enterprise',
-      title1: 'For corporations, on-premise',
-      title2: 'and large engineering departments.',
-      body: 'Unlimited outputs. Custom standards catalogues. Integration with RR schematics, BIM stack, PLM. On your infrastructure if required.',
-      b1: 'Unlimited outputs + users',
-      b2: 'On-premise available',
-      b3: 'RR schematic · BIM · PLM',
-      b4: '99.95 % SLA',
-      b5: 'White-glove onboarding',
-      b6: 'Custom standards catalogue',
-      cta: 'Contact sales',
-      priceLabel: 'Pricing',
-      priceTitle: 'On request',
-      priceBody:
-        'Typical engineering corporation: €6,000–15,000 / month or annual framework agreement.',
-      priceNote: 'Contract · pilot in 4 weeks · GDPR-compliant · EU hosting or on-prem',
-    },
-    compare: {
-      eyebrow: 'In detail',
-      title: 'All features compared',
-      rows: [
-        { label: 'Documentation outputs / month', s: '30', t: '200', e: '800', x: 'Unlimited' },
-        { label: 'Output types', s: 'All', t: 'All', e: 'All', x: 'All + custom' },
-        { label: 'Included users', s: '1', t: '8', e: '25', x: 'Unlimited' },
-        { label: 'DOCX + PDF export', s: '✓', t: '✓', e: '✓', x: '✓' },
-        { label: 'GAEB X86 export', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'draw.io / DWG export', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'Versioning + audit trail', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'Custom templates', s: '—', t: '5', e: 'Unlimited', x: 'Unlimited' },
-        { label: 'API access', s: '—', t: 'Read', e: 'Read + write', x: 'Full' },
-        { label: 'SSO / SAML', s: '—', t: '—', e: '✓', x: '✓' },
-        { label: 'On-premise', s: '—', t: '—', e: '—', x: '✓' },
-        { label: 'Custom standards catalogue', s: '—', t: '—', e: '—', x: '✓' },
-        { label: 'Account manager', s: '—', t: '—', e: 'Dedicated', x: 'Dedicated' },
-        { label: 'SLA', s: '—', t: 'Best effort', e: '99.5 %', x: '99.95 %' },
-        { label: 'Support', s: 'Community', t: 'Email 24h', e: 'Priority 4h', x: 'White-glove' },
-      ],
-    },
-    faq: {
-      eyebrow: 'FAQ',
-      title: 'Frequently asked questions',
-      items: [
-        {
-          q: 'What counts as one "documentation output"?',
-          a: 'One generated functional description, one function list or one bill of quantities (as a complete document) each count as one output. Iterations, re-generations with adjusted parameters and standards updates on the same output are included without limit.',
-        },
-        {
-          q: 'What happens if I exceed the limit?',
-          a: 'You automatically receive an upgrade offer or pay overage per extra output (€5 / €3.50 / €2 depending on tier). Existing outputs remain accessible at all times.',
-        },
-        {
-          q: 'Why no per-seat billing?',
-          a: 'AI generation has real cost per output. Output-based pricing is transparent and scales with actual value, not with the number of logins.',
-        },
-        {
-          q: 'Which standards does the engine check against?',
-          a: 'VDI 3814, VDI 6022, DIN 1946-4, DIN EN ISO 16484-3, GMP Annex 1, GAMP 5, EN 50600, VOB/A and DIN 276. Your own company standards can be stored as templates from Studio upwards.',
-        },
-        {
-          q: 'On-premise: how does that work?',
-          a: 'In the Enterprise tier we deliver a containerised engine that runs on your own infrastructure. Setup typically takes 4 weeks, with a dedicated account manager guiding commissioning.',
-        },
-        {
-          q: 'Which data leaves my environment?',
-          a: 'In Starter and Studio only the inputs you explicitly submit, encrypted in EU data centres (Frankfurt). In Engineering optionally BYO key. In Enterprise (on-premise) nothing leaves your infrastructure.',
-        },
-        {
-          q: 'Can I switch plans mid-year?',
-          a: 'Yes, any time. Upgrades take effect immediately, downgrades at the next billing cycle. No minimum term.',
-        },
-        {
-          q: 'Pilot: really no credit card?',
-          a: 'Correct. 10 outputs against a concrete project of yours, within 4 weeks, without credit card and without automatic transition to a paid plan.',
-        },
-      ],
-    },
-    finalCta: {
-      title: 'See what the engine makes of your project in 20 minutes.',
-      button: 'Book a demo',
-    },
   },
 
   // ── Sign in / Sign up ───────────────────────────────────
@@ -361,7 +213,7 @@ window.__translations_en = {
 
   signup: {
     title: 'Create account',
-    sub: 'First functional description in 90 seconds.',
+    sub: 'First document in a few minutes.',
     nameLabel: 'Name',
     namePlaceholder: 'First and last name',
     emailLabel: 'Email',

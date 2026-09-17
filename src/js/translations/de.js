@@ -1,8 +1,8 @@
 window.__translations_de = {
   // ── Announcement bar ───────────────────────────────────────
   announce: {
-    text: 'aynzamAI Pilot 2026: erste 10 Outputs gratis',
-    link: 'Mehr lesen',
+    text: 'aynzamAI Pilotphase 2026: wir suchen Projektpartner aus der Baubranche',
+    link: 'Gespräch vereinbaren',
   },
 
   // ── Header ──────────────────────────────────────────────
@@ -10,69 +10,81 @@ window.__translations_de = {
     platform: 'Plattform',
     industries: 'Branchen',
     company: 'Unternehmen',
-    pricing: 'Preise',
-    cta: 'Demo buchen',
+    blog: 'Blog',
+    cta: 'Gespräch vereinbaren',
   },
 
   // ── Hero ────────────────────────────────────────────────
   hero: {
     line1: 'Angewandte KI für',
-    line2: 'TGA-Engineering',
-    deck: 'aynzamAI hilft Planungsbüros, Funktionsbeschreibungen, Leistungsverzeichnisse und Funktionslisten in Minuten statt Wochen zu erstellen.',
-    ctaPrimary: 'Demo buchen',
+    line2: 'die Baubranche',
+    deck: 'aynzamAI hilft Planungsbüros, Bauunternehmen und Betreibern, technische Dokumentation in Minuten statt Wochen zu erstellen, zu prüfen und zu übergeben.',
+    ctaPrimary: 'Gespräch vereinbaren',
     ctaSecondary: 'Plattform erkunden',
   },
 
   // ── Logo wall ───────────────────────────────────────────
   logos: {
-    title: 'Entwickelt mit Engineering-Teams aus Battery, Automotive und Reinraum',
+    title: 'Entwickelt mit Projektpartnern aus Industrie, Automotive und Reinraumbau',
     c1: 'PowerCo',
     c2: 'Volkswagen',
     c3: 'Exyte',
-    l1: 'Gigafactory · Battery',
-    l2: 'Werks-TGA · Automotive',
-    l3: 'Cleanroom · Halbleiter',
+    l1: 'Gigafactory · Industriebau',
+    l2: 'Werksplanung · Automotive',
+    l3: 'Reinraum · Halbleiter',
   },
 
   // ── Stories rail ────────────────────────────────────────
   stories: {
     title1: 'Wir lösen die Probleme,',
-    title2: 'die Planungsbüros wirklich bremsen',
+    title2: 'die Bauprojekte wirklich bremsen',
     s1: {
-      title: 'Funktionsbeschreibung für eine komplette RLT-Anlage in 4 Minuten',
-      meta: 'Reinraum · ISO 5',
+      title: 'Leistungsverzeichnisse aus Planungsdaten, direkt als GAEB',
+      meta: 'Ausschreibung · Vergabe',
     },
-    s2: { title: 'Leistungsverzeichnis nach VOB/A, direkt als GAEB X86', meta: 'Vergabe · LPH 6' },
-    s3: { title: 'Funktionsliste nach VDI 3814 aus Feldgeräten und Klappen', meta: 'GA · LPH 5' },
-    s4: { title: 'GMP-konforme Doku für Dryroom und Gigafactory', meta: 'Battery · Annex 1' },
-    s5: { title: 'Anlagenschemata und Funktionsmatrizen als draw.io', meta: 'Schema · Export' },
-    s6: { title: 'Versioniert und prüfungsfähig, mit Quellen-Nachweis', meta: 'Audit · Review' },
+    s2: {
+      title: 'Funktionsbeschreibungen und Anlagendoku für alle TGA-Gewerke',
+      meta: 'Planung · LPH 5',
+    },
+    s3: {
+      title: 'Planunterlagen automatisch gegen DIN, VDI und VOB prüfen',
+      meta: 'Qualität · Prüfung',
+    },
+    s4: {
+      title: 'Revisions- und Übergabeunterlagen vollständig und strukturiert',
+      meta: 'Bau · Inbetriebnahme',
+    },
+    s5: {
+      title: 'Anlagenschemata und Funktionsmatrizen aus Bestandsdaten',
+      meta: 'Planung · Bestand',
+    },
+    s6: { title: 'Wartungs- und Betriebsdokumentation für Betreiber', meta: 'Betrieb · FM' },
   },
 
   // ── Statement ───────────────────────────────────────────
   statement: {
-    text: 'Wir bringen Anlagedaten, Normkataloge und Engineering-Know-how zusammen, um die Arbeitsweise von TGA-Planern zu transformieren.',
+    text: 'Wir bringen Planungsdaten, Normen und Bau-Know-how zusammen, um die Arbeitsweise der Baubranche zu transformieren.',
   },
 
   // ── Platform ────────────────────────────────────────────
   platform: {
-    title1: 'Die einheitliche Doku-Schicht',
-    title2: 'für das KI-native Planungsbüro',
+    title1: 'Die einheitliche KI-Schicht',
+    title2: 'für Planung, Bau und Betrieb',
     cta: 'Engine erkunden',
   },
 
   // ── Pillars ─────────────────────────────────────────────
   pillars: {
     p1: {
-      title1: 'Ein Workflow',
-      title2: 'in drei Schritten.',
-      body: 'Anlage beschreiben, Normen werden automatisch gezogen, Export direkt ins Projekt. Ohne Copy-Paste aus Altprojekten.',
-      cta: 'Pläne ansehen',
+      title1: 'Ein System',
+      title2: 'für alle Gewerke.',
+      body: 'Von der TGA über Elektro bis zur Gebäudeautomation: eine Engine, die Planungsdaten versteht und daraus prüffähige Dokumente erzeugt.',
+      cta: 'Über uns',
     },
     p2: {
       title1: 'Normkonform',
       title2: 'per Default.',
-      body: 'VDI 3814, VDI 6022, DIN 1946-4, GMP Annex 1 und EN 50600. Jeder Output mit Quellen-Nachweis und Audit-Trail.',
+      body: 'DIN, VDI, VOB und HOAI als Prüfgrundlage. Jeder Output mit Quellen-Nachweis, Versionierung und Audit-Trail.',
       cta: 'Branchen erkunden',
     },
   },
@@ -80,7 +92,7 @@ window.__translations_de = {
   // ── Industries ──────────────────────────────────────────
   industries: {
     title1: 'Tief in regulierten,',
-    title2: 'geschäftskritischen Branchen',
+    title2: 'geschäftskritischen Bauprojekten',
     cta: 'Mehr entdecken',
     tabs: {
       semi: 'Halbleiter',
@@ -92,7 +104,7 @@ window.__translations_de = {
     items: {
       semi: {
         title: 'Halbleiter',
-        sub: 'Cleanroom-konforme Doku von ISO 5 bis Subnano',
+        sub: 'Reinraum-konforme Planung und Doku von ISO 5 bis Subnano',
         chips: ['ISO 14644', 'VDI 2083', 'SEMI F'],
       },
       battery: {
@@ -107,12 +119,12 @@ window.__translations_de = {
       },
       pharma: {
         title: 'Pharma',
-        sub: 'GMP-konforme Funktionsbeschreibungen mit FAT-Plan',
+        sub: 'GMP-konforme Planungs- und Qualifizierungsunterlagen',
         chips: ['GMP Annex 1', 'GAMP 5', 'DIN 1946-4'],
       },
       automotive: {
         title: 'Automotive',
-        sub: 'Werks-TGA mit Funktionslisten nach VDI 3814',
+        sub: 'Werksplanung mit prüffähiger Gewerke-Dokumentation',
         chips: ['VDI 3814', 'ISO 16484-3', 'VOB/A'],
       },
     },
@@ -121,33 +133,34 @@ window.__translations_de = {
   // ── Company ─────────────────────────────────────────────
   company: {
     title1: 'Das Team, das die Zukunft',
-    title2: 'der TGA-Doku baut.',
-    body: 'Von TGA- und MSR-Planern für TGA-Planer gebaut. Wir stehen am Anfang und arbeiten mit Engineering-Teams, die diesen Bereich maßgeblich prägen.',
+    title2: 'der Bau-Dokumentation baut.',
+    body: 'Von Planern und Ingenieuren für die Baubranche gebaut. Wir stehen am Anfang und arbeiten mit Projektpartnern, die diesen Bereich maßgeblich prägen.',
     card1: 'Über uns',
-    card2: 'Preise',
+    card2: 'Kontakt',
   },
 
   // ── Final CTA ───────────────────────────────────────────
   finalCta: {
-    title: 'Transformieren Sie Ihre Doku-Prozesse mit aynzamAI.',
-    button: 'Demo buchen',
+    title: 'Lassen Sie uns über Ihr Projekt sprechen.',
+    note: 'Konditionen auf Anfrage. Umfang und Einsatz klären wir gemeinsam in einem Gespräch.',
+    button: 'Gespräch vereinbaren',
   },
 
   // ── Footer ──────────────────────────────────────────────
   footer: {
-    tagline:
-      'Angewandte KI für TGA-Engineering. Funktionsbeschreibungen, Leistungsverzeichnisse und Funktionslisten.',
-    cta: 'Demo buchen',
+    tagline: 'Angewandte KI für die Baubranche. Planung, Ausschreibung, Dokumentation und Betrieb.',
+    cta: 'Gespräch vereinbaren',
     colPlatform: 'Plattform',
     linkEngine: 'Engine',
-    linkOutputs: 'Outputs',
+    linkOutputs: 'Anwendungsfälle',
     linkWorkflow: 'Workflow',
-    linkPricing: 'Preise',
+    linkIndustries: 'Branchen',
     colIndustries: 'Branchen',
     colCompany: 'Unternehmen',
     linkAbout: 'Über uns',
     linkBlog: 'Blog',
     linkContact: 'Kontakt',
+    linkCall: 'Gespräch vereinbaren',
     linkSignin: 'Anmelden',
     colLegal: 'Rechtliches',
     linkImprint: 'Impressum',
@@ -160,179 +173,27 @@ window.__translations_de = {
   // ── About page ──────────────────────────────────────────
   about: {
     title1: 'Gebaut von Planern,',
-    title2: 'die den Schmerz kennen.',
-    deck: 'aynzamAI entsteht bei pure-msrplanung in München. Wir haben selbst Jahre damit verbracht, Funktionsbeschreibungen aus Altprojekten zusammenzukopieren. Jetzt bauen wir die Engine, die das übernimmt.',
+    title2: 'die die Baustelle kennen.',
+    deck: 'aynzamAI entsteht bei pure-msrplanung in München. Wir haben selbst Jahre damit verbracht, Ausschreibungen, Funktionsbeschreibungen und Übergabeunterlagen aus Altprojekten zusammenzukopieren. Jetzt bauen wir die Engine, die das übernimmt.',
     v1: {
       title: 'Normen statt Prosa',
-      body: 'Jeder Output wird gegen den passenden Norm-Katalog geprüft. Keine generischen Texte, sondern prüfungsfähige Doku mit Quellen-Nachweis.',
+      body: 'Jeder Output wird gegen den passenden Norm-Katalog geprüft. Keine generischen Texte, sondern prüffähige Dokumente mit Quellen-Nachweis.',
     },
     v2: {
-      title: 'Auf realen Anlagen',
-      body: 'Drei Pilot-Engagements in Battery, Automotive und Reinraum. Jede Funktion wird gegen echte RLT-, GA- und MSR-Anlagen validiert.',
+      title: 'Auf realen Projekten',
+      body: 'Drei Pilotprojekte in Industriebau, Automotive und Reinraum. Jede Funktion wird gegen echte Planungs- und Bestandsdaten validiert.',
     },
     v3: {
       title: 'Daten bleiben in Europa',
-      body: 'EU-Hosting in Frankfurt, optional BYO-Key oder On-Premise für Halbleiter-, Pharma- und Defense-Projekte.',
+      body: 'EU-Hosting in Frankfurt, optional eigener Schlüssel oder On-Premise für Halbleiter-, Pharma- und Defense-Projekte.',
     },
-    statTitle: 'Zahlen aus dem Pilot',
-    s1: { value: '4 min', label: 'bis zur fertigen FUBE' },
+    statTitle: 'Zahlen aus der Pilotphase',
+    s1: { value: '4 min', label: 'bis zum ersten fertigen Dokument' },
     s2: { value: '9', label: 'Norm-Kataloge integriert' },
-    s3: { value: '3', label: 'aktive Pilot-Kunden' },
+    s3: { value: '3', label: 'aktive Pilotprojekte' },
     s4: { value: '100 %', label: 'Quellen-Nachweis pro Output' },
     ctaTitle: 'Lernen Sie das Team kennen.',
     ctaButton: 'Gespräch vereinbaren',
-  },
-
-  // ── Pricing page ────────────────────────────────────────
-  pricingPage: {
-    eyebrow: 'Preise',
-    title1: 'Pläne, die mit',
-    title2: 'Ihrem Büro skalieren.',
-    deck: 'Vom Solo-Planer bis zur Engineering-Abteilung: output-basierte Tiers, keine Seat-Gebühren, transparente Kosten.',
-    pilot: {
-      tag: 'Pilot',
-      title: 'Erste 10 Outputs gratis',
-      body: 'Keine Kreditkarte. Testen Sie FUBE, Funktionsliste und LV mit Ihrem echten Projekt.',
-      button: 'Pilot starten',
-    },
-    toggle: {
-      monthly: 'Monatlich',
-      yearly: 'Jährlich',
-      discount: '−20 %',
-    },
-    tiers: {
-      starter: {
-        name: 'Starter',
-        tagline: 'Für Solo-Planer und Freelancer.',
-        price: '119 €',
-        priceYearly: '95 €',
-        priceNote: 'Jährlich vorab · 1.140 € / Jahr',
-        unit: '/ Monat',
-        f1: '30 Doku-Outputs / Monat',
-        f2: 'Alle Output-Typen (FUBE · Funktionsliste · LV)',
-        f3: 'DOCX- und PDF-Export',
-        f4: 'Community-Support',
-        f5: 'Single User',
-        cta: 'Starter wählen',
-      },
-      studio: {
-        name: 'Studio',
-        badge: 'Beliebt',
-        tagline: 'Für Planungsbüros (5–15 MA).',
-        price: '549 €',
-        priceYearly: '439 €',
-        priceNote: 'Jährlich vorab · 5.268 € / Jahr',
-        unit: '/ Monat',
-        f1: '200 Doku-Outputs / Monat',
-        f2: 'Bis zu 8 User',
-        f3: 'Alle Starter-Features',
-        f4: 'GAEB X86-Export',
-        f5: 'Versionierung + Audit-Trail',
-        f6: '5 Custom-Templates',
-        f7: 'E-Mail-Support (24h)',
-        cta: 'Demo buchen',
-      },
-      engineering: {
-        name: 'Engineering',
-        tagline: 'Für größere Büros (15–50 MA).',
-        price: '1.890 €',
-        priceYearly: '1.512 €',
-        priceNote: 'Jährlich vorab · 18.144 € / Jahr',
-        unit: '/ Monat',
-        f1: '800 Doku-Outputs / Monat',
-        f2: 'Bis zu 25 User',
-        f3: 'Alle Studio-Features',
-        f4: 'REST-API (Read + Write)',
-        f5: 'SSO / SAML',
-        f6: '99,5 % SLA',
-        f7: 'Dedizierter Account-Manager',
-        f8: 'Unlimited Custom-Templates',
-        cta: 'Sales kontaktieren',
-      },
-    },
-    overageNote:
-      'Überschreitung: +5 € / 3,50 € / 2 € pro extra Output (Starter / Studio / Engineering). Volumen-Rabatte ab 500 Outputs / Monat.',
-    enterprise: {
-      eyebrow: 'Enterprise',
-      name: 'Enterprise',
-      title1: 'Für Konzerne, On-Premise',
-      title2: 'und große Engineering-Abteilungen.',
-      body: 'Unbegrenzte Outputs. Eigene Norm-Kataloge. Integration in RR-Schema, BIM-Stack, PLM. Auf Ihrer Infrastruktur, falls gewünscht.',
-      b1: 'Unlimited Outputs + User',
-      b2: 'On-Premise verfügbar',
-      b3: 'RR-Schema · BIM · PLM',
-      b4: '99,95 % SLA',
-      b5: 'White-Glove-Onboarding',
-      b6: 'Custom-Norm-Katalog',
-      cta: 'Sales kontaktieren',
-      priceLabel: 'Pricing',
-      priceTitle: 'Auf Anfrage',
-      priceBody: 'Typischer Engineering-Konzern: 6.000–15.000 € / Monat oder Jahres-Rahmenvertrag.',
-      priceNote: 'Vertrag · Pilot in 4 Wochen · DSGVO-konform · EU-Hosting oder On-Prem',
-    },
-    compare: {
-      eyebrow: 'Im Detail',
-      title: 'Alle Features im Vergleich',
-      rows: [
-        { label: 'Doku-Outputs / Monat', s: '30', t: '200', e: '800', x: 'Unlimited' },
-        { label: 'Output-Typen', s: 'Alle', t: 'Alle', e: 'Alle', x: 'Alle + Custom' },
-        { label: 'Inkludierte User', s: '1', t: '8', e: '25', x: 'Unlimited' },
-        { label: 'DOCX + PDF-Export', s: '✓', t: '✓', e: '✓', x: '✓' },
-        { label: 'GAEB X86-Export', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'draw.io / DWG-Export', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'Versionierung + Audit-Trail', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'Custom-Templates', s: '—', t: '5', e: 'Unlimited', x: 'Unlimited' },
-        { label: 'API-Zugang', s: '—', t: 'Read', e: 'Read + Write', x: 'Full' },
-        { label: 'SSO / SAML', s: '—', t: '—', e: '✓', x: '✓' },
-        { label: 'On-Premise', s: '—', t: '—', e: '—', x: '✓' },
-        { label: 'Norm-Katalog Custom', s: '—', t: '—', e: '—', x: '✓' },
-        { label: 'Account-Manager', s: '—', t: '—', e: 'Dediziert', x: 'Dediziert' },
-        { label: 'SLA', s: '—', t: 'Best effort', e: '99,5 %', x: '99,95 %' },
-        { label: 'Support', s: 'Community', t: 'E-Mail 24h', e: 'Prio 4h', x: 'White-Glove' },
-      ],
-    },
-    faq: {
-      eyebrow: 'FAQ',
-      title: 'Häufige Fragen',
-      items: [
-        {
-          q: 'Was zählt als ein „Doku-Output"?',
-          a: 'Eine generierte FUBE, eine Funktionsliste oder ein LV (als Gesamt-Dokument) zählt jeweils als ein Output. Iterationen, Re-Generierungen mit angepassten Parametern und Norm-Updates am selben Output sind unbegrenzt enthalten.',
-        },
-        {
-          q: 'Was passiert bei Limit-Überschreitung?',
-          a: 'Sie bekommen automatisch ein Upgrade-Angebot oder zahlen Overage pro extra Output (5 € / 3,50 € / 2 € je nach Tier). Vorhandene Outputs bleiben jederzeit zugänglich.',
-        },
-        {
-          q: 'Warum keine Per-Seat-Abrechnung?',
-          a: 'KI-Generierung hat reale Kosten pro Output. Output-basiertes Pricing ist transparent und skaliert mit dem tatsächlichen Nutzen, nicht mit der Anzahl der Logins.',
-        },
-        {
-          q: 'Gegen welche Normen prüft die Engine?',
-          a: 'VDI 3814, VDI 6022, DIN 1946-4, DIN EN ISO 16484-3, GMP Annex 1, GAMP 5, EN 50600, VOB/A und DIN 276. Eigene Firmenstandards können ab Studio als Templates hinterlegt werden.',
-        },
-        {
-          q: 'On-Premise: wie funktioniert das?',
-          a: 'Im Enterprise-Tier liefern wir eine containerisierte Engine, die in Ihrer eigenen Infrastruktur läuft. Setup typisch 4 Wochen, ein dedizierter Account-Manager begleitet die Inbetriebnahme.',
-        },
-        {
-          q: 'Welche Daten verlassen meine Umgebung?',
-          a: 'In Starter und Studio nur die Eingaben, die Sie explizit absenden, verschlüsselt in EU-Rechenzentren (Frankfurt). In Engineering optional BYO-Key. In Enterprise (On-Premise) verlässt nichts Ihre Infrastruktur.',
-        },
-        {
-          q: 'Kann ich Pläne unterjährig wechseln?',
-          a: 'Ja, jederzeit. Upgrade sofort wirksam, Downgrade zum nächsten Abrechnungszyklus. Keine Vertragslaufzeit.',
-        },
-        {
-          q: 'Pilot: wirklich keine Kreditkarte?',
-          a: 'Korrekt. 10 Outputs gegen ein konkretes Projekt, in 4 Wochen, ohne Kreditkarte und ohne automatischen Übergang in ein Abo.',
-        },
-      ],
-    },
-    finalCta: {
-      title: 'Sehen Sie, was die Engine in 20 Minuten aus Ihrem Projekt macht.',
-      button: 'Demo buchen',
-    },
   },
 
   // ── Sign in / Sign up ───────────────────────────────────
@@ -351,7 +212,7 @@ window.__translations_de = {
 
   signup: {
     title: 'Konto erstellen',
-    sub: 'Erste FUBE in 90 Sekunden.',
+    sub: 'Erstes Dokument in wenigen Minuten.',
     nameLabel: 'Name',
     namePlaceholder: 'Vor- und Nachname',
     emailLabel: 'E-Mail',

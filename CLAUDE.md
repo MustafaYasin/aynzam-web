@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AynzamAI marketing website — a static multi-page site for an Enterprise Knowledge Intelligence platform. Built with Webpack 5, Alpine.js, and Tailwind CSS 4.
+AynzamAI marketing website — a static multi-page site for an applied-AI platform for the construction industry (Baubranche: planning, tendering, technical documentation, handover, operations; TGA is one focus among several). Built with Webpack 5, Alpine.js, and Tailwind CSS 4.
+
+**Positioning rules:** no prices anywhere on the site (terms are on request, every CTA leads to a Calendly call). Do not over-focus copy on Funktionsbeschreibungen or on a single pilot customer such as PowerCo; the site must make clear the company operates across the construction industry, details are discussed in a call.
 
 ## Commands
 
@@ -42,7 +44,7 @@ Plain component classes (header, cards, rail, stage backgrounds, footer, motion)
 
 ### Key Libraries
 
-- **Alpine.js** (with `@alpinejs/persist`) — reactive UI state (language toggle, mobile menu, sticky header, card rail, industry tabs, pricing toggle/FAQ)
+- **Alpine.js** (with `@alpinejs/persist`) — reactive UI state (language toggle, mobile menu, sticky header, card rail, industry tabs)
 - Swiper, WOW.js and FSLightbox are still in `package.json` but no longer imported.
 
 ### External Integrations
@@ -52,7 +54,7 @@ Plain component classes (header, cards, rail, stage backgrounds, footer, motion)
 
 ### Pages
 
-8 HTML pages in `src/`: index (landing), about, pricing, blog-grid, blog-single, signin, signup, 404. Each uses `<include>` tags for shared partials (`header`, `footer`, `fonts`, `lang-init`).
+7 HTML pages in `src/`: index (landing), about, blog-grid, blog-single, signin, signup, 404. There is deliberately no pricing page. Each uses `<include>` tags for shared partials (`header`, `footer`, `fonts`, `lang-init`).
 
 ### Favicon
 

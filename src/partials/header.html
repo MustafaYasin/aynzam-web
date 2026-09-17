@@ -13,7 +13,7 @@
   <!-- Announcement bar -->
   <div class="announce" x-show="!stuck" x-transition.opacity.duration.200ms>
     <span x-text="$store.lang.t('announce.text')"></span>
-    <a href="pricing.html" class="text-link">
+    <a href="#" class="text-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mustafayasin'});return false;">
       <span x-text="$store.lang.t('announce.link')"></span>
       <span class="btn-arrow" aria-hidden="true"></span>
     </a>
@@ -32,7 +32,7 @@
         <a href="index.html#platform" class="nav-link" x-text="$store.lang.t('header.platform')"></a>
         <a href="index.html#industries" class="nav-link" x-text="$store.lang.t('header.industries')"></a>
         <a href="about.html" class="nav-link" x-text="$store.lang.t('header.company')"></a>
-        <a href="pricing.html" class="nav-link" x-text="$store.lang.t('header.pricing')"></a>
+        <a href="blog-grid.html" class="nav-link" x-text="$store.lang.t('header.blog')"></a>
       </nav>
 
       <!-- Actions -->
@@ -87,7 +87,7 @@
       <a href="index.html#platform" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.platform')"></a>
       <a href="index.html#industries" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.industries')"></a>
       <a href="about.html" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.company')"></a>
-      <a href="pricing.html" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.pricing')"></a>
+      <a href="blog-grid.html" class="nav-link" @click="mobileMenuOpen = false" x-text="$store.lang.t('header.blog')"></a>
       <div class="pt-4 mt-2 border-t border-[var(--line)]">
         <a
           href="#"
