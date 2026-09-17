@@ -494,15 +494,25 @@
   justify-content: center;
   gap: 10px;
   height: 36px;
+  padding-inline: 16px;
   font-size: 12px;
   color: var(--ink);
   background: var(--paper-3);
   border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @layer components {
+  .announce > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
   .announce .text-link {
     font-size: 12px;
+    flex: none;
   }
 
   .site-header {
