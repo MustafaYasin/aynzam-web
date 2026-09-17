@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AynzamAI marketing website — a static multi-page site for an Enterprise Knowledge Intelligence platform. Built with Webpack 5, Alpine.js, and Tailwind CSS 4.
+AynzamAI marketing website — a static multi-page site for an applied-AI platform for the construction industry (Baubranche: planning, tendering, technical documentation, handover, operations; TGA is one focus among several). Built with Webpack 5, Alpine.js, and Tailwind CSS 4.
+
+**Positioning rules:** no prices anywhere on the site (terms are on request, every CTA leads to a Calendly call). Do not over-focus copy on Funktionsbeschreibungen or on a single pilot customer such as PowerCo; the site must make clear the company operates across the construction industry, details are discussed in a call.
 
 ## Commands
 
@@ -18,62 +20,57 @@ AynzamAI marketing website — a static multi-page site for an Enterprise Knowle
 ### Build Pipeline
 
 Webpack 5 bundles everything from `src/` into `build/`. Key details:
-- **Entry point:** `src/js/index.js` — imports CSS, initializes Alpine.js, sets up scroll-based active nav detection
-- **HTML processing:** A custom webpack preprocessor resolves `<include src="./partials/header.html" />` tags, enabling reusable HTML partials (header, footer, scrolltop)
+- **Entry point:** `src/js/index.js` — imports CSS and translations, registers the `rail` Alpine component, starts Alpine, then wires active-nav detection, scroll reveal and the statement word reveal
+- **HTML processing:** A custom webpack preprocessor resolves `<include src="./partials/header.html" />` tags, enabling reusable HTML partials (header, footer, fonts, lang-init)
 - **CSS:** PostCSS processes Tailwind CSS 4; `MiniCssExtractPlugin` outputs a single `style.css`
 - **JS:** Babel transpiles ES6+; outputs a single `bundle.js`
 - **All HTML files** in `src/*.html` are auto-discovered via glob and each generates an `HtmlWebpackPlugin` instance
 
-### Dark Mode
+### Design System (wonderful.ai-inspired, light only)
 
-Managed via Alpine.js global store (`src/js/theme.js`):
-- Toggles `.dark` class on `<html>` element
-- Persisted to `localStorage` key `"theme"`, falls back to `prefers-color-scheme`
-- CSS uses custom properties defined in `:root` and `:root.dark` blocks in `src/css/style.css`
-- Dark mode variant: `@custom-variant dark (&:is(.dark *));`
-- **Gradient mesh background:** Dark mode uses a fixed multi-radial gradient on `body` (`.dark body` rule) that transitions from muted purple (top-left) through dusty blue (top-right) to warm amber (bottom-right). The dark mode CSS variables use semi-transparent rgba values (`--bg-primary`, `--bg-surface`) so the gradient shows through page sections and cards, creating depth. The solid base color (`#181325`, warm dark purple) is set on `:root.dark` as `background-color` for html. When changing the dark mode color scheme, update both the gradient blobs in `.dark body` and the CSS variables together.
+The site follows a monochrome editorial look modelled on wonderful.ai: near-black on white, a silver-gradient hero, light-weight (300) grotesque display type with tight tracking, pill buttons, and a single warm accent (`--accent`, orange) used only for tiny marks. **There is no dark mode.** Tokens live in `:root` in `src/css/style.css` (`--ink*`, `--paper*`, `--night`, `--accent`, `--line*`).
+
+- **Fonts:** Inter (300–600) for everything, IBM Plex Mono for small labels. Loaded via `src/partials/fonts.html`.
+- **Landing page structure (mirrors wonderful.ai):** announcement bar + fixed header → full-viewport silver hero (headline bottom-left, deck + two pill buttons bottom-right) → logo wall → horizontal story-card rail → scroll-driven word-reveal statement → dark "platform" stage with dot field and floating labels → two pillar cards → industries with tab pills and one large art card → blurred colour "company" block with two link cards → black final CTA band → black footer with giant faded wordmark.
+- **Art backgrounds:** no photography; `.art-carbon`, `.art-silver`, `.art-graphite`, `.art-ember`, `.art-steel`, `.art-mist` are CSS-gradient stand-ins used on cards, pillars, industry cards and page banners.
+- **Header:** `.site-header` gets `.is-stuck` after 24px scroll (white blur bar, announcement bar hides). On pages whose `<body data-hero="silver">`, it also gets `.on-hero` so wordmark/nav/pills render white while over the hero.
+- **Motion:** `.reveal` blur-in on intersection (added by JS only), `.statement .w` word reveal driven by scroll progress, `.animate-fade-up` for hero. All motion respects `prefers-reduced-motion`.
 
 ### Tailwind CSS 4 Custom Utilities
 
-All defined in `src/css/style.css` using `@utility` syntax:
-- Layout: `container`
-- Effects: `glass`, `glass-hover`, `glow-orb`, `grid-bg`, `shimmer`
-- Buttons: `btn-primary`, `btn-outline`
-- Text: `text-gradient-hero`, `text-gradient-subtle`
-- Cards: `card-premium`, `card-premium-hover`
-- Nav: `nav-link`, `active-nav-link`
+`@utility` definitions in `src/css/style.css`: `container`, `container-narrow`, typography (`display-xl/lg/md/sm`, `statement`, `lead`, `body-md/sm/xs`, `mono-sm`, `eyebrow`), buttons (`btn`, `btn-sm`, `btn-lg`, `btn-primary`, `btn-white`, `btn-outline`, `btn-outline-white`, `text-link`, `icon-btn`), `announce`, `wordmark`, `nav-link`, `hero-silver`, `on-dark`.
+
+Plain component classes (header, cards, rail, stage backgrounds, footer, motion) are wrapped in `@layer components` so Tailwind utilities such as `lg:hidden` can override them. **Every `<body>` must carry `x-data`** (Alpine only initialises trees rooted at an `x-data` element; without it `x-text` outside the header stays empty).
 
 ### Key Libraries
 
-- **Alpine.js** (with `@alpinejs/persist`) — reactive UI state (theme toggle, mobile menu, sticky header)
-- **Swiper** — carousels/sliders
-- **WOW.js** — scroll-triggered animations (paired with `src/css/animate.css`)
-- **FSLightbox** — image lightbox galleries
+- **Alpine.js** (with `@alpinejs/persist`) — reactive UI state (language toggle, mobile menu, sticky header, card rail, industry tabs)
+- Swiper, WOW.js and FSLightbox are still in `package.json` but no longer imported.
 
 ### External Integrations
 
 - **Calendly** — booking widget loaded via CDN
-- **Google Fonts** — DM Sans font family
+- **Google Fonts** — Inter + IBM Plex Mono
 
 ### Pages
 
-8 HTML pages in `src/`: index (landing), about, pricing, blog-grid, blog-single, signin, signup, 404. Each uses `<include>` tags for shared partials.
+7 HTML pages in `src/`: index (landing), about, blog-grid, blog-single, signin, signup, 404. There is deliberately no pricing page. Each uses `<include>` tags for shared partials (`header`, `footer`, `fonts`, `lang-init`).
 
 ### Favicon
 
-The favicon (`src/images/favicon.svg`) must match the site logo (purple rounded square with white lightning bolt). Whenever the logo design or brand color changes, update the favicon SVG to stay in sync.
+The favicon (`src/images/favicon.svg`) should stay in sync with the wordmark. The wordmark is now plain text (`aynzam` medium + `AI` light) in near-black; when it changes, update the favicon SVG.
 
 ### Internationalization (i18n)
 
-German is the default language; English is shown to users with English browser settings. Managed via Alpine.js global store (`src/js/language.js`), mirroring the theme store pattern:
+German is the default language; English is shown to users with English browser settings. Managed via Alpine.js global store (`src/js/language.js`), as a global store:
 
 - **Translation files:** `src/js/translations/de.js` and `src/js/translations/en.js` — assign to `window.__translations_de` / `window.__translations_en`. Organized by section (header, hero, features, pricing, etc.) with dot-notation keys.
 - **Language store:** `Alpine.store('lang')` with `current`, `toggle()`, `t(key)` methods. Reads `localStorage('language')`, falls back to `navigator.language`, defaults to `'de'`.
 - **Lang init:** `src/partials/lang-init.html` — inline `<script>` in `<head>` that detects language from localStorage / navigator.language before first paint and sets `<html lang>` + `window.__lang`.
 - **HTML pattern:** No hardcoded text in HTML. All visible text comes from translation files via `x-text="$store.lang.t('section.key')"`. Elements are empty in HTML — Alpine fills them on init.
-- **Language toggle:** EN/DE button in header next to theme toggle.
+- **Language toggle:** DE/EN pill in the header (shows the current language).
 - **Adding new strings:** Add the key to both `de.js` and `en.js`, then use `x-text="$store.lang.t('section.key')"` on the element.
 
-### Semantic Color System
+### Color Tokens
 
-Colors are defined as CSS custom properties (not hardcoded) to support dark mode. Use the semantic variables (`--bg-primary`, `--text-primary`, `--brand-color`, etc.) rather than raw color values. See the `:root` / `:root.dark` blocks in `src/css/style.css` for the full palette.
+Use the CSS custom properties from `:root` in `src/css/style.css` (`--ink`, `--ink-2/3/4`, `--paper`, `--paper-2/3/4`, `--night`, `--accent`, `--line`, `--line-strong`, `--line-inverse`) instead of raw colour values. Never add emojis; do not reintroduce a dark mode.

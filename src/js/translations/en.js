@@ -1,370 +1,206 @@
 window.__translations_en = {
+  // ── Announcement bar ───────────────────────────────────────
+  announce: {
+    text: 'aynzamAI pilot phase 2026: we are looking for project partners in construction',
+    link: 'Schedule a call',
+  },
+
   // ── Header ──────────────────────────────────────────────
   header: {
-    useCases: 'Use cases',
-    workflow: 'Workflow',
+    platform: 'Platform',
     industries: 'Industries',
-    pricing: 'Pricing',
-    bookDemo: 'Book a demo',
+    company: 'Company',
+    blog: 'Blog',
+    cta: 'Schedule a call',
   },
 
   // ── Hero ────────────────────────────────────────────────
   hero: {
-    eyebrow: 'For HVAC & MSR planners · stage 5 + 6',
-    trustLabel: 'Validated against',
-    titleA: 'HVAC docs in ',
-    titleEm: 'minutes',
-    titleB: ', not weeks.',
-    deck: 'Function descriptions, function lists, and bills of quantities, straight from your plant data. Compliant by default.',
-    ctaPrimary: 'Book a demo',
-    ctaSecondary: 'See use cases',
-    cardEyebrow: 'The engine at a glance',
-    cardDeck:
-      'Plant data and standards codes converge in the hub, then three audit-ready doc types come out.',
-    viz: {
-      aria: 'Topology of the aynzamAI engine: four inputs (ISO 5, volume flow, VOB/A, VDI 3814) converge to the central hub and fan out as three outputs: FUBE, GA schema, and BOQ with GAEB export.',
-      i1: 'BACnet',
-      i2: 'V̇ 12 000',
-      i3: 'VOB/A',
-      i4: 'VDI 3814',
-      o1Tag: 'FUBE',
-      o1Title: 'Function',
-      o2Tag: 'GA',
-      o2Title: 'Schema',
-      o3Tag: 'LV',
-      o3Title: 'GAEB',
-    },
+    line1: 'Applied AI for',
+    line2: 'the construction industry',
+    deck: 'aynzamAI helps engineering firms, contractors and operators create, check and hand over technical documentation in minutes instead of weeks.',
+    ctaPrimary: 'Schedule a call',
+    ctaSecondary: 'Explore the platform',
   },
 
-  // ── Trust / Pilot projects ─────────────────────────────
-  trust: {
-    eyebrow: 'Pilot projects 2025 / 2026',
-    titleA: 'Built with ',
-    titleEm: 'engineering teams',
-    titleB: ', not in a vacuum.',
-    deck: 'Three active pilot engagements in battery, automotive, and cleanroom. Every output is tested against real plants.',
-    c1: { name: 'PowerCo', context: 'Battery · Gigafactory' },
-    c2: { name: 'Volkswagen', context: 'Plant HVAC · Automotive' },
-    c3: { name: 'Exyte', context: 'Cleanroom · Semiconductor' },
-    footnote: 'Pilot status · since 2025 · references on request.',
+  // ── Logo wall ───────────────────────────────────────────
+  logos: {
+    title: 'Built with project partners in industrial, automotive and cleanroom construction',
+    c1: 'PowerCo',
+    c2: 'Volkswagen',
+    c3: 'Exyte',
+    l1: 'Gigafactory · Industrial',
+    l2: 'Plant planning · Automotive',
+    l3: 'Cleanroom · Semiconductor',
   },
 
-  // ── Engine / Live visualisations ───────────────────────
-  engine: {
-    eyebrow: '01 / Live in loop',
-    titleA: 'How the ',
-    titleEm: 'engine',
-    titleB: ' works. On real plant data.',
-    deck: 'Plant data goes in, compliant docs come out. Three outputs, one workflow.',
-    v1: {
-      aria: 'FUBE generation: plant data converges into the engine, function description builds up line by line.',
-      tag: 'Function description · FUBE',
-      title: 'Plant to ready FUBE',
-      body: 'Four values in, full function description out, including FAT plan and source references.',
-    },
-    v2: {
-      aria: 'Function list: components converge, building-automation schema wires itself up.',
-      tag: 'Function list · GA schema',
-      title: 'Components to function list',
-      body: 'Field devices and dampers turn into a function list per VDI 3814, ready for procurement and commissioning.',
-    },
-    v3: {
-      aria: 'BOQ generation: plant data becomes line items with GAEB export.',
-      tag: 'Bill of quantities · BOQ',
-      title: 'Plant to BOQ with GAEB export',
-      body: 'Quantities, units, and standard texts per VOB/A, exported as GAEB X86 for any procurement tool.',
-    },
-  },
-
-  // ── Use Cases ──────────────────────────────────────────
-  useCases: {
-    eyebrow: '01 / What aynzamAI creates',
-    titleA: 'Three doc types. ',
-    titleEm: 'One workflow',
-    titleB: '.',
-    deck: 'Every output is compliant, versioned, and audit-ready by default.',
-    c1: {
-      tag: 'Function descriptions',
-      title: 'FUBE for every HVAC plant',
-      body: 'From ventilation to building-automation functions, fully documented including FAT plan and maintenance.',
-    },
-    c2: {
-      tag: 'Bills of quantities',
-      title: 'BOQ items per VOB/A',
-      body: 'Quantities, units, and standard texts for procurement, with direct GAEB export.',
-    },
-    c3: {
-      tag: 'Flow matrices',
-      title: 'Function matrices & schematics',
-      body: 'Plant schematics and function matrices, direct to draw.io, DWG, or PDF.',
-    },
-  },
-
-  // ── Workflow ───────────────────────────────────────────
-  workflow: {
-    eyebrow: '02 / The workflow',
-    titleA: 'In three steps ',
-    titleEm: 'to finished docs',
-    titleB: '.',
-    deck: 'From concept data to audit-ready documentation, with no copy-paste from legacy projects.',
+  // ── Stories rail ────────────────────────────────────────
+  stories: {
+    title1: 'We solve the problems',
+    title2: 'that actually slow construction projects down',
     s1: {
-      label: 'Brief',
-      title: 'Describe the plant',
-      body: 'Briefly describe what to generate: component, cleanroom class, critical functions.',
+      title: 'Bills of quantities from planning data, exported straight to GAEB',
+      meta: 'Tendering · Procurement',
     },
     s2: {
-      label: 'Generate',
-      title: 'aynzamAI pulls the standards',
-      body: 'The engine checks against the matching standards catalog and produces consistent docs with source references.',
+      title: 'Functional descriptions and system documentation for all MEP trades',
+      meta: 'Design · Stage 5',
     },
     s3: {
-      label: 'Export',
-      title: 'Straight into the project',
-      body: 'Export to your target format, versioned, with audit trail, ready for review.',
+      title: 'Check drawings and specs automatically against DIN, VDI and VOB',
+      meta: 'Quality · Review',
+    },
+    s4: {
+      title: 'Complete, structured as-built and handover documentation',
+      meta: 'Construction · Commissioning',
+    },
+    s5: {
+      title: 'System schematics and function matrices from as-is data',
+      meta: 'Design · Existing assets',
+    },
+    s6: { title: 'Maintenance and operating documentation for operators', meta: 'Operations · FM' },
+  },
+
+  // ── Statement ───────────────────────────────────────────
+  statement: {
+    text: 'We bring planning data, standards and construction know-how together to transform how the construction industry works.',
+  },
+
+  // ── Platform ────────────────────────────────────────────
+  platform: {
+    title1: 'The unified AI layer',
+    title2: 'for design, construction and operations',
+    cta: 'Explore the engine',
+  },
+
+  // ── Pillars ─────────────────────────────────────────────
+  pillars: {
+    p1: {
+      title1: 'One system',
+      title2: 'for every trade.',
+      body: 'From HVAC and electrical to building automation: one engine that understands planning data and turns it into audit-ready documents.',
+      cta: 'About us',
+    },
+    p2: {
+      title1: 'Compliant',
+      title2: 'by default.',
+      body: 'DIN, VDI, VOB and HOAI as the basis for every check. Each output with source references, versioning and an audit trail.',
+      cta: 'Explore industries',
     },
   },
 
-  // ── Industries ─────────────────────────────────────────
+  // ── Industries ──────────────────────────────────────────
   industries: {
-    eyebrow: '03 / For the industry',
-    titleA: 'Built for ',
-    titleEm: 'high-precision engineering',
-    titleB: '.',
-    deck: 'aynzamAI speaks your industry and knows the standards that matter in audit.',
-    i1: {
-      tag: 'Semiconductor & cleanroom',
-      title: 'Cleanroom-compliant docs',
-      body: 'From ISO 5 to subnano. Specs for AHU, MAL, PAL, and FFU in semiconductor fabs and research facilities.',
+    title1: 'Deep in regulated,',
+    title2: 'mission-critical construction projects',
+    cta: 'Discover more',
+    tabs: {
+      semi: 'Semiconductor',
+      battery: 'Battery',
+      datacenter: 'Data centres',
+      pharma: 'Pharma',
+      automotive: 'Automotive',
     },
-    i2: {
-      tag: 'Battery & gigafactory',
-      title: 'Dryroom & GMP',
-      body: 'Dryroom-specific requirements, GMP-compliant function descriptions. Scales from pilot to gigafactory.',
-    },
-    i3: {
-      tag: 'Mission critical',
-      title: 'HVAC for data centers',
-      body: 'Tier III/IV docs, redundancy concepts, fire protection for hyperscalers and colocation.',
+    items: {
+      semi: {
+        title: 'Semiconductor',
+        sub: 'Cleanroom-compliant design and documentation from ISO 5 to sub-nano',
+        chips: ['ISO 14644', 'VDI 2083', 'SEMI F'],
+      },
+      battery: {
+        title: 'Battery',
+        sub: 'Dry-room requirements and GMP, from pilot line to gigafactory',
+        chips: ['GMP Annex 1', 'VDI 6022', 'Dry room'],
+      },
+      datacenter: {
+        title: 'Data centres',
+        sub: 'Tier III/IV documentation, redundancy concepts and fire protection',
+        chips: ['EN 50600', 'Tier III/IV', 'VDI 2050'],
+      },
+      pharma: {
+        title: 'Pharma',
+        sub: 'GMP-compliant design and qualification documents',
+        chips: ['GMP Annex 1', 'GAMP 5', 'DIN 1946-4'],
+      },
+      automotive: {
+        title: 'Automotive',
+        sub: 'Plant planning with audit-ready documentation per trade',
+        chips: ['VDI 3814', 'ISO 16484-3', 'VOB/A'],
+      },
     },
   },
 
-  // ── Final CTA ──────────────────────────────────────────
+  // ── Company ─────────────────────────────────────────────
+  company: {
+    title1: 'The team building the future',
+    title2: 'of construction documentation.',
+    body: 'Built by planners and engineers for the construction industry. We are at the very beginning and work with the project partners who will shape this field.',
+    card1: 'About us',
+    card2: 'Contact',
+  },
+
+  // ── Final CTA ───────────────────────────────────────────
   finalCta: {
-    eyebrow: 'Ready?',
-    titleA: 'See what aynzamAI makes of your project in ',
-    titleEm: '20 minutes',
-    titleB: '.',
-    deck: 'A demo against a concrete plant from your backlog. No generic tour, we generate live against your example.',
-    button: 'Book a demo',
+    title: "Let's talk about your project.",
+    note: 'Terms on request. We define scope and rollout together in a call.',
+    button: 'Schedule a call',
   },
 
-  // ── Footer ─────────────────────────────────────────────
+  // ── Footer ──────────────────────────────────────────────
   footer: {
     tagline:
-      'AI documentation engine for HVAC. Function descriptions, bills of quantities, and flow matrices, checked against VDI, DIN, and GMP Annex 1.',
-    cta: 'Book a demo',
-    colProduct: 'Product',
-    linkUseCases: 'Use cases',
+      'Applied AI for the construction industry. Design, tendering, documentation and operations.',
+    cta: 'Schedule a call',
+    colPlatform: 'Platform',
+    linkEngine: 'Engine',
+    linkOutputs: 'Use cases',
     linkWorkflow: 'Workflow',
     linkIndustries: 'Industries',
-    linkPricing: 'Pricing',
+    colIndustries: 'Industries',
     colCompany: 'Company',
-    linkAbout: 'About',
+    linkAbout: 'About us',
     linkBlog: 'Blog',
     linkContact: 'Contact',
+    linkCall: 'Schedule a call',
+    linkSignin: 'Sign in',
+    colLegal: 'Legal',
     linkImprint: 'Imprint',
+    privacy: 'Privacy policy',
+    terms: 'Terms of use',
+    linkSecurity: 'AI safety',
     copyright: '© 2026 aynzamAI · pure-msrplanung.de',
-    privacy: 'Privacy',
-    terms: 'Terms',
-    region: 'Made in Munich',
   },
 
-  // ── Legacy fallbacks for other pages ─────────────────────
+  // ── About page ──────────────────────────────────────────
   about: {
-    title: 'About aynzamAI',
-    breadcrumb: 'About',
-    sectionTitle: 'About aynzamAI',
-    heading: 'Engineering docs, rethought.',
-    description: 'aynzamAI is built by HVAC planners for HVAC planners. pure-msrplanung.de.',
-    ctaButton: 'Book a demo',
-    featuresTitle: 'What you get',
-    featuresHeading: 'Core features',
-    featuresDesc: 'FUBE, BOQ, and flow matrices, compliant and audit-ready by default.',
+    title1: 'Built by planners',
+    title2: 'who know the job site.',
+    deck: 'aynzamAI is developed at pure-msrplanung in Munich. We spent years stitching tenders, functional descriptions and handover documents together from old projects. Now we are building the engine that does it for us.',
+    v1: {
+      title: 'Standards, not prose',
+      body: 'Every output is checked against the matching standards catalogue. No generic text, but audit-ready documents with source references.',
+    },
+    v2: {
+      title: 'On real projects',
+      body: 'Three pilot projects in industrial, automotive and cleanroom construction. Every function is validated against real planning and as-built data.',
+    },
+    v3: {
+      title: 'Data stays in Europe',
+      body: 'EU hosting in Frankfurt, optional own key or on-premise for semiconductor, pharma and defence projects.',
+    },
+    statTitle: 'Numbers from the pilot phase',
+    s1: { value: '4 min', label: 'to the first finished document' },
+    s2: { value: '9', label: 'standards catalogues integrated' },
+    s3: { value: '3', label: 'active pilot projects' },
+    s4: { value: '100 %', label: 'source references per output' },
+    ctaTitle: 'Meet the team.',
+    ctaButton: 'Schedule a call',
   },
 
-  pricingPage: {
-    eyebrow: '04 / Pricing',
-    titleA: 'Plans that scale with your ',
-    titleEm: 'engineering office',
-    titleB: '.',
-    deck: 'From solo planner to engineering department: output-based tiers, no per-seat fees, transparent token economics.',
-    pilot: {
-      tag: 'Pilot',
-      title: 'First 10 outputs free',
-      body: 'No credit card. Test FUBE, function list, and BOQ on your real project.',
-      button: 'Start pilot',
-    },
-    toggle: {
-      monthly: 'Monthly',
-      yearly: 'Annual',
-      discount: '−20%',
-    },
-    tiers: {
-      starter: {
-        tag: 'Starter',
-        name: 'Starter',
-        tagline: 'For solo planners and freelancers.',
-        price: '€119',
-        priceYearly: '€95',
-        priceNote: 'Annual prepay · €1,140 / year',
-        unit: '/ month',
-        f1: '30 doc outputs / month',
-        f2: 'All output types (FUBE · function list · BOQ)',
-        f3: 'Word and PDF export',
-        f4: 'Community support',
-        f5: 'Single user',
-        cta: 'Choose Starter',
-      },
-      studio: {
-        tag: 'Studio',
-        name: 'Studio',
-        badge: 'Popular',
-        tagline: 'For planning offices (5–15 staff).',
-        price: '€549',
-        priceYearly: '€439',
-        priceNote: 'Annual prepay · €5,268 / year',
-        unit: '/ month',
-        f1: '200 doc outputs / month',
-        f2: 'Up to 8 users',
-        f3: 'All Starter features',
-        f4: 'GAEB X86 export',
-        f5: 'Versioning + audit trail',
-        f6: '5 custom templates',
-        f7: 'Email support (24h)',
-        cta: 'Book a demo',
-      },
-      engineering: {
-        tag: 'Engineering',
-        name: 'Engineering',
-        tagline: 'For larger offices (15–50 staff).',
-        price: '€1,890',
-        priceYearly: '€1,512',
-        priceNote: 'Annual prepay · €18,144 / year',
-        unit: '/ month',
-        f1: '800 doc outputs / month',
-        f2: 'Up to 25 users',
-        f3: 'All Studio features',
-        f4: 'REST API (read + write)',
-        f5: 'SSO / SAML',
-        f6: '99.5% SLA',
-        f7: 'Dedicated account manager',
-        f8: 'Unlimited custom templates',
-        cta: 'Contact sales',
-      },
-    },
-    overageNote:
-      'Overage: +€5 / €3.50 / €2 per extra output (Starter / Studio / Engineering). Volume discounts from 500 outputs / month.',
-    enterprise: {
-      eyebrow: 'Enterprise',
-      name: 'Enterprise',
-      titleA: 'For corporations, ',
-      titleEm: 'on-premise',
-      titleB: ', and large engineering departments.',
-      body: 'Unlimited outputs. Custom standards catalog. Integration with RR-Schema, BIM stack, PLM. On your infrastructure if needed, for semiconductor fabs and defense projects.',
-      b1: 'Unlimited outputs + users',
-      b2: 'On-premise available',
-      b3: 'RR-Schema · BIM · PLM',
-      b4: '99.95% SLA',
-      b5: 'White-glove onboarding',
-      b6: 'Custom standards catalog',
-      cta: 'Contact sales',
-      priceLabel: 'Pricing',
-      priceTitle: 'On request',
-      priceBody:
-        'Typical engineering corporation: €6,000–15,000 / month or annual framework contract.',
-      priceNote: 'Contract · Pilot in 4 weeks · GDPR-compliant · EU hosting or on-prem',
-    },
-    compare: {
-      eyebrow: 'In detail',
-      title: 'All features compared',
-      rows: [
-        { label: 'Doc outputs / month', s: '30', t: '200', e: '800', x: 'Unlimited' },
-        { label: 'Output types', s: 'All', t: 'All', e: 'All', x: 'All + custom' },
-        { label: 'Included users', s: '1', t: '8', e: '25', x: 'Unlimited' },
-        { label: 'Word + PDF export', s: '✓', t: '✓', e: '✓', x: '✓' },
-        { label: 'GAEB X86 export', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'draw.io / DWG export', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'Versioning + audit trail', s: '—', t: '✓', e: '✓', x: '✓' },
-        { label: 'Custom templates', s: '—', t: '5', e: 'Unlimited', x: 'Unlimited' },
-        { label: 'API access', s: '—', t: 'Read', e: 'Read + Write', x: 'Full' },
-        { label: 'SSO / SAML', s: '—', t: '—', e: '✓', x: '✓' },
-        { label: 'On-premise', s: '—', t: '—', e: '—', x: '✓' },
-        { label: 'Custom standards catalog', s: '—', t: '—', e: '—', x: '✓' },
-        { label: 'Account manager', s: '—', t: '—', e: 'Dedicated', x: 'Dedicated' },
-        { label: 'SLA', s: '—', t: 'Best effort', e: '99.5%', x: '99.95%' },
-        { label: 'Support', s: 'Community', t: 'Email 24h', e: 'Priority 4h', x: 'White-glove' },
-      ],
-    },
-    faq: {
-      eyebrow: 'FAQ',
-      title: 'Frequently asked',
-      items: [
-        {
-          q: 'What counts as one "doc output"?',
-          a: 'A generated FUBE, a function list, or a BOQ (as a complete document) each counts as one output. Iterations, regenerations with adjusted parameters, and standards updates on the same output are unlimited, and you only pay for new outputs.',
-        },
-        {
-          q: 'What happens if I exceed my limit?',
-          a: 'You automatically get an upgrade offer or pay overage per extra output (€5 / €3.50 / €2 depending on tier). Your existing outputs remain accessible at all times. No hidden throttling.',
-        },
-        {
-          q: 'Why no per-seat billing?',
-          a: 'AI generation has real per-output token costs. Per-seat pricing collapses when a power user generates heavily, and we would lose money. Output-based pricing is the 2026 standard for AI SaaS (Anthropic, OpenAI, Vercel AI Gateway).',
-        },
-        {
-          q: 'Which standards does the engine check against?',
-          a: 'VDI 3814, VDI 6022 (incl. new sheet 3, white draft 12/2025), DIN 1946-4, DIN EN ISO 16484-3, GMP Annex 1 (revised 2022), GAMP 5, EN 50600, VOB/A, and DIN 276. Continuously expanding. Internal company standards can be configured as templates in Studio and higher.',
-        },
-        {
-          q: 'On-premise: how does it work?',
-          a: 'In Enterprise, we deliver a containerized engine that runs in your own infrastructure, important for defense, semiconductor, and pharma projects with strict IT requirements. Typical setup takes 4 weeks, with a dedicated account manager guiding deployment.',
-        },
-        {
-          q: 'Which data leaves my environment?',
-          a: 'On Starter and Studio: only the inputs you explicitly submit, encrypted in EU data centers (Frankfurt). On Engineering: same, plus optional extra encryption layer (BYO key). On Enterprise (on-premise): nothing leaves your infrastructure.',
-        },
-        {
-          q: 'Can I switch plans during the year?',
-          a: 'Yes, anytime. Upgrades are effective immediately and only the difference is billed. Downgrades take effect next billing cycle. No fixed contract term, cancel monthly.',
-        },
-        {
-          q: 'Pilot: really no credit card?',
-          a: 'Correct. 10 outputs against a concrete project of yours, in 4 weeks, no credit card, no automatic transition to a paid plan. Only after completion you decide whether to continue.',
-        },
-      ],
-    },
-    finalCta: {
-      eyebrow: 'Ready?',
-      titleA: 'First see what the engine makes of your project in ',
-      titleEm: '20 minutes',
-      titleB: '.',
-      deck: 'Demo against a concrete plant from your backlog. We show your FUBE being created live and which plan fits your operation.',
-      button: 'Book a demo',
-    },
-    title: 'Pricing',
-    breadcrumb: 'Pricing',
-    sectionBadge: 'Pricing',
-    heading: 'Plans that grow with you.',
-    description: 'From solo planner to engineering enterprise.',
-  },
-
+  // ── Sign in / Sign up ───────────────────────────────────
   signin: {
     title: 'Sign in',
-    breadcrumb: 'Sign in',
-    sideHeading: 'AI documentation engine for HVAC',
-    googleButton: 'Continue with Google',
-    appleButton: 'Continue with Apple',
-    divider: 'Or',
+    sub: 'Welcome back to aynzamAI.',
     emailLabel: 'Email',
     emailPlaceholder: 'name@company.com',
     passwordLabel: 'Password',
@@ -376,14 +212,10 @@ window.__translations_en = {
   },
 
   signup: {
-    title: 'Sign up',
-    breadcrumb: 'Sign up',
-    sideHeading: 'First FUBE in 90 seconds',
-    googleButton: 'Sign up with Google',
-    appleButton: 'Sign up with Apple',
-    divider: 'Or',
+    title: 'Create account',
+    sub: 'First document in a few minutes.',
     nameLabel: 'Name',
-    namePlaceholder: 'First Last',
+    namePlaceholder: 'First and last name',
     emailLabel: 'Email',
     emailPlaceholder: 'name@company.com',
     passwordLabel: 'Password',
@@ -393,19 +225,52 @@ window.__translations_en = {
     signInLink: 'Sign in',
   },
 
+  // ── 404 ─────────────────────────────────────────────────
   notFound: {
-    title: 'Error page',
-    breadcrumb: '404',
+    code: '404',
     heading: 'This page is not in the bill of quantities.',
-    description: 'We could not find the item you requested. Go back to the home page.',
-    goHome: 'Go home',
+    description: 'We could not find the requested item.',
+    goHome: 'Back to home',
   },
 
+  // ── Blog ────────────────────────────────────────────────
   blog: {
-    gridTitle: 'Blog',
-    gridBreadcrumb: 'Blog',
-    singleTitle: 'Article',
-    singleBreadcrumb: 'Article',
+    title: 'Blog',
+    deck: 'Notes from practice: standards, workflows and what AI really changes in building services engineering.',
+    readMore: 'Read',
+    back: 'All articles',
+    posts: [
+      {
+        tag: 'Standards',
+        date: '12 August 2026',
+        title: 'VDI 6022 Part 3: what changes for functional descriptions',
+        excerpt:
+          'The final edition brings new requirements for hygiene evidence in the functional description. We show which sections are affected.',
+      },
+      {
+        tag: 'Workflow',
+        date: '28 July 2026',
+        title: 'From system schematic to function list in four minutes',
+        excerpt:
+          'How the engine recognises field devices, dampers and control loops and builds a VDI 3814-compliant function list from them.',
+      },
+      {
+        tag: 'Tendering',
+        date: '3 July 2026',
+        title: 'GAEB X86 without rework: BoQ items from plant data',
+        excerpt:
+          'Quantities, units and standard texts to VOB/A, directly importable into any tendering tool.',
+      },
+    ],
+    single: {
+      tag: 'Standards',
+      date: '12 August 2026',
+      title: 'VDI 6022 Part 3: what changes for functional descriptions',
+      p1: 'With the final edition of VDI 6022 Part 3, the requirements for hygiene evidence in the functional description shift. Previously a reference to maintenance intervals was sufficient. Now cleaning and inspection points must be described explicitly per component.',
+      h2: 'Which sections of the functional description are affected',
+      p2: 'Specifically, this concerns the chapters on system description, operating modes and maintenance. The engine completes these sections automatically as soon as an AHU with hygiene requirements is detected, and references the respective table of the guideline.',
+      p3: 'For ongoing projects we recommend regenerating existing functional descriptions against the new catalogue. Iterations on the same output are included without limit in all plans.',
+    },
   },
 
   common: {
