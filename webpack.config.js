@@ -29,7 +29,6 @@ const generateHTMLPlugins = () => glob.sync('./src/*.html').map((dir) => {
   return new HtmlWebpackPlugin({
     filename,
     template: `./src/${filename}`,
-    favicon: `./src/images/favicon.svg`,
     inject: 'body',
   });
 });
@@ -116,6 +115,7 @@ module.exports = {
     clean: true,
     assetModuleFilename: 'images/[name][ext]',
   },
+  performance: { hints: false }, // static marketing site, single bundle by design
   target: 'web', // fix for "browserslist" error message
   stats: 'errors-only', // suppress irrelevant log messages
 }
