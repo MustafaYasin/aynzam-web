@@ -71,6 +71,18 @@ window.__translations_de = {
 
   // ── Platform ────────────────────────────────────────────
   platform: {
+    labels: {
+      l1: 'Lokale Datenbank',
+      l2: 'Wissensbasis',
+      l3: 'Normkatalog',
+      l4: 'Berechtigungen',
+      l5: 'Versionierung',
+      l6: 'Audit-Trail',
+      l7: 'Templates',
+      l8: 'Prüfung',
+      l9: 'Export',
+      l10: 'On-Premise',
+    },
     title1: 'Die einheitliche KI-Schicht',
     title2: 'für Planung, Bau und Betrieb',
     cta: 'Engine erkunden',

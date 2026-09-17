@@ -71,6 +71,18 @@ window.__translations_en = {
 
   // ── Platform ────────────────────────────────────────────
   platform: {
+    labels: {
+      l1: 'Local database',
+      l2: 'Knowledge base',
+      l3: 'Standards catalogue',
+      l4: 'Permissions',
+      l5: 'Versioning',
+      l6: 'Audit trail',
+      l7: 'Templates',
+      l8: 'Review',
+      l9: 'Export',
+      l10: 'On-premise',
+    },
     title1: 'The unified AI layer',
     title2: 'for design, construction and operations',
     cta: 'Explore the engine',
